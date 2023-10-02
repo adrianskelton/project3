@@ -21,17 +21,30 @@ SHEET = GSPREAD_CLIENT.open("animal_game")
 """
 Terminal based animal quiz game
 """
-def rungame():
-    print("You now have the following options")
+## Option Screen after the player has entered their name
+def option_screen():
+    print("Welcome " + PLAYERNAME +"." + " You now have the following options: \n")
+    print(f"1) Play the quiz.\n")
+    print(f"2) Read the rules.\n")
+    print(f"3) High scores.\n")
+    print(f"4) Exit to start.\n")
 
-playername = input("Welcome to the amazing animal quiz game please enter your name\n")
+## Rules of the game
 
-if len(playername) <= 20:
+PLAYERNAME = input("Welcome to the amazing animal quiz game please enter your name\n")
+
+if len(PLAYERNAME) <= 20:
     print("Entry is valid!")
-    rungame()
+    option_screen()
 else:
     input("Please enter a name shorter than 20 characters\n")   
 
+##def update_score():
+##print("score updated")
+
+"""
+First set of questions
+"""
 
 #print("Welcome " + playername + " please select an option below:\n")
 
