@@ -30,6 +30,7 @@ def option_screen():
     print(f"4) Exit to start.\n")
 
 ## Rules of the game
+##placeholder for rules
 
 PLAYERNAME = input("Welcome to the amazing animal quiz game please enter your name\n")
 
@@ -40,6 +41,20 @@ else:
     input("Please enter a name shorter than 20 characters\n")   
 
 ##def update_score():
+def update_scoreboard(new_row, worksheet):
+    """
+    Update the animal game worksheet,
+    adding a new row with the list data provided.
+    """
+    print(f"Updating {worksheet} worksheet...\n")
+    worksheet_to_update = SHEET.worksheet(worksheet)
+
+    # adds new row to the end of the current data
+    worksheet_to_update.append_row(new_row)
+
+    print(f"{worksheet} worksheet updated successfully\n")
+
+
 ##print("score updated")
 
 """
