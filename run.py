@@ -60,17 +60,11 @@ quiz_data = [
 # Start screen of the game asking the players name
 def game_start():
     print("""\
-
-                                       ._ o o
-                                       \_`-)|_
-                                    ,""       \ 
-                                  ,"  ## |   ಠ ಠ. 
-                                ," ##   ,-\__    `.
-                              ,"       /     `--._;)
-                            ,"     ## /
-                          ,"   ##    /
-
-
+    _          _                 _    ___        _     
+   / \   _ __ (_)_ __ ___   __ _| |  / _ \ _   _(_)____
+  / _ \ | '_ \| | '_ ` _ \ / _` | | | | | | | | | |_  /
+ / ___ \| | | | | | | | | | (_| | | | |_| | |_| | |/ / 
+/_/   \_\_| |_|_|_| |_| |_|\__,_|_|  \__\_\\__,_|_/___|
                     """)
     global playername
     playername = input("Welcome to the amazing animal quiz game please enter your name\n")
