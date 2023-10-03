@@ -76,44 +76,38 @@ def game_start():
     playername = input("Welcome to the amazing animal quiz game please enter your name\n")
     if len(playername) <= 20:
         print("playername has been entered")
-
         update_scoreboard([playername], "scoreboard")
+        option_screen()
         return
     else:
         input("Please enter a name shorter than 20 characters\n")   
 
-    """##Option Screen after the player has entered their name
+
 def option_screen():
+    global choice
+    choice=""
+    while True:
         print("Welcome " + playername +"." + " You now have the following options: \n")
-        print(f"1) Play the quiz.\n")
-        print(f"2) Read the rules.\n")
-        print(f"3) High scores.\n")
-        print(f"4) Exit to start.\n")""" 
+        print("1) Play the quiz.\n")
+        print("2) Read the rules.\n")
+        print("3) High scores.\n")
+        print("4) Exit to start.\n")
 
-    def option_screen():
-        global option_screen
-        choice=""
-        while True:
-            print("Welcome " + playername +"." + " You now have the following options: \n")
-            print("1) Play the quiz.\n")
-            print("2) Read the rules.\n")
-            print("3) High scores.\n")
-            print("4) Exit to start.\n")
+        choice = input("Enter choice")
+        choice = choice.strip()
 
-            choice = input("Enter choice")
-            choice = choice.strip()
+        if (choice == "1"):
+            run_quiz(quiz_data)
+        elif(choice == "2"): 
+            print("rules link")
+        elif(choice == "3"):
+            print("high score placeholder")
+        elif(choice == "4"): 
+            game_start()                
+            break
+        else:
+            print("invalid option please try again")
 
-            if (choice == "1"):
-                run_quiz(quiz_data)
-            elif(choice == "2"): 
-                print("rules link")
-            elif(choice == "3"):
-                print("high score placeholder")
-            elif(choice == "4"): 
-                game_start()
-                break
-            else:
-                print("invalid option please try again")
 
 ##this function updates the scoreboard
 def update_scoreboard(new_row, worksheet):
