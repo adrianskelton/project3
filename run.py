@@ -57,7 +57,7 @@ quiz_data = [
 
 ]
 
-#Start screen of the game asking the players name
+# Start screen of the game asking the players name
 def game_start():
     print("""\
 
@@ -93,23 +93,33 @@ def option_screen():
         print("3) High scores.\n")
         print("4) Exit to start.\n")
 
-        choice = input("Enter choice")
+        choice = input("Enter choice:  ")
         choice = choice.strip()
 
         if (choice == "1"):
+            print("Quiz starting, good luck!")
             run_quiz(quiz_data)
         elif(choice == "2"): 
-            print("rules link")
+            rules()
         elif(choice == "3"):
             print("high score placeholder")
-        elif(choice == "4"): 
-            game_start()                
+        elif(choice == "4"):
+            print("Game Exited")                 
             break
         else:
             print("invalid option please try again")
 
+## Rules of the game
+def rules():
+    print(f"Welcome to the animal game quiz {playername}!\n")
+    print("Take the quiz to test your animal general knowledge.\n")
+    print("There are 20 multiple choice questions.\n")
+    print("Select your answer by typing 'a', 'b' or 'c'.\n")
+    print("Good luck!\n")
+    import time
+    time.sleep(30) #pause for 30 seconds
 
-##this function updates the scoreboard
+## This function updates the scoreboard
 def update_scoreboard(new_row, worksheet):
     """
     Update the animal game worksheet,
@@ -123,12 +133,13 @@ def update_scoreboard(new_row, worksheet):
 
     print(f"{worksheet} worksheet updated successfully\n")
 
-##get scoreboard
+## Get scoreboard
 
-## Rules of the game
-##placeholder for rules
 
-##print("score updated")
+## Placeholder for rules
+
+## Print("score updated")
+
 def run_quiz(quiz_data):
     """
     Runs through questions in the quiz and answers get users input and changes the score by 1 if correct depending on the answer.
@@ -151,12 +162,11 @@ def run_quiz(quiz_data):
             print(f"Correct!\n")
             print(f"{guess['fact']}")
             score += 1
+            print(f"Score" + score())
         else:
             print(f"Sorry thats incorrect, better luck next question\n")
-    final_score(score)
+    final_score = print("Well done you got " + {score()} + "play again?" )
 
 
-#print("Welcome " + playername + " please select an option below:\n")
-
-game_start ()
-run_quiz(quiz_data)
+game_start()
+#run_quiz(quiz_data)
