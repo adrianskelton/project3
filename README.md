@@ -25,8 +25,8 @@ Connect your GitHub repository and deploy as normal.
 
 ## Constraints
 
-The deployment terminal is set to 80 columns by 24 rows. That means that each line of text needs to be 80 characters or less otherwise it will be wrapped onto a second line.
 
----
+## Source code 
 
-Happy coding!
+help sorting gspread by column.. https://stackoverflow.com/questions/50938274/sort-a-spread-sheet-via-gspread
+the code for the countdown timere... https://stackoverflow.com/questions/17220128/display-a-countdown-for-the-python-sleep-function
