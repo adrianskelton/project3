@@ -232,7 +232,7 @@ def option_screen():
             print("invalid option please try again")
 
 
-## Rules of the game
+# Rules of the game
 def rules():
     print(f"Welcome to the animal game quiz {playername}!\n")
     print("Take the quiz to test your animal general knowledge.\n")
@@ -247,9 +247,7 @@ def rules():
         sys.stdout.flush()
         time.sleep(1)  # pause for 10 seconds
 
-
-## This function updates the scoreboard
-def update_scoreboard(new_row, worksheet):
+def update_scoreboard(new_row, worksheet): # This function updates the scoreboard
     """
     Update the animal game worksheet,
     adding a new row with the list data provided.
@@ -298,8 +296,9 @@ def run_quiz(quiz_data):
         else:
             print(f"Sorry thats incorrect, better luck next question\n")
             print(score)
-    final_score(score)
+    final_score = score
     ##print(f"your final score is"final_score)
+    worksheet = SHEET.worksheet("scoreboard")
     worksheet.update_cell(13, 2, final_score)
 
 

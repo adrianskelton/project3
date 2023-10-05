@@ -1,29 +1,185 @@
-![CI logo](https://codeinstitute.s3.amazonaws.com/fullstack/ci_logo_small.png)
+# ANIMAL QUIZ
 
-Welcome,
+Animal-Quiz is my third project for Code Institute Full Stack development program. 
 
-This is the Code Institute student template for deploying your third portfolio project, the Python command-line project. The last update to this file was: **March 14, 2023**
+The inspiration for the game came from my two children Axel and Hannah and their love for animal facts and the natural world in general. 
 
-## Reminders
 
-- Your code must be placed in the `run.py` file
-- Your dependencies must be placed in the `requirements.txt` file
-- Do not edit any of the other files or your code may not deploy properly
+![Space Quiz website image](assets/readme_images/webpage_img.png)
 
-## Creating the Heroku app
+Visit the live site [Here.](https://animalgame-470e463a9700.herokuapp.com/ "Link to Budget Calculator")
 
-When you create the app, you will need to add two buildpacks from the _Settings_ tab. The ordering is as follows:
+---
 
-1. `heroku/python`
-2. `heroku/nodejs`
+## CONTENTS
 
-You must then create a _Config Var_ called `PORT`. Set this to `8000`
+* [Project Overview](#project-overview)
+  * [Project Goals](#project-goals)
 
-If you have credentials, such as in the Love Sandwiches project, you must create another _Config Var_ called `CREDS` and paste the JSON into the value field.
+* [User Experience](#user-experience)
+  * [User Expectations](#user-expectations)
+  * [User Stories](#user-stories)
 
-Connect your GitHub repository and deploy as normal.
+* [Design](#design)
+  * [Colour Scheme](#colour-scheme)
+  * [Imagery](#imagery)
+  * [Structure](#structure)
+  * [Wireframes](#wireframes)
 
-## Constraints
+* [Features](#features)
+  * [Intro](#intro)
+  * [Name input](#name-input)
+  * [Guide](#guide)
+  * [Quiz](#quiz)
+  * [More knowledge](#more-knowledge)
+  * [Quiz end messages](#quiz-end-messages)
+  * [Leaderboard update message and display](#leaderboard-update-message-and-display)
+  * [Quiz replay](#quiz-replay)
+  * [Secret username](#secret-username)
+  * [Front-end features](#front-end-features)
+
+* [Future Implementations](#future-implementations)
+
+* [Technologies Used](#technologies-used)
+  * [Languages Used](#languages-used)
+  * [Programs Used](#programs-used)
+
+* [Deployment](#deployment)
+
+* [Testing](#testing)
+
+* [Credits](#credits)
+  * [Code used and adapted](#code-used-and-adapted)
+  * [Acknowledgments](#acknowledgments)
+
+---
+
+## **Project Overview**
+
+
+
+### **Project Goals**
+
+
+---
+
+## **User Experience**
+
+### **User Expectations**
+
+
+### **User Stories**
+
+
+---
+
+## **Design**
+
+### **Colour Scheme**
+
+
+
+### **Imagery**
+
+
+
+
+
+### **Structure**
+
+
+
+
+ 
+### **Wireframes**
+
+
+
+![Project planning wireframe](assets/readme_images/p3_planning_and_UX.png)
+
+
+
+
+---
+
+## **Features**
+
+### **Intro**
+
+### **Name input**
+
+
+### **Guide**
+
+
+### **Quiz**
+
+
+### **More knowledge**
+
+
+
+
+### **Quiz end messages** 
+
+
+### **Leaderboard update message and display**
+
+
+
+
+### **Secret username**
+
+
+
+### **Front-end features**
+
+
+---
+
+## **Future Implementations**
+
+
+---
+
+## **Technologies Used**
+
+### **Languages Used**
+
+
+
+### **Programs Used**
+
+
+
+---
+
+## **Deployment**
+
+
+---
+
+## **Testing**
+
+
+---
+
+## **Credits**
+
+### **Code used and adapted**
+
+
+
+### **Websites visited to gather knowledge**
+
+
+
+###  **Acknowledgments**
+
+
+[Back to top ⇧](#space-quiz)
+
+***
 
 
 ## Source code 
