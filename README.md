@@ -59,7 +59,9 @@ Visit the live site [Here.](https://animalgame-470e463a9700.herokuapp.com/ "Link
 
 
 ### **Project Goals**
-
+- Understand the purpose of the site
+- Find out the rules of the game and have them easily understandable
+- 
 
 ---
 
@@ -172,6 +174,7 @@ Visit the live site [Here.](https://animalgame-470e463a9700.herokuapp.com/ "Link
 
 ### **Websites visited to gather knowledge**
 
+Help with gsheets and getting data from excel https://www.youtube.com/watch?v=wrR0YLzh4DQ
 
 
 ###  **Acknowledgments**

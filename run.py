@@ -178,7 +178,6 @@ quiz_data = [
         "correct_answer": "B",
         "fact": "In humans, oxygen is bound to hemoglobin, a molecule that contains iron and gives blood its red color. In spiders, oxygen is bound to hemocyanin, a molecule that contains copper rather than iron, making their blood blue.",
     },
-    print(score),
 ]
 
 # Start screen of the game asking the players name
@@ -224,7 +223,7 @@ def option_screen():
         elif choice == "2":
             rules()
         elif choice == "3":
-            print("high score placeholder")
+            show_scoreboard()
         elif choice == "4":
             print("Game Exited")
             break
@@ -238,14 +237,7 @@ def rules():
     print("Take the quiz to test your animal general knowledge.\n")
     print("There are 15 multiple choice questions.\n")
     print("Select your answer by typing 'a', 'b' or 'c'.\n")
-    print("Good luck, warm your brain up, the game will start in 10 seconds!\n")
-    import time
-    import sys
-
-    for i in range(10, 0, -1):
-        sys.stdout.write(str(i) + " ")
-        sys.stdout.flush()
-        time.sleep(1)  # pause for 10 seconds
+    input("Press Enter to continue...")
 
 def update_scoreboard(new_row, worksheet): # This function updates the scoreboard
     """
@@ -260,11 +252,12 @@ def update_scoreboard(new_row, worksheet): # This function updates the scoreboar
 
     print(f"{worksheet} worksheet updated successfully\n")
 
+def update_final_score ():
+    worksheet.update_cell(13, 2, "")
 
 ## Get scoreboard
 
 
-## Placeholder for rules
 
 ## Print("score updated")
 
@@ -297,10 +290,23 @@ def run_quiz(quiz_data):
             print(f"Sorry thats incorrect, better luck next question\n")
             print(score)
     final_score = score
+    print(final_score)
     ##print(f"your final score is"final_score)
     worksheet = SHEET.worksheet("scoreboard")
-    worksheet.update_cell(13, 2, final_score)
+    worksheet.update_cell(13, 2, final_score) ##Update final score into spreadsheet
+    playername = ""
+    # Sort sheet A -> Z by column 'B'
+    worksheet.sort((2, "asc"))
+    game_start()
 
+
+    def show_scoreboard(playername, finalscore):
+        worksheet = SHEET.worksheet("scoreboard")
+        players = spreadsheet.col_values(1)
+        finalscore = spreadsheet.col_values(2)
+
+        for player, score in zip(players[1:], scores[1:]): 
+            print(f"Player: {playername}, Final Score:{score}")
 
 game_start()
 # run_quiz(quiz_data)
