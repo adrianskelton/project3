@@ -23,7 +23,7 @@ global score
 score = 0
 
 # Sort sheet A -> Z by column 'B'
-worksheet.sort((2, "asc"))
+worksheet.sort((2, "des"))
 # This sorts the excell scoreboard sheet and deletes some rows
 clear_range = "A13:A20"
 empty_values = [[""]] * 8  # Create an empty list with 8 rows
@@ -195,7 +195,7 @@ def game_start():
     playername = input(
         "Welcome to the amazing animal quiz game please enter your name\n"
     )
-    if len(playername) <= 20:
+    if len(playername) <= 20 and len(playername) >= 1:
         print("playername has been entered")
         update_scoreboard([playername], "scoreboard")
         option_screen()
@@ -231,13 +231,14 @@ def option_screen():
             print("invalid option please try again")
 
 
-# Rules of the game
+# OPTION 2 Rules of the game
 def rules():
-    print(f"Welcome to the animal game quiz {playername}!\n")
-    print("Take the quiz to test your animal general knowledge.\n")
-    print("There are 15 multiple choice questions.\n")
+    print(f"\nWelcome to the animal game quiz {playername}!")
+    print("Take the quiz to test your animal general knowledge.")
+    print("There are 15 multiple choice questions.")
     print("Select your answer by typing 'a', 'b' or 'c'.\n")
     input("Press Enter to continue...")
+
 
 def update_scoreboard(new_row, worksheet): # This function updates the scoreboard
     """
@@ -255,16 +256,20 @@ def update_scoreboard(new_row, worksheet): # This function updates the scoreboar
 def update_final_score ():
     worksheet.update_cell(13, 2, "")
 
-## Get scoreboard
+def show_scoreboard():
+    print("TOP 10 SCORES - ANIMAL QUIZ\n")
+    worksheet = SHEET.worksheet("scoreboard")
+    scoreboard_players = worksheet.col_values(1)[1:11]  # Assuming players are in column A starting from row 2
+    scoreboard_scores = worksheet.col_values(2)[1:11]  # Assuming scores are in column B starting from row 2
 
-
-
-## Print("score updated")
-
+    for player, score in zip(scoreboard_players, scoreboard_scores):
+        print("PLAYER: {} POINTS {} ".format(player, score))
+    
+    input("Press Enter to continue...")
 
 def run_quiz(quiz_data):
     """
-    Runs through questions in the quiz and answers get users input and changes the score by 1 if correct depending on the answer.
+    Runs through questions in the quiz and answers get user's input and changes the score by 1 if correct depending on the answer.
     """
     score = 0
     final_score = 0
@@ -279,34 +284,25 @@ def run_quiz(quiz_data):
             user_answer = user_answer.upper()
 
             if user_answer not in guess["answers"]:
-                print("Please select a, b, c or d as an answer\n")
+                print("Please select a, b, c, or d as an answer\n")
 
         if user_answer == guess["correct_answer"]:
-            print(f"Correct!\n")
+            # smiling face with sunglasses
+            print("\N{smiling face with sunglasses} " " Correct!")
             print(f"{guess['fact']}")
             score += 1
             print(score)
         else:
-            print(f"Sorry thats incorrect, better luck next question\n")
+            print(f"Incorrect!", "\N{loudly crying face}", "Better luck next question\n")
             print(score)
     final_score = score
     print(final_score)
     ##print(f"your final score is"final_score)
     worksheet = SHEET.worksheet("scoreboard")
-    worksheet.update_cell(13, 2, final_score) ##Update final score into spreadsheet
+    worksheet.update_cell(13, 2, final_score)  # Update final score into spreadsheet
     playername = ""
     # Sort sheet A -> Z by column 'B'
-    worksheet.sort((2, "asc"))
-    game_start()
-
-
-    def show_scoreboard(playername, finalscore):
-        worksheet = SHEET.worksheet("scoreboard")
-        players = spreadsheet.col_values(1)
-        finalscore = spreadsheet.col_values(2)
-
-        for player, score in zip(players[1:], scores[1:]): 
-            print(f"Player: {playername}, Final Score:{score}")
+    worksheet.sort((2, "des"))
+    ##game_start()
 
 game_start()
-# run_quiz(quiz_data)

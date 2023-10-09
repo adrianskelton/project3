@@ -59,16 +59,26 @@ Visit the live site [Here.](https://animalgame-470e463a9700.herokuapp.com/ "Link
 
 
 ### **Project Goals**
-- Understand the purpose of the site
-- Find out the rules of the game and have them easily understandable
-- 
+- Create a game in python
+- Understand the concepts of the code written and how the code is executed
+- Create data manipulation of an excel spreadsheet using gspread and python
+- Have no bugs and if there are some have them documented
 
 ---
 
 ## **User Experience**
+- Understand the purpose of the site
+- Find out the rules of the game and have them easily understandable
+- Have the game be fun and informative
+- Give the full fact about the answer if answered correctly
+- Have a scoring system where the player can see their score on the leaderboard 
 
 ### **User Expectations**
-
+- I want to easily know what this site is for
+- I want to easily and clearly navigate through the site
+- If I need help it is easily available
+- I want to see what my score was at the end of the game
+- I want to enjoy the game and learn something new
 
 ### **User Stories**
 
@@ -175,6 +185,7 @@ Visit the live site [Here.](https://animalgame-470e463a9700.herokuapp.com/ "Link
 ### **Websites visited to gather knowledge**
 
 Help with gsheets and getting data from excel https://www.youtube.com/watch?v=wrR0YLzh4DQ
+Adding emojis https://www.makeuseof.com/how-to-include-emojis-in-your-python-code/
 
 
 ###  **Acknowledgments**
