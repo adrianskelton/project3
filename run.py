@@ -2,6 +2,14 @@ import gspread
 from google.oauth2.service_account import Credentials
 import json
 
+from colorama import Fore, Back, Style #used for text color
+#Initialize colorama
+import colorama
+from colorama import Fore, Back, Style
+colorama.init(autoreset=True)
+
+
+
 # Every Google account has as an IAM (Identity and Access Management)
 # configuration which specifies what the user has access to.
 # The SCOPE lists the APIs that the program should access in order to run.
@@ -183,13 +191,15 @@ quiz_data = [
 # Start screen of the game asking the players name
 def game_start():
 
-    print("""\
+    artwork=    """\
     _          _                 _    ___        _     
    / \   _ __ (_)_ __ ___   __ _| |  / _ \ _   _(_)____
   / _ \ | '_ \| | '_ ` _ \ / _` | | | | | | | | | |_  /
  / ___ \| | | | | | | | | | (_| | | | |_| | |_| | |/ / 
 /_/   \_\_| |_|_|_| |_| |_|\__,_|_|  \__\_\\__,_|_/___|
-                    """)
+                    """
+
+    print(Back.YELLOW+Fore.BLUE+artwork)
 
     global playername
     playername = input(
@@ -228,7 +238,7 @@ def option_screen():
             print("Game Exited")
             break
         else:
-            print("invalid option please try again")
+            print(Fore.RED+"invalid option please try again\n ")
 
 
 # OPTION 2 Rules of the game
@@ -288,12 +298,12 @@ def run_quiz(quiz_data):
 
         if user_answer == guess["correct_answer"]:
             # smiling face with sunglasses
-            print("\N{smiling face with sunglasses} " " Correct!")
+            print(Fore.GREEN+"\N{smiling face with sunglasses} " " Correct!")
             print(f"{guess['fact']}")
             score += 1
             print(score)
         else:
-            print(f"Incorrect!", "\N{loudly crying face}", "Better luck next question\n")
+            print(f"Fore.RED+Incorrect!", "\N{loudly crying face}", "Better luck next question\n") 
             print(score)
     final_score = score
     print(final_score)
