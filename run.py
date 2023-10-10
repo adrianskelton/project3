@@ -2,13 +2,14 @@ import gspread
 from google.oauth2.service_account import Credentials
 import json
 
-from colorama import Fore, Back, Style #used for text color
-#Initialize colorama
+# Used for text color
+from colorama import Fore, Back, Style
+
+# Initialize colorama
 import colorama
 from colorama import Fore, Back, Style
+
 colorama.init(autoreset=True)
-
-
 
 # Every Google account has as an IAM (Identity and Access Management)
 # configuration which specifies what the user has access to.
@@ -190,16 +191,14 @@ quiz_data = [
 
 # Start screen of the game asking the players name
 def game_start():
-
-    artwork=    """\
-    _          _                 _    ___        _     
+    artwork = """\
    / \   _ __ (_)_ __ ___   __ _| |  / _ \ _   _(_)____
   / _ \ | '_ \| | '_ ` _ \ / _` | | | | | | | | | |_  /
  / ___ \| | | | | | | | | | (_| | | | |_| | |_| | |/ / 
 /_/   \_\_| |_|_|_| |_| |_|\__,_|_|  \__\_\\__,_|_/___|
                     """
 
-    print(Back.YELLOW+Fore.BLUE+artwork)
+    print(Back.YELLOW + Fore.BLUE + artwork)
 
     global playername
     playername = input(
@@ -238,7 +237,7 @@ def option_screen():
             print("Game Exited")
             break
         else:
-            print(Fore.RED+"invalid option please try again\n ")
+            print(Fore.RED + "invalid option please try again\n ")
 
 
 # OPTION 2 Rules of the game
@@ -250,7 +249,7 @@ def rules():
     input("Press Enter to continue...")
 
 
-def update_scoreboard(new_row, worksheet): # This function updates the scoreboard
+def update_scoreboard(new_row, worksheet):  # This function updates the scoreboard
     """
     Update the animal game worksheet,
     adding a new row with the list data provided.
@@ -263,19 +262,26 @@ def update_scoreboard(new_row, worksheet): # This function updates the scoreboar
 
     print(f"{worksheet} worksheet updated successfully\n")
 
-def update_final_score ():
+
+def update_final_score():
     worksheet.update_cell(13, 2, "")
+
 
 def show_scoreboard():
     print("TOP 10 SCORES - ANIMAL QUIZ\n")
     worksheet = SHEET.worksheet("scoreboard")
-    scoreboard_players = worksheet.col_values(1)[1:11]  # Assuming players are in column A starting from row 2
-    scoreboard_scores = worksheet.col_values(2)[1:11]  # Assuming scores are in column B starting from row 2
+    scoreboard_players = worksheet.col_values(1)[
+        1:11
+    ]  # Assuming players are in column A starting from row 2
+    scoreboard_scores = worksheet.col_values(2)[
+        1:11
+    ]  # Assuming scores are in column B starting from row 2
 
     for player, score in zip(scoreboard_players, scoreboard_scores):
         print("PLAYER: {} POINTS {} ".format(player, score))
-    
+
     input("Press Enter to continue...")
+
 
 def run_quiz(quiz_data):
     """
@@ -298,12 +304,16 @@ def run_quiz(quiz_data):
 
         if user_answer == guess["correct_answer"]:
             # smiling face with sunglasses
-            print(Fore.GREEN+"\N{smiling face with sunglasses} " " Correct!")
+            print(Fore.GREEN + "\N{smiling face with sunglasses} " " Correct!")
             print(f"{guess['fact']}")
             score += 1
             print(score)
         else:
-            print(f"Fore.RED+Incorrect!", "\N{loudly crying face}", "Better luck next question\n") 
+            print(
+                f"Fore.RED+Incorrect!",
+                "\N{loudly crying face}",
+                "Better luck next question\n",
+            )
             print(score)
     final_score = score
     print(final_score)
@@ -314,5 +324,6 @@ def run_quiz(quiz_data):
     # Sort sheet A -> Z by column 'B'
     worksheet.sort((2, "des"))
     ##game_start()
+
 
 game_start()
