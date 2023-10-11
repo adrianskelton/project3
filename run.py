@@ -1,14 +1,11 @@
 import gspread
 from google.oauth2.service_account import Credentials
 import json
-
-# Used for text color
-from colorama import Fore, Back, Style
-
 # Initialize colorama
 import colorama
 from colorama import Fore, Back, Style
-
+# Used for text color
+from colorama import Fore, Back, Style
 colorama.init(autoreset=True)
 
 # Every Google account has as an IAM (Identity and Access Management)
