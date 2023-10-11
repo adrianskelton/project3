@@ -168,6 +168,19 @@ Visit the live site [Here.](https://animalgame-470e463a9700.herokuapp.com/ "Link
 
 ## **Deployment**
 
+The project was deployed on github, the command 'python3 run.py' was used in terminal to launch the game and once there was a good enough portion of the game written it was then deployed on heroku. The following steps were taken for deployment:
+
+1. Add dependencies in GitPod to requirements.txt file with command "pip3 freeze > requirements.txt"
+2. Commit and push to GitHub
+3. Go to the Heroku Dashboard
+4. Click "Create new app"
+5. Name app and select location
+5. Add Config Vars for Creds and Port in Settings tab
+6. Add the buildbacks to Python and NodeJS in that order
+7. Select appropriate deployment method, GitHub
+8. Connect to Github and link to repository
+9. Enable automatic deployment and/or deploy manually
+10. Click on Deploy
 
 ---
 
