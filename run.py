@@ -196,7 +196,6 @@ def game_start():
         "Welcome to the amazing animal quiz game please enter your name\n"
     )
     if len(playername) <= 20 and len(playername) >= 1:
-        print("playername has been entered")
         update_scoreboard([playername], "scoreboard")
         option_screen()
         return
@@ -228,7 +227,7 @@ def option_screen():
             print("Game Exited")
             break
         else:
-            print("invalid option please try again\n ")
+            print("ERROR! Invalid option please select 1, 2, 3 or 4\n ")
 
 
 # OPTION 2 Rules of the game
@@ -291,7 +290,7 @@ def run_quiz(quiz_data):
             user_answer = user_answer.upper()
 
             if user_answer not in guess["answers"]:
-                print("Please select a, b, c, or d as an answer\n")
+                print("ERROR! Please select a, b, c, or d as an answer.\n")
 
         if user_answer == guess["correct_answer"]:
             # smiling face with sunglasses
@@ -311,7 +310,6 @@ def run_quiz(quiz_data):
     ##print(f"your final score is"final_score)
     worksheet = SHEET.worksheet("scoreboard")
     worksheet.update_cell(13, 2, final_score)  # Update final score into spreadsheet
-    playername = ""
     # Sort sheet A -> Z by column 'B'
     worksheet.sort((2, "des"))
     ##game_start()

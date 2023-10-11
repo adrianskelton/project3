@@ -5,9 +5,9 @@ Animal-Quiz is my third project for Code Institute Full Stack development progra
 The inspiration for the game came from my two children Axel and Hannah and their love for animal facts and the natural world in general. 
 
 
-![Space Quiz website image](assets/readme_images/webpage_img.png)
+![Animal Quiz website image](https://i.ibb.co/6nx2BN1/screenshot.png)
 
-Visit the live site [Here.](https://animalgame-470e463a9700.herokuapp.com/ "Link to Budget Calculator")
+Visit the live site [here.](https://animalgame-470e463a9700.herokuapp.com/ "Link to animal quiz on heroku")
 
 ---
 
@@ -93,6 +93,9 @@ Visit the live site [Here.](https://animalgame-470e463a9700.herokuapp.com/ "Link
 
 ### **Imagery**
 
+background image from pexels.com
+![](https://i.ibb.co/H7rz38r/pexels-george-lebada-567540-1.jpg)
+
 
 
 
@@ -105,7 +108,7 @@ Visit the live site [Here.](https://animalgame-470e463a9700.herokuapp.com/ "Link
  
 ### **Wireframes**
 
-
+Due to the nature of the project being mostly backend no wireframes were made or needed.
 
 ![Project planning wireframe](assets/readme_images/p3_planning_and_UX.png)
 
@@ -116,10 +119,9 @@ Visit the live site [Here.](https://animalgame-470e463a9700.herokuapp.com/ "Link
 
 ## **Features**
 
-### **Intro**
+### **Intro with name input**
 
-### **Name input**
-
+![Project planning wireframe](.devcontainer/images/screenshot_start.png)
 
 ### **Guide**
 
