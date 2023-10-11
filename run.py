@@ -1,12 +1,6 @@
 import gspread
 from google.oauth2.service_account import Credentials
 import json
-# Initialize colorama
-import colorama
-from colorama import Fore, Back, Style
-# Used for text color
-from colorama import Fore, Back, Style
-colorama.init(autoreset=True)
 
 # Every Google account has as an IAM (Identity and Access Management)
 # configuration which specifies what the user has access to.
@@ -195,7 +189,7 @@ def game_start():
 /_/   \_\_| |_|_|_| |_| |_|\__,_|_|  \__\_\\__,_|_/___|
                     """
 
-    print(Back.YELLOW + Fore.BLUE + artwork)
+    print(artwork)
 
     global playername
     playername = input(
@@ -234,7 +228,7 @@ def option_screen():
             print("Game Exited")
             break
         else:
-            print(Fore.RED + "invalid option please try again\n ")
+            print("invalid option please try again\n ")
 
 
 # OPTION 2 Rules of the game
@@ -301,13 +295,13 @@ def run_quiz(quiz_data):
 
         if user_answer == guess["correct_answer"]:
             # smiling face with sunglasses
-            print(Fore.GREEN + "\N{smiling face with sunglasses} " " Correct!")
+            print("\N{smiling face with sunglasses} " " Correct!")
             print(f"{guess['fact']}")
             score += 1
             print(score)
         else:
             print(
-                f"Fore.RED+Incorrect!",
+                f"Incorrect!",
                 "\N{loudly crying face}",
                 "Better luck next question\n",
             )
