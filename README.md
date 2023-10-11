@@ -173,6 +173,7 @@ Visit the live site [Here.](https://animalgame-470e463a9700.herokuapp.com/ "Link
 
 ## **Testing**
 
+Realised colorama was not compatible with heroku, removed and looking for alternative
 
 ---
 
@@ -180,7 +181,7 @@ Visit the live site [Here.](https://animalgame-470e463a9700.herokuapp.com/ "Link
 
 ### **Code used and adapted**
 
-used colorama import for text colors
+
 
 ### **Websites visited to gather knowledge**
 
