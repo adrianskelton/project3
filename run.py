@@ -182,6 +182,7 @@ quiz_data = [
 
 # Start screen of the game asking the players name
 def game_start():
+    print(f'\033[2J')
     artwork = """\
    / \   _ __ (_)_ __ ___   __ _| |  / _ \ _   _(_)____
   / _ \ | '_ \| | '_ ` _ \ / _` | | | | | | | | | |_  /
@@ -232,19 +233,21 @@ def option_screen():
 
 # OPTION 2 Rules of the game
 def rules():
+    print(f'\033[2J')
+    print("=========================================================")
     print(f"\nWelcome to the animal game quiz {playername}!")
     print("Take the quiz to test your animal general knowledge.")
     print("There are 15 multiple choice questions.")
     print("Select your answer by typing 'a', 'b' or 'c'.\n")
     input("Press Enter to continue...")
+    print("=========================================================")
 
-
-def update_scoreboard(new_row, worksheet):  # This function updates the scoreboard
+# This function updates the scoreboard
+def update_scoreboard(new_row, worksheet):  
     """
     Update the animal game worksheet,
     adding a new row with the list data provided.
     """
-    print(f"Updating {worksheet} worksheet...\n")
     worksheet_to_update = SHEET.worksheet(worksheet)
 
     # adds new row to the end of the current data
@@ -282,6 +285,8 @@ def run_quiz(quiz_data):
     for guess in quiz_data:
         user_answer = ""
         while user_answer not in ["A", "B", "C", "D"]:
+            print(f'\033[2J')
+            print("=========================================================")
             print(f"{guess['question']}")
 
             for key, value in guess["answers"].items():
@@ -293,6 +298,7 @@ def run_quiz(quiz_data):
                 print("ERROR! Please select a, b, c, or d as an answer.\n")
 
         if user_answer == guess["correct_answer"]:
+            print(f'\033[2J')
             # smiling face with sunglasses
             print("\N{smiling face with sunglasses} " " Correct!")
             print(f"{guess['fact']}")
@@ -307,7 +313,6 @@ def run_quiz(quiz_data):
             print(score)
     final_score = score
     print(final_score)
-    ##print(f"your final score is"final_score)
     worksheet = SHEET.worksheet("scoreboard")
     worksheet.update_cell(13, 2, final_score)  # Update final score into spreadsheet
     # Sort sheet A -> Z by column 'B'
