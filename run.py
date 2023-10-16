@@ -51,7 +51,7 @@ def game_start():
 
     global playername
     playername = input(
-        "Welcome to the amazing animal quiz game\n Please enter your name\n"
+        " Welcome to the amazing animal quiz game\n Please enter your name\n"
     )
     if len(playername) <= 20 and len(playername) >= 1:
         update_scoreboard([playername], "scoreboard")
