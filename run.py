@@ -35,13 +35,15 @@ worksheet.update(clear_range, empty_values)
 
 
 """
-The set of 15 questions that is used during the game. Questions 
+The set of 15 questions that is used during the game. Questions
 imported from questions.py file. Source of questions credited in the
  readme.
 """
 quiz_data = questions.quiz_data
 
-# Start screen of the game asking the players name
+"""
+The start of the game asking the player to enter their name
+"""
 
 
 def game_start():
@@ -59,6 +61,12 @@ def game_start():
         return
     else:
         input("Please enter a name shorter than 20 characters\n")
+
+
+"""
+The option screen function is defined below giving the four choices
+for the player after they have entered their player name
+"""
 
 
 def option_screen():
@@ -98,7 +106,8 @@ def rules():
     print("HOW TO PLAY THE ANAZING ANIMAL QUIZ")
     print("Take the quiz to test your animal general knowledge.")
     print("There are 15 multiple choice questions.")
-    print("Select your answer by typing 'a', 'b', 'c' or 'd' and pressing Enter afterwards.\n")
+    print("Select your answer by typing 'a', 'b', 'c' or 'd' and pressing"
+          "Enter afterwards.\n")
     input("Press Enter to continue...")
     print("=========================================================")
 
@@ -126,6 +135,8 @@ def update_final_score():
 Function to show the scoreboard
 This is called in the main menu at the start when selected by the user
 """
+
+
 def show_scoreboard():
     print("TOP 10 SCORES - ANIMAL QUIZ\n")
     worksheet = SHEET.worksheet("scoreboard")
@@ -141,10 +152,13 @@ def show_scoreboard():
 
     input("Press Enter to continue...")
 
+
 """
 This function is called once the game has ended and prints out if
 the score was good or bad based on the users final score"
 """
+
+
 def score_grading(final_score):
     print("======================================================\n")
     print(f"Your score was {final_score}")
@@ -154,25 +168,30 @@ def score_grading(final_score):
         print("That's abouve average, well done!")
     gameover_option()
 
+
 """
 This will be called once the game is over to ask the player what they
 want to do next
 """
+
+
 def gameover_option():
     print("======================================================\n")
     print("Play again? press p otherwise press r to return to the "
-    "main menu")
+          "main menu")
     option = (input("Make your selection now..."))
     if option == p:
         print("quiz function")
     elif option == r:
         print("return to restart of game")
-    
 
 
 """
-Runs through questions in the quiz and answers get user's input and changes the score by 1 if correct depending on the answer.
+Runs through questions in the quiz and answers get user's input and changes
+the score by 1 if correct depending on the answer.
 """
+
+
 def run_quiz(quiz_data):
     score = 0
     final_score = 0

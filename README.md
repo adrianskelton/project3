@@ -103,17 +103,12 @@ background image from pexels.com
 ### **Structure**
 
 
-
+![](.devcontainer/images/readme_images/flow_chart.png)
 
  
 ### **Wireframes**
 
 Due to the nature of the project being mostly backend no wireframes were made or needed.
-
-![Project planning wireframe](assets/readme_images/p3_planning_and_UX.png)
-
-
-
 
 ---
 
@@ -132,17 +127,12 @@ Due to the nature of the project being mostly backend no wireframes were made or
 ### **More knowledge**
 
 
-
-
 ### **Quiz end messages** 
 
 
-### **Leaderboard update message and display**
+### **Leaderboard**
 
 
-
-
-### **Secret username**
 
 
 
