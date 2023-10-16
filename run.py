@@ -1,4 +1,6 @@
 import gspread
+import questions
+import artwork
 from google.oauth2.service_account import Credentials
 import json
 from colorama import init, Fore, Back, Style
@@ -31,77 +33,21 @@ clear_range = "A13:A20"
 empty_values = [[""]] * 8  # Create an empty list with 8 rows
 worksheet.update(clear_range, empty_values)
 
-# import questions
+
 """
-The set of 15 questions that is used during the game. Source of 
-questions credited in the readme.
+The set of 15 questions that is used during the game. Questions 
+imported from questions.py file. Source of questions credited in the
+ readme.
 """
-quiz_data = [
-    {
-        #question 1
-        "question": "What animal has the longest lifespan?",
-        "answers": {
-            "A": "Locust",
-            "B": "Elephant",
-            "C": "Blue Whale",
-            "D": "Giant Tortoise",
-        },
-        "correct_answer": "D",
-        "fact": "The lifespan of the giant tortoise is about 150 years,"
-        "making it the longest-living animal on the planet."
-        "In captivity, some giant tortoises have lived as long as 177 years.",
-    },
-    {
-        "question": "What is the only mammal capable of true flight?",
-        "answers": {
-            "A": "Bat",
-            "B": "Ocelot",
-            "C": "Hummingbird",
-            "D": "Flying Squirrel",
-        },
-        "correct_answer": "A",
-        "fact":
-        "Bats are the only mammals capable of true flight."
-        "A bat's wing is constructed very much like the human hand,"
-        "with extremely elongated fingers and membranes stretched between."
-        "Bats can be found almost anywhere in the world except for areas"
-        "with extreme temperatures such as polar regions and deserts. "
-        "In fact, there are almost 1,000 species of bats worldwide,"
-        "ranging in size from less than an inch to almost six feet. "
-        "Many species of bats are considered endangered.",
-    },
-    {
-        "question": "What is the fastest bird in the world?",
-        "answers": {
-            "A": "PEREGRINE FALCON",
-            "B": "SPINE-TAILED SWIFT",
-            "C": "HARPY EAGLE",
-            "D": "HORNED SUNGEM",
-        },
-        "correct_answer": "A",
-        "fact":
-        "Able to dive at almost 200 miles per hour, the peregrine falcon is"
-        "not only the fastest flying bird in the world, but the fastest animal"
-        "on earth. Although several subspecies, including the Arctic peregrine"
-        " falcon and the American peregrine falcon, were once considered "
-        "endangered, they have made a successful recovery and are no longer "
-        "listed on the endangered species list. The peregrine falcon can be "
-        "found on every continent except Antarctica.",
-    },
-    
-]
+quiz_data = questions.quiz_data
+
 # Start screen of the game asking the players name
 
 
 def game_start():
-    artwork = """\
-   / \   _ __ (_)_ __ ___   __ _| |  / _ \ _   _(_)____
-  / _ \ | '_ \| | '_ ` _ \ / _` | | | | | | | | | |_  /
- / ___ \| | | | | | | | | | (_| | | | |_| | |_| | |/ / 
-/_/   \_\_| |_|_|_| |_| |_|\__,_|_|  \__\_\\__,_|_/___|
-                    """
+    asci_art = artwork.artwork
 
-    print(artwork)
+    print(asci_art)
 
     global playername
     playername = input(
@@ -176,6 +122,10 @@ def update_final_score():
     worksheet.update_cell(12, 2, "")
 
 
+"""
+Function to show the scoreboard
+This is called in the main menu at the start when selected by the user
+"""
 def show_scoreboard():
     print("TOP 10 SCORES - ANIMAL QUIZ\n")
     worksheet = SHEET.worksheet("scoreboard")
@@ -191,19 +141,39 @@ def show_scoreboard():
 
     input("Press Enter to continue...")
 
+"""
+This function is called once the game has ended and prints out if
+the score was good or bad based on the users final score"
+"""
 def score_grading(final_score):
+    print("======================================================\n")
+    print(f"Your score was {final_score}")
     if final_score <= 2:
-        print("your score was less than average could do better")
+        print("This was less than average could do better")
     elif final_score >= 2:
-        print("your score was good, well done!")
-    input("Press Enter to continue...")
-    print("Game is now restarting")
+        print("That's abouve average, well done!")
+    gameover_option()
+
+"""
+This will be called once the game is over to ask the player what they
+want to do next
+"""
+def gameover_option():
+    print("======================================================\n")
+    print("Play again? press p otherwise press r to return to the "
+    "main menu")
+    option = (input("Make your selection now..."))
+    if option == p:
+        print("quiz function")
+    elif option == r:
+        print("return to restart of game")
+    
 
 
+"""
+Runs through questions in the quiz and answers get user's input and changes the score by 1 if correct depending on the answer.
+"""
 def run_quiz(quiz_data):
-    """
-    Runs through questions in the quiz and answers get user's input and changes the score by 1 if correct depending on the answer.
-    """
     score = 0
     final_score = 0
     for guess in quiz_data:
@@ -238,7 +208,6 @@ def run_quiz(quiz_data):
             input("Press Enter to continue...")
 
     final_score = score
-    print(f"Well done your score was {final_score}")
     score_grading(final_score)
     input("Press Enter to continue...")
     worksheet = SHEET.worksheet("scoreboard")

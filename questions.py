@@ -1,3 +1,56 @@
+quiz_data = [
+    {
+        #question 1
+        "question": "What animal has the longest lifespan?",
+        "answers": {
+            "A": "Locust",
+            "B": "Elephant",
+            "C": "Blue Whale",
+            "D": "Giant Tortoise",
+        },
+        "correct_answer": "D",
+        "fact": "The lifespan of the giant tortoise is about 150 years,"
+        "making it the longest-living animal on the planet."
+        "In captivity, some giant tortoises have lived as long as 177 years.",
+    },
+    {
+        "question": "What is the only mammal capable of true flight?",
+        "answers": {
+            "A": "Bat",
+            "B": "Ocelot",
+            "C": "Hummingbird",
+            "D": "Flying Squirrel",
+        },
+        "correct_answer": "A",
+        "fact":
+        "Bats are the only mammals capable of true flight."
+        "A bat's wing is constructed very much like the human hand,"
+        "with extremely elongated fingers and membranes stretched between."
+        "Bats can be found almost anywhere in the world except for areas"
+        "with extreme temperatures such as polar regions and deserts. "
+        "In fact, there are almost 1,000 species of bats worldwide,"
+        "ranging in size from less than an inch to almost six feet. "
+        "Many species of bats are considered endangered.",
+    },
+    {
+        "question": "What is the fastest bird in the world?",
+        "answers": {
+            "A": "PEREGRINE FALCON",
+            "B": "SPINE-TAILED SWIFT",
+            "C": "HARPY EAGLE",
+            "D": "HORNED SUNGEM",
+        },
+        "correct_answer": "A",
+        "fact":
+        "Able to dive at almost 200 miles per hour, the peregrine falcon is"
+        "not only the fastest flying bird in the world, but the fastest animal"
+        "on earth. Although several subspecies, including the Arctic peregrine"
+        " falcon and the American peregrine falcon, were once considered "
+        "endangered, they have made a successful recovery and are no longer "
+        "listed on the endangered species list. The peregrine falcon can be "
+        "found on every continent except Antarctica.",
+    },
+    
 {
         "question": "A newborn kangaroo is about the size of a..?",
         "answers": {
@@ -201,3 +254,5 @@
         "In spiders, oxygen is bound to hemocyanin, a molecule that contains "
         "copper rather than iron, making their blood blue.",
     }
+]
+

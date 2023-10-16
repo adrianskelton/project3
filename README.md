@@ -188,7 +188,8 @@ The project was deployed on github, the command 'python3 run.py' was used in ter
 
 ## **Testing**
 
-Realised colorama was not compatible with heroku, removed and looking for alternative
+Colorama module was not working I thought it was not compatible with heroku but then realised it was not in the requirements.txt so ran command Pip Freeze > Requirements.txt
+from terminal and pushed everything to heroku and it worked.
 
 ---
 
