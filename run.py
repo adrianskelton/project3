@@ -2,8 +2,6 @@ import gspread
 from google.oauth2.service_account import Credentials
 import json
 from colorama import init, Fore, Back, Style
-init(convert=True)
-print(Fore.RED + 'some red text')
 
 # Every Google account has as an IAM (Identity and Access Management)
 # configuration which specifies what the user has access to.
@@ -96,7 +94,6 @@ quiz_data = [
 
 
 def game_start():
-    print(f'\033[2J')
     artwork = """\
    / \   _ __ (_)_ __ ___   __ _| |  / _ \ _   _(_)____
   / _ \ | '_ \| | '_ ` _ \ / _` | | | | | | | | | |_  /
@@ -221,13 +218,14 @@ def run_quiz(quiz_data):
 
         if user_answer == guess["correct_answer"]:
             # smiling face with sunglasses
-            print("\N{smiling face with sunglasses} " " Correct!")
+            print(Fore.GREEN + 'Correct! ''\033[39m')
+            print("\N{smiling face with sunglasses} ")
             print(f"{guess['fact']}")
             score += 1
             input("Press Enter to continue...")
         else:
+            print(Fore.RED + 'Incorrect! ''\033[39m')
             print(
-                f"Incorrect!",
                 "\N{loudly crying face}",
                 "Better luck with the next question\n")
             print(f"{guess['fact']}")
