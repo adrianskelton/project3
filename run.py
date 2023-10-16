@@ -22,6 +22,7 @@ worksheet = SHEET.worksheet("scoreboard")
 global score
 score = 0
 
+
 # Sort sheet A -> Z by column 'B'
 worksheet.sort((2, "des"))
 # This sorts the excell scoreboard sheet and deletes some rows
@@ -29,12 +30,14 @@ clear_range = "A13:A20"
 empty_values = [[""]] * 8  # Create an empty list with 8 rows
 worksheet.update(clear_range, empty_values)
 
-##import questions
+# import questions
 """
-First set of questions
+The set of 15 questions that is used during the game. Source of 
+questions credited in the readme.
 """
 quiz_data = [
     {
+        #question 1
         "question": "What animal has the longest lifespan?",
         "answers": {
             "A": "Locust",
@@ -43,7 +46,8 @@ quiz_data = [
             "D": "Giant Tortoise",
         },
         "correct_answer": "D",
-        "fact": "The lifespan of the giant tortoise is about 150 years, making it the longest-living animal on the planet."\
+        "fact": "The lifespan of the giant tortoise is about 150 years,"
+        "making it the longest-living animal on the planet."
         "In captivity, some giant tortoises have lived as long as 177 years.",
     },
     {
@@ -55,10 +59,14 @@ quiz_data = [
             "D": "Flying Squirrel",
         },
         "correct_answer": "A",
-        "fact": "Bats are the only mammals capable of true flight."\
-        "A bats wing is constructed very much like the human hand, with extremely elongated fingers and membranes stretched between."\
-        "Bats can be found almost anywhere in the world except for areas with extreme temperatures such as polar regions and deserts."\
-        "In fact, there are almost 1,000 species of bats worldwide, ranging in size from less than an inch to almost six feet."\
+        "fact":
+        "Bats are the only mammals capable of true flight."
+        "A bat's wing is constructed very much like the human hand,"
+        "with extremely elongated fingers and membranes stretched between."
+        "Bats can be found almost anywhere in the world except for areas"
+        "with extreme temperatures such as polar regions and deserts. "
+        "In fact, there are almost 1,000 species of bats worldwide,"
+        "ranging in size from less than an inch to almost six feet. "
         "Many species of bats are considered endangered.",
     },
     {
@@ -70,12 +78,20 @@ quiz_data = [
             "D": "HORNED SUNGEM",
         },
         "correct_answer": "A",
-        "fact": "Able to dive at almost 200 miles per hour, the peregrine falcon is not only the fastest flying bird in the world, but the fastest animal on earth."\
-        "Although several subspecies including the Arctic peregrine falcon and the American peregrine falcon were once considered endangered,"\
-        "they have made a successful recovery and are no longer listed on the endagered species list."\
-        "The peregrine falcon can be found on every continent except Antarctica.",
-    },]
+        "fact":
+        "Able to dive at almost 200 miles per hour, the peregrine falcon is"
+        "not only the fastest flying bird in the world, but the fastest animal"
+        "on earth. Although several subspecies, including the Arctic peregrine"
+        " falcon and the American peregrine falcon, were once considered "
+        "endangered, they have made a successful recovery and are no longer "
+        "listed on the endangered species list. The peregrine falcon can be "
+        "found on every continent except Antarctica.",
+    },
+    
+]
 # Start screen of the game asking the players name
+
+
 def game_start():
     print(f'\033[2J')
     artwork = """\
@@ -104,7 +120,8 @@ def option_screen():
     choice = ""
     while True:
         print(f'\033[2J')
-        print("Welcome " + playername + "." + " You now have the following options: \n")
+        print("Welcome " + playername + "." +
+              " You now have the following options: \n")
         print("1) Play the quiz.\n")
         print("2) Read the rules.\n")
         print("3) High scores.\n")
@@ -128,7 +145,6 @@ def option_screen():
             input("Press Enter to continue...")
 
 
-
 # OPTION 2 Rules of the game
 def rules():
     print(f'\033[2J')
@@ -141,7 +157,9 @@ def rules():
     print("=========================================================")
 
 # This function updates the scoreboard
-def update_scoreboard(new_row, worksheet):  
+
+
+def update_scoreboard(new_row, worksheet):
     """
     Update the animal game worksheet,
     adding a new row with the list data provided.
@@ -155,7 +173,7 @@ def update_scoreboard(new_row, worksheet):
 
 
 def update_final_score():
-    worksheet.update_cell(13, 2, "")
+    worksheet.update_cell(12, 2, "")
 
 
 def show_scoreboard():
@@ -173,6 +191,8 @@ def show_scoreboard():
 
     input("Press Enter to continue...")
 
+def score_grading():
+    print("you could do better")
 
 def run_quiz(quiz_data):
     """
@@ -204,20 +224,22 @@ def run_quiz(quiz_data):
             input("Press Enter to continue...")
         else:
             print(
-            f"Incorrect!",
-            "\N{loudly crying face}",
-            "Better luck with the next question\n")
+                f"Incorrect!",
+                "\N{loudly crying face}",
+                "Better luck with the next question\n")
             print(f"{guess['fact']}")
             input("Press Enter to continue...")
 
-    print(f"Well done your score was {final_score}")        
+    print(f"Well done your score was {final_score}")
     final_score = score
     print(final_score)
+    input("Press Enter to continue...")
     worksheet = SHEET.worksheet("scoreboard")
-    worksheet.update_cell(13, 2, final_score)  # Update final score into spreadsheet
+    # Update final score into spreadsheet
+    worksheet.update_cell(13, 2, final_score)
     # Sort sheet A -> Z by column 'B'
     worksheet.sort((2, "des"))
-    ##game_start()
+    # game_start()
 
 
 game_start()
