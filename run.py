@@ -1,6 +1,9 @@
 import gspread
 from google.oauth2.service_account import Credentials
 import json
+from colorama import init, Fore, Back, Style
+init(convert=True)
+print(Fore.RED + 'some red text')
 
 # Every Google account has as an IAM (Identity and Access Management)
 # configuration which specifies what the user has access to.
@@ -230,9 +233,8 @@ def run_quiz(quiz_data):
             print(f"{guess['fact']}")
             input("Press Enter to continue...")
 
-    print(f"Well done your score was {final_score}")
     final_score = score
-    print(final_score)
+    print(f"Well done your score was {final_score}")
     input("Press Enter to continue...")
     worksheet = SHEET.worksheet("scoreboard")
     # Update final score into spreadsheet
