@@ -187,12 +187,18 @@ def show_scoreboard():
     ]  # Assuming scores are in column B starting from row 2
 
     for player, score in zip(scoreboard_players, scoreboard_scores):
-        print("PLAYER: {} || CORRECT: {} ||".format(player, score))
+        print("PLAYER: {} || POINTS: {} ||".format(player, score))
 
     input("Press Enter to continue...")
 
-def score_grading():
-    print("you could do better")
+def score_grading(final_score):
+    if final_score <= 2:
+        print("your score was less than average could do better")
+    elif final_score >= 2:
+        print("your score was good, well done!")
+    input("Press Enter to continue...")
+    print("Game is now restarting")
+
 
 def run_quiz(quiz_data):
     """
@@ -233,6 +239,7 @@ def run_quiz(quiz_data):
 
     final_score = score
     print(f"Well done your score was {final_score}")
+    score_grading(final_score)
     input("Press Enter to continue...")
     worksheet = SHEET.worksheet("scoreboard")
     # Update final score into spreadsheet
