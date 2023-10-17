@@ -219,19 +219,20 @@ def run_quiz(quiz_data):
             if user_answer not in ["A", "B", "C", "D"]:
                 print("ERROR! Please select 'A', 'B', 'C', or 'D' as an answer.\n")
 
-        if user_answer == guess["correct_answer"]:
-            # smiling face with sunglasses
-            print(Fore.GREEN + 'Correct! ''\033[39m')
-            print("\N{smiling face with sunglasses} ")
-            print(f"{guess['fact']}")
-            score += 1
-            input("Press Enter to continue...")
-        else:
-            print(Fore.RED + 'Incorrect! ''\033[39m')
-            print(
-                "\N{loudly crying face}",
-                "Better luck with the next question\n")
-            print(f"{guess['fact']}")
+            else:
+                if user_answer == guess["correct_answer"]:
+                    # smiling face with sunglasses
+                    print(Fore.GREEN + 'Correct! ''\033[39m')
+                    print("\N{smiling face with sunglasses} ")
+                    print(f"{guess['fact']}")
+                    score += 1
+                    input("Press Enter to continue...")
+                else:
+                    print(Fore.RED + 'Incorrect! ''\033[39m')
+                    print(
+                        "\N{loudly crying face}",
+                        "Better luck with the next question\n")
+                    print(f"{guess['fact']}")
             input("Press Enter to continue...")
 
     final_score = score
