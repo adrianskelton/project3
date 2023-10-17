@@ -102,7 +102,7 @@ Background cameleon image from pexels.com
 ### **Structure**
 
 
-![](.devcontainer/images/readme_images/flow_chart.png)
+![](assets/images/readme_images/flow_chart.png)
 
  
 ### **Wireframes**
@@ -115,11 +115,11 @@ Due to the nature of the project being mostly backend no wireframes were made or
 
 ### **Intro with name input**
 
-![Project planning wireframe](.devcontainer/images/screenshot_start.png)
+![](assets/images/readme_images/screenshot_start.png)
 
 ### **Guide**
 
-
+![](assets/images/readme_images/screenshot_start.png)
 ### **Quiz**
 
 
