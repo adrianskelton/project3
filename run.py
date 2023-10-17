@@ -27,12 +27,10 @@ worksheet = SHEET.worksheet("scoreboard")
 global score
 score = 0
 
-"""
-Function to clear the screen
-"""
-
-
 def clearScreen():
+    """
+    Function to clear the screen
+    """
     os.system("clear")
 
 
@@ -213,7 +211,6 @@ def run_quiz(quiz_data):
     for guess in quiz_data:
         user_answer = ""
         while user_answer not in ["A", "B", "C", "D"]:
-            print(f'\033[2J')
             print("=========================================================")
             print(f"{guess['question']}")
             print("=========================================================")
@@ -224,7 +221,7 @@ def run_quiz(quiz_data):
             user_answer = user_answer.upper()
 
             if user_answer not in ["A", "B", "C", "D"]:
-                print("ERROR! Please select 'A', 'B', 'C', or 'D' as an answer.\n")
+                print(Fore.RED + "ERROR!\033[39m Please select 'A', 'B', 'C', or 'D' as an answer.\n")
 
             else:
                 if user_answer == guess["correct_answer"]:
