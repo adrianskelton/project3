@@ -233,7 +233,7 @@ def run_quiz(quiz_data):
                         "\N{loudly crying face}",
                         "Better luck with the next question\n")
                     print(f"{guess['fact']}")
-            input("Press Enter to continue...")
+                    input("Press Enter to continue...")
 
     final_score = score
     score_grading(final_score)
