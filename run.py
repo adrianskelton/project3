@@ -27,6 +27,10 @@ worksheet = SHEET.worksheet("scoreboard")
 global score
 score = 0
 
+def linebreak():
+    print("=========================================================")
+    
+
 def clearScreen():
     """
     Function to clear the screen
@@ -111,19 +115,14 @@ def option_screen():
 # OPTION 2 Rules of the game
 def rules():
     print(f'\033[2J')
-    print("=========================================================")
-    print("HOW TO PLAY THE ANAZING ANIMAL QUIZ")
+    linebreak()
+    print("HOW TO PLAY THE AMAZING ANIMAL QUIZ")
     print("Take the quiz to test your animal general knowledge.")
     print("There are 15 multiple choice questions.")
     print("Select your answer by typing 'a', 'b', 'c' or 'd'\n"
           "and pressing Enter afterwards.\n")
+    linebreak()
     input("Press Enter to continue...")
-    print("=========================================================")
-
-
-"""
-This function updates the animal game worksheet
-"""
 
 
 def update_scoreboard(new_row, worksheet):
@@ -132,64 +131,54 @@ def update_scoreboard(new_row, worksheet):
     adding a new row with the list data provided.
     """
     worksheet_to_update = SHEET.worksheet(worksheet)
-
-    # adds new row to the end of the current data
     worksheet_to_update.append_row(new_row)
-
     print(f"{worksheet} worksheet updated successfully\n")
 
 
-def update_final_score():
-    worksheet.update_cell(12, 2, "")
-
-
-"""
-Function to show the scoreboard
-This is called in the main menu at the start when selected by the user
-"""
+##def update_final_score():
+##    worksheet.update_cell(12, 2, "")
 
 
 def show_scoreboard():
+    """
+    Function to show the scoreboard
+    This is called in the main menu at the start when selected by the user
+    """
     print("TOP 10 SCORES - ANIMAL QUIZ\n")
     worksheet = SHEET.worksheet("scoreboard")
     scoreboard_players = worksheet.col_values(1)[
         1:11
-    ]  # Assuming players are in column A starting from row 2
+    ] 
     scoreboard_scores = worksheet.col_values(2)[
         1:11
-    ]  # Assuming scores are in column B starting from row 2
-
+    ] 
     for player, score in zip(scoreboard_players, scoreboard_scores):
         print("PLAYER: {} || POINTS: {} ||".format(player, score))
-
     input("Press Enter to continue...")
 
 
-"""
-My function is called once the game has ended and prints out if
-the score was good or bad based on the users final score"
-"""
-
-
 def score_grading(final_score):
-    print("======================================================\n")
+    """
+    My function is called once the game has ended and prints out if
+    the score was good or bad based on the users final score
+    """
+    linebreak()
+    print("\n")
     print(f"Your score was {final_score}")
     if final_score <= 7:
         print("This was less than average, you could do better")
     elif final_score >= 8:
-        print("That's abouve average, well done!")
+        print("That's above average, well done!")
     gameover_option()
 
 
-"""
-My function called once the game is over to ask the player what they
-want to do next
-"""
-
-
 def gameover_option():
-    print("======================================================\n")
-    print("Play again? Press p and enter otherwise press r and enter to return to the main menu")
+    """
+    My function called once the game is over to ask the player what they
+    want to do next
+    """
+    linebreak()
+    print("\nPlay again? Press p and enter otherwise press r and enter to return to the main menu")
     option = (input("Make your selection now..."))
     if option not in ["p", "r"]:
         print("Incorrect choice. Please enter p or r and press enter")
@@ -199,13 +188,14 @@ def gameover_option():
         print("return to restart of game")
 
 
-"""
-Runs through questions in the quiz and answers get user's input and changes
-the score by 1 if correct depending on the answer.
-"""
+
 
 
 def run_quiz(quiz_data):
+    """
+    Runs through questions in the quiz and answers get user's input and changes
+    the score by 1 if correct depending on the answer
+    """
     score = 0
     final_score = 0
     for guess in quiz_data:
@@ -225,7 +215,6 @@ def run_quiz(quiz_data):
 
             else:
                 if user_answer == guess["correct_answer"]:
-                    # smiling face with sunglasses
                     print(Fore.GREEN + 'Correct! ''\033[39m')
                     print("\N{smiling face with sunglasses} ")
                     print(f"{guess['fact']}")
