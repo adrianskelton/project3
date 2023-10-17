@@ -35,7 +35,6 @@ Visit the live site [here.](https://animalgame-470e463a9700.herokuapp.com/ "Link
   * [Quiz end messages](#quiz-end-messages)
   * [Leaderboard update message and display](#leaderboard-update-message-and-display)
   * [Quiz replay](#quiz-replay)
-  * [Secret username](#secret-username)
   * [Front-end features](#front-end-features)
 
 * [Future Implementations](#future-implementations)
@@ -207,4 +206,4 @@ Adding emojis [link here](https://www.makeuseof.com/how-to-include-emojis-in-you
 ## Source code 
 
 help sorting gspread by column.. https://stackoverflow.com/questions/50938274/sort-a-spread-sheet-via-gspread
-the code for the countdown timere... https://stackoverflow.com/questions/17220128/display-a-countdown-for-the-python-sleep-function
+

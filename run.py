@@ -1,5 +1,6 @@
 import gspread
 import questions
+#ascii artwork for the game 
 import artwork
 from google.oauth2.service_account import Credentials
 import json
@@ -29,6 +30,8 @@ score = 0
 """
 Function to clear the screen
 """
+
+
 def clearScreen():
     os.system("clear")
 
@@ -119,7 +122,9 @@ def rules():
     input("Press Enter to continue...")
     print("=========================================================")
 
-# This function updates the scoreboard
+"""
+This function updates the animal game worksheet
+"""
 
 
 def update_scoreboard(new_row, worksheet):
@@ -162,35 +167,35 @@ def show_scoreboard():
 
 
 """
-This function is called once the game has ended and prints out if
+My function is called once the game has ended and prints out if
 the score was good or bad based on the users final score"
 """
-
 
 def score_grading(final_score):
     print("======================================================\n")
     print(f"Your score was {final_score}")
-    if final_score <= 2:
-        print("This was less than average could do better")
-    elif final_score >= 2:
+    if final_score <= 7:
+        print("This was less than average, you could do better")
+    elif final_score >= 8:
         print("That's abouve average, well done!")
     gameover_option()
 
 
 """
-This will be called once the game is over to ask the player what they
+My function called once the game is over to ask the player what they
 want to do next
 """
 
 
 def gameover_option():
     print("======================================================\n")
-    print("Play again? press p otherwise press r to return to the "
-          "main menu")
+    print("Play again? Press p and enter otherwise press r and enter to return to the main menu")
     option = (input("Make your selection now..."))
-    if option == p:
+    if option not in ["p", "r"]:
+        print("Incorrect choice. Please enter p or r and press enter")
+    elif option == "p":
         print("quiz function")
-    elif option == r:
+    elif option == "r":
         print("return to restart of game")
 
 
