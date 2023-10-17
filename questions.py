@@ -8,9 +8,9 @@ quiz_data = [
             "D": "Giant Tortoise",
         },
         "correct_answer": "D",
-        "fact": "The lifespan of the giant tortoise is about 150 years, "
+        "fact": "The lifespan of the giant tortoise is about 150 years, \n"
                 "making it the longest-living animal on the planet.\n"
-                "In captivity, some giant tortoises have lived as long as 177 years.",
+                "In captivity, some giant tortoises have lived as long as 177 years\n",
     },
     {
         "question": "What is the only mammal capable of true flight?",
@@ -21,14 +21,14 @@ quiz_data = [
             "D": "Flying Squirrel",
         },
         "correct_answer": "A",
-        "fact": "Bats are the only mammals capable of true flight. "
-                "A bat's wing is constructed very much like the human hand, "
-                "with extremely elongated fingers and membranes stretched between. "
-                "Bats can be found almost anywhere in the world except for areas "
-                "with extreme temperatures such as polar regions and deserts. "
-                "In fact, there are almost 1,000 species of bats worldwide, "
-                "ranging in size from less than an inch to almost six feet. "
-                "Many species of bats are considered endangered.",
+        "fact": "Bats are the only mammals capable of true flight. \n"
+                "A bat's wing is constructed very much like the human hand, \n"
+                "with extremely elongated fingers and membranes stretched between.\n "
+                "Bats can be found almost anywhere in the world except for areas \n"
+                "with extreme temperatures such as polar regions and deserts. \n"
+                "In fact, there are almost 1,000 species of bats worldwide, \n"
+                "ranging in size from less than an inch to almost six feet. \n"
+                "Many species of bats are considered endangered.\n",
     },
     {
         "question": "What is the fastest bird in the world?",
