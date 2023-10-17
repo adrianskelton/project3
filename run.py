@@ -32,9 +32,6 @@ def linebreak():
     print("=========================================================")
 
 
-
-
-
 # Sort sheet A -> Z by column 'B'
 worksheet.sort((2, "des"))
 # This sorts the excell scoreboard sheet and deletes some rows
