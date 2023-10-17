@@ -93,7 +93,7 @@ Visit the live site [here.](https://animalgame-470e463a9700.herokuapp.com/ "Link
 
 ### **Imagery**
 
-background image from pexels.com
+Background cameleon image from pexels.com
 ![](https://i.ibb.co/H7rz38r/pexels-george-lebada-567540-1.jpg)
 
 
@@ -179,11 +179,12 @@ The project was deployed on github, the command 'python3 run.py' was used in ter
 ## **Testing**
 
 Colorama module was not working I thought it was not compatible with heroku but then realised it was not in the requirements.txt so ran command Pip Freeze > Requirements.txt
-from terminal and pushed everything to heroku and it worked.
+from terminal and pushed everything to heroku and it worked, solution found on code institute slack community.
 
 ---
 
 ## **Credits**
+
 
 ### **Code used and adapted**
 
@@ -191,17 +192,17 @@ from terminal and pushed everything to heroku and it worked.
 
 ### **Websites visited to gather knowledge**
 
-Help with gsheets and getting data from excel https://www.youtube.com/watch?v=wrR0YLzh4DQ
-Adding emojis https://www.makeuseof.com/how-to-include-emojis-in-your-python-code/
+Help with gsheets and getting data from excel [link here](https://www.youtube.com/watch?v=wrR0YLzh4DQ)\
+Adding emojis [link here](https://www.makeuseof.com/how-to-include-emojis-in-your-python-code)\
+
 
 
 ###  **Acknowledgments**
 
 
-[Back to top ⇧](#space-quiz)
+[Back to top ⇧](#animal-quiz)
 
 ***
-
 
 ## Source code 
 

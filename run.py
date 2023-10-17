@@ -3,6 +3,7 @@ import questions
 import artwork
 from google.oauth2.service_account import Credentials
 import json
+import os
 from colorama import init, Fore, Back, Style
 
 # Every Google account has as an IAM (Identity and Access Management)
@@ -24,6 +25,12 @@ worksheet = SHEET.worksheet("scoreboard")
 
 global score
 score = 0
+
+"""
+Function to clear the screen
+"""
+def clearScreen():
+    os.system("clear")
 
 
 # Sort sheet A -> Z by column 'B'
@@ -47,6 +54,7 @@ The start of the game asking the player to enter their name
 
 
 def game_start():
+    clearScreen()
     asci_art = artwork.artwork
 
     print(asci_art)
@@ -208,8 +216,8 @@ def run_quiz(quiz_data):
             user_answer = input("Select answer and press enter...\n")
             user_answer = user_answer.upper()
 
-            if user_answer not in guess["answers"]:
-                print("ERROR! Please select a, b, c, or d as an answer.\n")
+            if user_answer not in ["A", "B", "C", "D"]:
+                print("ERROR! Please select 'A', 'B', 'C', or 'D' as an answer.\n")
 
         if user_answer == guess["correct_answer"]:
             # smiling face with sunglasses
