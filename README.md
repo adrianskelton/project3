@@ -103,6 +103,7 @@ Background cameleon image from pexels.com
 
 
 ![](assets/images/readme_images/flow_chart.png)
+THIS IMAGE WILL BE UPDATED PLACEHOLDER
 
  
 ### **Wireframes**
@@ -131,7 +132,7 @@ Due to the nature of the project being mostly backend no wireframes were made or
 
 ### **Leaderboard**
 
-
+![](assets/images/readme_images/screenshot_highscores.png)
 
 
 
@@ -177,8 +178,10 @@ The project was deployed on github, the command 'python3 run.py' was used in ter
 
 ## **Testing**
 
-Colorama module was not working I thought it was not compatible with heroku but then realised it was not in the requirements.txt so ran command Pip Freeze > Requirements.txt
+Problem: Colorama module was not working I thought it was not compatible with heroku but then realised it was not in the requirements.txt 
+Fix: Ran command Pip Freeze > Requirements.txt
 from terminal and pushed everything to heroku and it worked, solution found on code institute slack community.
+Problem: 
 
 ---
 
@@ -186,6 +189,8 @@ from terminal and pushed everything to heroku and it worked, solution found on c
 
 
 ### **Code used and adapted**
+
+Some of the code for the functionality was adapted from here. Namely the quiz data function [link here](https://github.com/cornishcoder1/Food_of_Japan_Quiz/blob/main/run.py)
 
 
 
