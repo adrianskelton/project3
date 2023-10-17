@@ -21,7 +21,6 @@ Visit the live site [here.](https://animalgame-470e463a9700.herokuapp.com/ "Link
   * [User Stories](#user-stories)
 
 * [Design](#design)
-  * [Colour Scheme](#colour-scheme)
   * [Imagery](#imagery)
   * [Structure](#structure)
   * [Wireframes](#wireframes)
@@ -67,10 +66,10 @@ Visit the live site [here.](https://animalgame-470e463a9700.herokuapp.com/ "Link
 
 ## **User Experience**
 - Understand the purpose of the site
-- Find out the rules of the game and have them easily understandable
+- Find out the rules of the game and have them easy to understand
 - Have the game be fun and informative
-- Give the full fact about the answer if answered correctly
-- Have a scoring system where the player can see their score on the leaderboard 
+- Give the full facts about the answer if answered correctly
+- Have a scoring system where the player can see their score on the leader-board 
 
 ### **User Expectations**
 - I want to easily know what this site is for
@@ -86,13 +85,9 @@ Visit the live site [here.](https://animalgame-470e463a9700.herokuapp.com/ "Link
 
 ## **Design**
 
-### **Colour Scheme**
-
-
-
 ### **Imagery**
 
-Background cameleon image from pexels.com
+Background chameleon image from pexels.com
 ![](https://i.ibb.co/H7rz38r/pexels-george-lebada-567540-1.jpg)
 
 
@@ -148,8 +143,15 @@ Due to the nature of the project being mostly backend no wireframes were made or
 
 ## **Technologies Used**
 
+[Colorama](https://pypi.org/project/colorama/) - Used for the colours in the terminal\
+[Code Spell Checker v2.20.3](https://opencollective.com/code-spell-checker)Addon for VSCode used to check spelling\
+[Lucid Chart](https://www.lucidchart.com/pages/) - Used for making the flowchart seen in this readme
+
+
 ### **Languages Used**
 
+Python\
+HTML and CSS edited for the styling of the page and background image
 
 
 ### **Programs Used**
@@ -178,14 +180,21 @@ The project was deployed on github, the command 'python3 run.py' was used in ter
 
 ## **Testing**
 
-Problem: Colorama module was not working I thought it was not compatible with heroku but then realised it was not in the requirements.txt 
+Problem: Colorama module was not working I thought it was not compatible with heroku but then realised it was not in the requirements.txt as it was added after initial deployment.\
 Fix: Ran command Pip Freeze > Requirements.txt
-from terminal and pushed everything to heroku and it worked, solution found on code institute slack community.
+from terminal and pushed everything to heroku and it worked, solution found on code institute slack community.\
 Problem: 
+
+### **Automated testing**
+
+Ran the code through code institutes Python Linter [pep8 validator](https://pep8ci.herokuapp.com/#)
+
+Result: No errors
 
 ---
 
 ## **Credits**
+
 
 
 ### **Code used and adapted**
@@ -196,12 +205,16 @@ Some of the code for the functionality was adapted from here. Namely the quiz da
 
 ### **Websites visited to gather knowledge**
 
-Help with gsheets and getting data from excel [link here](https://www.youtube.com/watch?v=wrR0YLzh4DQ)\
-Adding emojis [link here](https://www.makeuseof.com/how-to-include-emojis-in-your-python-code)\
+[Gsheets](https://www.youtube.com/watch?v=wrR0YLzh4DQ) Help with gsheets and getting data from excel \
+[Emojis](https://www.makeuseof.com/how-to-include-emojis-in-your-python-code) and how to add them\
+[W3Schools](https://www.w3schools.com/) used when I getting stuck with implementation of code
 
 
 
 ###  **Acknowledgments**
+
+Thanks to all the help and support via the slack community.\
+Thanks to my kids for inspiring me to do this quiz (and most other things in life too) 
 
 
 [Back to top ⇧](#animal-quiz)

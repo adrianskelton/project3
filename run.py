@@ -27,15 +27,12 @@ worksheet = SHEET.worksheet("scoreboard")
 global score
 score = 0
 
+
 def linebreak():
     print("=========================================================")
-    
 
-def clearScreen():
-    """
-    Function to clear the screen
-    """
-    os.system("clear")
+
+
 
 
 # Sort sheet A -> Z by column 'B'
@@ -59,7 +56,7 @@ The start of the game asking the player to enter their name
 
 
 def game_start():
-    clearScreen()
+    print(f'\033[2J')
     asci_art = artwork.artwork
 
     print(asci_art)
@@ -135,8 +132,8 @@ def update_scoreboard(new_row, worksheet):
     print(f"{worksheet} worksheet updated successfully\n")
 
 
-##def update_final_score():
-##    worksheet.update_cell(12, 2, "")
+# def update_final_score():
+# worksheet.update_cell(12, 2, "")
 
 
 def show_scoreboard():
@@ -148,10 +145,10 @@ def show_scoreboard():
     worksheet = SHEET.worksheet("scoreboard")
     scoreboard_players = worksheet.col_values(1)[
         1:11
-    ] 
+    ]
     scoreboard_scores = worksheet.col_values(2)[
         1:11
-    ] 
+    ]
     for player, score in zip(scoreboard_players, scoreboard_scores):
         print("PLAYER: {} || POINTS: {} ||".format(player, score))
     input("Press Enter to continue...")
@@ -188,9 +185,6 @@ def gameover_option():
         print("return to restart of game")
 
 
-
-
-
 def run_quiz(quiz_data):
     """
     Runs through questions in the quiz and answers get user's input and changes
@@ -201,9 +195,9 @@ def run_quiz(quiz_data):
     for guess in quiz_data:
         user_answer = ""
         while user_answer not in ["A", "B", "C", "D"]:
-            print("=========================================================")
+            linebreak()
             print(f"{guess['question']}")
-            print("=========================================================")
+            linebreak()
 
             for key, value in guess["answers"].items():
                 print(f"\t{key}: {value}")
@@ -211,7 +205,8 @@ def run_quiz(quiz_data):
             user_answer = user_answer.upper()
 
             if user_answer not in ["A", "B", "C", "D"]:
-                print(Fore.RED + "ERROR!\033[39m Please select 'A', 'B', 'C', or 'D' as an answer.\n")
+                print(
+                    Fore.RED + "ERROR!\033[39m Please select 'A', 'B', 'C', or 'D' as an answer.\n")
 
             else:
                 if user_answer == guess["correct_answer"]:
@@ -236,7 +231,6 @@ def run_quiz(quiz_data):
     worksheet.update_cell(13, 2, final_score)
     # Sort sheet A -> Z by column 'B'
     worksheet.sort((2, "des"))
-    # game_start()
 
 
 game_start()
