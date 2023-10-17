@@ -123,7 +123,7 @@ Due to the nature of the project being mostly backend no wireframes were made or
 ### **Quiz**
 
 
-### **More knowledge**
+### **Facts after guess**
 
 
 ### **Quiz end messages** 

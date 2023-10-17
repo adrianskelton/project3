@@ -1,6 +1,6 @@
 import gspread
 import questions
-#ascii artwork for the game 
+# ascii artwork for the game
 import artwork
 from google.oauth2.service_account import Credentials
 import json
@@ -117,10 +117,11 @@ def rules():
     print("HOW TO PLAY THE ANAZING ANIMAL QUIZ")
     print("Take the quiz to test your animal general knowledge.")
     print("There are 15 multiple choice questions.")
-    print("Select your answer by typing 'a', 'b', 'c' or 'd' and pressing"
-          "Enter afterwards.\n")
+    print("Select your answer by typing 'a', 'b', 'c' or 'd'\n"
+          "and pressing Enter afterwards.\n")
     input("Press Enter to continue...")
     print("=========================================================")
+
 
 """
 This function updates the animal game worksheet
@@ -170,6 +171,7 @@ def show_scoreboard():
 My function is called once the game has ended and prints out if
 the score was good or bad based on the users final score"
 """
+
 
 def score_grading(final_score):
     print("======================================================\n")
