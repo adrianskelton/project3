@@ -109,7 +109,8 @@ def option_screen():
             print("Game Exited")
             break
         else:
-            print("ERROR! Invalid option please select 1, 2, 3 or 4\n ")
+            print(Fore.RED + "ERROR!\033[39m Invalid option please "
+            "select 1, 2, 3 or 4\n ")
             input("Press Enter to continue...")
 
 
