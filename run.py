@@ -34,14 +34,14 @@ def line_break():
     """
     print("=========================================================")
 
-
+"""
 # Sort sheet A -> Z by column 'B'
 worksheet.sort((2, "des"))
 # This sorts the excell scoreboard sheet and deletes some rows
 clear_range = "A13:A20"
 empty_values = [[""]] * 8  # Create an empty list with 8 rows
 worksheet.update(clear_range, empty_values)
-
+"""
 
 """
 The set of 15 questions that is used during the game. Questions
@@ -50,12 +50,13 @@ imported from questions.py file. Source of questions credited in the
 """
 quiz_data = questions.quiz_data
 
-"""
-The start of the game asking the player to enter their name
-"""
+
 
 
 def game_start():
+    """
+    The start of the game asking the player to enter their name
+    """
     print(f'\033[2J')
     asci_art = artwork.artwork
 
@@ -81,13 +82,11 @@ def game_start():
                     "than 20 characters.\n")
 
 
-"""
-The option screen function is defined below giving the four choices
-for the player after they have entered their player name
-"""
-
-
 def option_screen():
+    """
+    The option screen function is defined below giving the four choices
+    for the player after they have entered their player name
+    """
     global choice
     choice = ""
     while True:
@@ -193,8 +192,9 @@ def gameover_option():
         print(f'\033[2J')
         print("Thank you for playing, enjoy your day further!")
     elif option == "p":
-        final_score = 0
-        run_quiz(quiz_data)
+        global score
+        score = 0  # Reset the score
+        run_quiz(quiz_data)  # Start a new game
 
 
 def run_quiz(quiz_data):
@@ -213,7 +213,7 @@ def run_quiz(quiz_data):
 
             for key, value in guess["answers"].items():
                 print(f"\t{key}: {value}")
-            user_answer = input("Select answer and press enter...\n")
+            user_answer = input(Fore.BLUE + "Select answer and press enter...\033[39m\n")
             user_answer = user_answer.upper()
 
             if user_answer not in ["A", "B", "C", "D"]:

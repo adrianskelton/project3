@@ -133,13 +133,18 @@ The user is welcomed to the game and asked to input their name. The game then ch
 
 ![](assets/images/readme_images/screenshot_options.png)
 
-Once the name is correctly entered the player is given four choices.
+Once the name is correctly entered the player is given four choices, as seen above.
 1) Play the game
 2) Read the rules
 3) High scores
 4) Exit to start
 
-### **Quiz**
+![](assets/images/readme_images/screenshot_options_incorrect.png)
+
+If none of the correct options are entered an error is shown, as pictured above.
+
+### **Play the Quiz**
+
 
 
 
@@ -153,6 +158,8 @@ Once the name is correctly entered the player is given four choices.
 
 ![](assets/images/readme_images/screenshot_highscores.png)
 
+The leaderboard is saved in the google excel sheet and is sorted by descending points to show who is on top of the leaderboard.
+This was 
 
 
 ### **Front-end features**
@@ -216,6 +223,8 @@ Problem: When I entered a blank name it would give the error but when I retried 
 
 Ran the code through code institutes Python Linter [pep8 validator](https://pep8ci.herokuapp.com/#)
 
+![](assets/images/readme_images/screenshot_linter.png)
+
 Result: No errors
 
 ---
@@ -235,8 +244,6 @@ Some of the code for the functionality was adapted from here. Namely the quiz da
 [Gsheets](https://www.youtube.com/watch?v=wrR0YLzh4DQ) Help with gsheets and getting data from excel \
 [Emojis](https://www.makeuseof.com/how-to-include-emojis-in-your-python-code) and how to add them\
 [W3Schools](https://www.w3schools.com/) used when I getting stuck with implementation of code
-
-
 
 ###  **Acknowledgments**
 
