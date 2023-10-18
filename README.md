@@ -183,7 +183,8 @@ The project was deployed on github, the command 'python3 run.py' was used in ter
 Problem: Colorama module was not working I thought it was not compatible with heroku but then realised it was not in the requirements.txt as it was added after initial deployment.\
 Fix: Ran command Pip Freeze > Requirements.txt
 from terminal and pushed everything to heroku and it worked, solution found on code institute slack community.\
-Problem: 
+Problem: When I entered a blank name it would give the error but when I retried to enter a blank name it would freeze.\
+
 
 ### **Automated testing**
 

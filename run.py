@@ -58,16 +58,18 @@ def game_start():
 
     print(asci_art)
 
-    global playername
-    playername = input(
-        " Welcome to the amazing animal quiz game\n Please enter your name\n"
-    )
-    if len(playername) <= 20 and len(playername) >= 1:
-        update_scoreboard([playername], "scoreboard")
-        option_screen()
-        return
-    else:
-        input("Please enter a name shorter than 20 characters\n")
+    while True:
+        global playername
+        playername = input(
+             " Welcome to the amazing animal quiz game\n Please enter your name\n"
+         )
+        if len(playername) <= 20 and len(playername) >= 1:
+            update_scoreboard([playername], "scoreboard")
+            option_screen()
+            break #exit the loop if the name is valid
+        else:
+            input("Please enter a name shorter than 20 characters\n")
+
 
 
 """
