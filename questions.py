@@ -8,9 +8,9 @@ quiz_data = [
             "D": "Giant Tortoise",
         },
         "correct_answer": "D",
-        "fact": "The lifespan of the giant tortoise is about 150 years, \n"
-                "making it the longest-living animal on the planet.\n"
-                "In captivity, some giant tortoises have lived as long as 177 years\n",
+        "fact": " The lifespan of the giant tortoise is about 150 years,\n"
+                " making it the longest-living animal on the planet.\n"
+                " In captivity, some giant tortoises have lived as long as 177 years\n",
     },
     {
         "question": "What is the only mammal capable of true flight?",
@@ -21,14 +21,14 @@ quiz_data = [
             "D": "Flying Squirrel",
         },
         "correct_answer": "A",
-        "fact": "Bats are the only mammals capable of true flight. \n"
-                "A bat's wing is constructed very much like the human hand, \n"
-                "with extremely elongated fingers and membranes stretched between.\n "
-                "Bats can be found almost anywhere in the world except for areas \n"
-                "with extreme temperatures such as polar regions and deserts. \n"
-                "In fact, there are almost 1,000 species of bats worldwide, \n"
-                "ranging in size from less than an inch to almost six feet. \n"
-                "Many species of bats are considered endangered.\n",
+        "fact": " Bats are the only mammals capable of true flight.\n"
+                " A bat's wing is constructed very much like the human hand,\n"
+                " with extremely elongated fingers and membranes stretched between.\n "
+                " Bats can be found almost anywhere in the world except for areas\n"
+                " with extreme temperatures such as polar regions and deserts.\n"
+                " In fact, there are almost 1,000 species of bats worldwide,\n"
+                " ranging in size from less than an inch to almost six feet.\n"
+                " Many species of bats are considered endangered.\n",
     },
     {
         "question": "What is the fastest bird in the world?",
@@ -39,13 +39,13 @@ quiz_data = [
             "D": "HORNED SUNGEM",
         },
         "correct_answer": "A",
-        "fact": "Able to dive at almost 200 miles per hour, the peregrine falcon is\n "
-                "not only the fastest flying bird in the world, but the fastest animal\n "
-                "on earth. Although several subspecies, including the Arctic peregrine\n "
-                "falcon and the American peregrine falcon, were once considered\n "
-                "endangered, they have made a successful recovery and are no longer\n "
-                "listed on the endangered species list. The peregrine falcon can be\n "
-                "found on every continent except Antarctica.\n",
+        "fact": " Able to dive at almost 200 miles per hour, the peregrine falcon is\n"
+                " not only the fastest flying bird in the world, but the fastest animal\n"
+                " on earth. Although several subspecies, including the Arctic peregrine\n"
+                " falcon and the American peregrine falcon, were once considered\n"
+                " endangered, they have made a successful recovery and are no longer\n"
+                " listed on the endangered species list. The peregrine falcon can be\n"
+                " found on every continent except Antarctica.\n",
     },
     {
         "question": "A newborn kangaroo is about the size of a..?",
@@ -56,17 +56,17 @@ quiz_data = [
             "D": "Plum",
         },
         "correct_answer": "B",
-        "fact": "A newborn kangaroo is about 1 inch in length - approximately\n "
-                "the size of a lima bean. Still essentially a fetus, the newborn\n "
-                "kangaroo swims through its mother's fur to reach her pouch where it\n "
-                "latches onto a teat which swells inside its mouth. The baby kangaroo\n "
-                "or joey will remain fused to the teat for four to five weeks.\n "
-                "After 7 to 8 months inside its mother's pouch, the infant will\n "
-                "venture outside, returning only to feed. "
-                "In the case of multiple infants belonging to the same mother, each\n "
-                "infant feeds only from its own individual teat, and each teat\n "
-                "provides a different mix of nutrients depending on the age of that\n "
-                "particular infant.",
+        "fact": " A newborn kangaroo is about 1 inch in length - approximately\n"
+                " the size of a lima bean. Still essentially a fetus, the newborn\n"
+                " kangaroo swims through its mother's fur to reach her pouch where it\n"
+                " latches onto a teat which swells inside its mouth. The baby kangaroo\n"
+                " or joey will remain fused to the teat for four to five weeks.\n"
+                " After 7 to 8 months inside its mother's pouch, the infant will\n"
+                " venture outside, returning only to feed.\n"
+                " In the case of multiple infants belonging to the same mother, each\n"
+                " infant feeds only from its own individual teat, and each teat\n"
+                " provides a different mix of nutrients depending on the age of that\n"
+                " particular infant.",
     },
     {
         "question": "What is the gestation period of a blue whale?",
@@ -93,18 +93,18 @@ quiz_data = [
             "D": "Numbat",
         },
         "correct_answer": "A",
-        "fact": "The smallest mammal in the world is the bumblebee bat which\n "
-                "lives along the River Kwai in western Thailand.\n "
-                "An endangered species, the bumblebee bat is not much larger than an\n"
+        "fact": " The smallest mammal in the world is the bumblebee bat which\n "
+                " lives along the River Kwai in western Thailand.\n "
+                " An endangered species, the bumblebee bat is not much larger than an\n"
                 " actual bumblebee (1.2 in) and weighs less than a penny (0.07 oz).\n "
-                "Of course, there are several mammals similar in size to the bumblebee\n"
+                " Of course, there are several mammals similar in size to the bumblebee\n"
                 " bat, and the designation of which one is actually the smallest can\n "
-                "sometimes be contentious. \n"
-                "Another animal which is sometimes awarded the title of the world's \n"
-                "smallest mammal is Savi's pygmy shrew, a tiny insectivore small \n"
-                "enough to run through the tunnels of large earthworms. \n"
-                "Each day, this pygmy shrew consumes insects and spiders up to 2 to 4 \n"
-                "times its own body weight.\n",
+                " sometimes be contentious. \n"
+                " Another animal which is sometimes awarded the title of the world's\n"
+                " smallest mammal is Savi's pygmy shrew, a tiny insectivore small\n"
+                " enough to run through the tunnels of large earthworms.\n"
+                " Each day, this pygmy shrew consumes insects and spiders up to 2 to 4\n"
+                " times its own body weight.\n",
     },
     {
         "question": "How far away can a wolf smell its prey?",
@@ -115,10 +115,10 @@ quiz_data = [
             "D": "Nearly half a mile/0.8km",
         },
         "correct_answer": "B",
-        "fact": "A wolf has two hundred million scent cells inside its nose\n "
-                "and can smell 100 times better than a human being.\n "
-                "Under favorable conditions, it can smell its prey from about 1.75\n"
-                "miles away.\n",
+        "fact": " A wolf has two hundred million scent cells inside its nose\n"
+                " and can smell 100 times better than a human being.\n "
+                " Under favorable conditions, it can smell its prey from about 1.75\n"
+                " miles away.\n",
     },
     {
         "question": "What is the world's most poisonous spider?",
@@ -129,12 +129,12 @@ quiz_data = [
             "D": "Sydney funnel spider",
         },
         "correct_answer": "B",
-        "fact": "According to the Guinness Book of World Records, the most\n "
-                "poisonous (or venomous) spider in the world is the Brazilian\n "
-                "wandering spider (Phoneutria nigriventer) or banana spider.\n "
-                "Its venom is so potent that just 0.006 mg (0.00000021 oz) can kill a\n "
-                "mouse, making it the most active neurotoxic venom of any known\n "
-                "spider.\n",
+        "fact": " According to the Guinness Book of World Records, the most\n "
+                " poisonous (or venomous) spider in the world is the Brazilian\n "
+                " wandering spider (Phoneutria nigriventer) or banana spider.\n "
+                " Its venom is so potent that just 0.006 mg (0.00000021 oz) can kill a\n "
+                " mouse, making it the most active neurotoxic venom of any known\n "
+                " spider.\n",
     },
     {
         "question": "How many times can a hummingbird flap its wings per "
@@ -146,13 +146,13 @@ quiz_data = [
             "D": "40",
         },
         "correct_answer": "D",
-        "fact": "A hummingbird can flap its wings about 80 times per second,\n "
-                "causing an audible humming sound. \n"
-                "Due to the unique structure of their wings, hummingbirds can fly\n"
-                "left, right, up, down, backward, or even upside down. \n"
-                "They can also hover by flapping their wings in a figure-eight\n"
-                "pattern. And their wings aren't the only fast-moving body part -- \n"
-                "they have a heart rate of approximately 1,260 beats per minute!\n",
+        "fact": " A hummingbird can flap its wings about 80 times per second,\n "
+                " causing an audible humming sound.\n"
+                " Due to the unique structure of their wings, hummingbirds can fly\n"
+                " left, right, up, down, backward, or even upside down.\n"
+                " They can also hover by flapping their wings in a figure-eight\n"
+                " pattern. And their wings aren't the only fast-moving body part --\n"
+                " they have a heart rate of approximately 1,260 beats per minute!\n",
     },
     {
         "question": "What animal has the highest blood pressure?",
@@ -163,14 +163,14 @@ quiz_data = [
             "D": "Blue whale",
         },
         "correct_answer": "A",
-        "fact": "Because of its extremely long neck, the giraffe must rely on\n"
-                "its oversized heart (two feet long and twenty-five pounds!) to pump \n"
-                "blood all the way to its head. As a result, the giraffe has the\n "
-                "highest blood pressure of any animal:  280/180 mmHg (millimeters of \n"
-                "mercury) at heart level when prone -- more\n "
-                "than twice the blood pressure of an average human. \n"
-                "Not surprisingly, because of their high blood pressure, giraffes are \n"
-                "prone to heart attacks.\n",
+        "fact": " Because of its extremely long neck, the giraffe must rely on\n"
+                " its oversized heart (two feet long and twenty-five pounds!) to pump\n"
+                " blood all the way to its head. As a result, the giraffe has the\n "
+                " highest blood pressure of any animal:  280/180 mmHg (millimeters of\n"
+                " mercury) at heart level when prone -- more\n "
+                " than twice the blood pressure of an average human.\n"
+                " Not surprisingly, because of their high blood pressure, giraffes are\n"
+                " prone to heart attacks.\n",
     },
     {
         "question": "How big is the largest known ant colony?",
@@ -181,11 +181,11 @@ quiz_data = [
             "D": "37 miles",
         },
         "correct_answer": "C",
-        "fact": "The largest recorded contiguous colony of ants in the world \n"
-                "stretches 3,700 miles (6,000 kilometers) from northern Italy, through\n"
-                " the south of France to the Atlantic coast of Spain, \n"
-                "and is made up of a species of Argentine ant (Linepithema humile) \n"
-                "introduced into Europe during the 1920s.\n",
+        "fact": " The largest recorded contiguous colony of ants in the world\n"
+                " stretches 3,700 miles (6,000 kilometers) from northern Italy, through\n"
+                " the south of France to the Atlantic coast of Spain,\n"
+                " and is made up of a species of Argentine ant (Linepithema humile)\n"
+                " introduced into Europe during the 1920s.\n",
     },
     {
         "question": "How many times does a giant panda poop each day?",
@@ -196,10 +196,10 @@ quiz_data = [
             "D": "40 times",
         },
         "correct_answer": "D",
-        "fact": "The average daily diet of a giant panda consists of 20 to 30 \n"
-                "lbs of bamboo. \n"
-                "Given this voluminous diet, the giant panda defecates up to 40 times \n"
-                "a day.",
+        "fact": " The average daily diet of a giant panda consists of 20 to 30\n"
+                " lbs of bamboo.\n"
+                " Given this voluminous diet, the giant panda defecates up to 40 times\n"
+                " a day.",
     },
     {
         "question": "What is the largest of the great apes?",
