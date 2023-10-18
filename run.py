@@ -192,7 +192,7 @@ def gameover_option():
     elif option == "q":
         print(f'\033[2J')
         print("Thank you for playing, enjoy your day further!")
-    elif option == "r":
+    elif option == "p":
         final_score = 0
         run_quiz(quiz_data)
 
