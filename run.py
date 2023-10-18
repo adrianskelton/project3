@@ -28,7 +28,7 @@ global score
 score = 0
 
 
-def linebreak():
+def line_break():
     print("=========================================================")
 
 
@@ -122,14 +122,14 @@ def rules():
     prints out the rules of the game.
     """
     print(f'\033[2J')
-    linebreak()
+    _()
     print(Fore.BLUE + "HOW TO PLAY THE AMAZING ANIMAL QUIZ\033[39m")
-    linebreak()
+    _()
     print("Take the quiz to test your animal general knowledge.")
     print("There are 15 multiple choice questions.")
     print("Select your answer by typing 'a', 'b', 'c' or 'd'\n"
           "and pressing Enter afterwards.\n")
-    linebreak()
+    _()
     input(Fore.BLUE + "Press Enter to continue...\033[39m")
 
 
@@ -165,7 +165,7 @@ def score_grading(final_score):
     My function is called once the game has ended and prints out if
     the score was good or bad based on the users final score
     """
-    linebreak()
+    _()
     print("\n")
     print(Fore.BLUE + f"Your score was {final_score}\033[39m")
     if final_score <= 7:
@@ -181,15 +181,17 @@ def gameover_option():
     My function called once the game is over to ask the player what they
     want to do next
     """
-    linebreak()
-    print("\nPlay again? Press p and enter otherwise press r and enter to return to the main menu")
+    _()
+    print("\nPlay again? Press p and enter otherwise press q to quit")
     option = (input("Make your selection now..."))
-    if option not in ["p", "r"]:
-        print("Incorrect choice. Please enter p or r and press enter")
-    elif option == "p":
-        print("quiz function")
+    if option not in ["p", "q"]:
+        print("Incorrect choice. Please enter p or q and press enter")
+    elif option == "q":
+        print(f'\033[2J')
+        print("Thank you for playing, enjoy your day further!")
     elif option == "r":
-        print("return to restart of game")
+        final_score = 0
+        run_quiz(quiz_data)
 
 
 def run_quiz(quiz_data):
@@ -202,9 +204,9 @@ def run_quiz(quiz_data):
     for guess in quiz_data:
         user_answer = ""
         while user_answer not in ["A", "B", "C", "D"]:
-            linebreak()
+            _()
             print(f"{guess['question']}")
-            linebreak()
+            _()
 
             for key, value in guess["answers"].items():
                 print(f"\t{key}: {value}")
