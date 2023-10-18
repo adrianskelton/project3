@@ -61,20 +61,21 @@ def game_start():
     while True:
         global playername
         playername = input(
-             " Welcome to the amazing animal quiz game\n" + Fore.BLUE + " Please enter your name\033[39m\n"
-         )
+            " Welcome to the amazing animal quiz game\n" +
+            Fore.BLUE + " Please enter your name\033[39m\n"
+        )
         if len(playername) <= 20 and len(playername) >= 1:
             update_scoreboard([playername], "scoreboard")
             option_screen()
-            break #exit the loop if the name is valid
+            break  # exit the loop if the name is valid
         else:
-            if playername: # Checks if something is entered
+            if playername:  # Checks if something is entered
                 input("Please enter your name\n")
             else:
                 print(
-                Fore.RED + "ERROR!\033[39m Please enter a name with at least one but less "
-                      "than 20 characters.\n")
-
+                    Fore.RED +
+                    "ERROR!\033[39m Please enter a name with at least one but less "
+                    "than 20 characters.\n")
 
 
 """
@@ -88,14 +89,14 @@ def option_screen():
     choice = ""
     while True:
         print(f'\033[2J')
-        print(Fore.BLUE +"Welcome " + playername + "." +
+        print(Fore.BLUE + "Welcome " + playername + "." +
               " You now have the following options: \033[39m\n")
         print("1) Play the quiz.\n")
         print("2) Read the rules.\n")
         print("3) High scores.\n")
         print("4) Exit to start.\n")
 
-        choice = input(Fore.BLUE +"Enter choice:  \033[39m\n")
+        choice = input(Fore.BLUE + "Enter choice:  \033[39m\n")
         choice = choice.strip()
 
         if choice == "1":
@@ -110,7 +111,7 @@ def option_screen():
             break
         else:
             print(Fore.RED + "ERROR!\033[39m Invalid option please "
-            "select 1, 2, 3 or 4\n ")
+                  "select 1, 2, 3 or 4\n ")
             input(Fore.BLUE + "Press Enter to continue...\033[39m")
 
 
@@ -118,7 +119,7 @@ def option_screen():
 def rules():
     print(f'\033[2J')
     linebreak()
-    print(Fore.BLUE + "HOW TO PLAY THE AMAZING ANIMAL QUIZ\033[39m\n")
+    print(Fore.BLUE + "HOW TO PLAY THE AMAZING ANIMAL QUIZ\033[39m")
     linebreak()
     print("Take the quiz to test your animal general knowledge.")
     print("There are 15 multiple choice questions.")
@@ -169,7 +170,8 @@ def score_grading(final_score):
     print("\n")
     print(Fore.BLUE + f"Your score was {final_score}\033[39m")
     if final_score <= 7:
-        print(Fore.BLUE + "This was less than average, you could do better\033[39m")
+        print(Fore.BLUE +
+              "This was less than average, you could do better\033[39m")
     elif final_score >= 8:
         print(Fore.BLUE + "That's above average, well done!\033[39m")
     gameover_option()
