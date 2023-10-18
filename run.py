@@ -115,8 +115,12 @@ def option_screen():
             input(Fore.BLUE + "Press Enter to continue...\033[39m")
 
 
-# OPTION 2 Rules of the game
+
 def rules():
+    """
+    Option 2 called from the game menu option. This function 
+    prints out the rules of the game.
+    """
     print(f'\033[2J')
     linebreak()
     print(Fore.BLUE + "HOW TO PLAY THE AMAZING ANIMAL QUIZ\033[39m")
@@ -137,11 +141,6 @@ def update_scoreboard(new_row, worksheet):
     worksheet_to_update = SHEET.worksheet(worksheet)
     worksheet_to_update.append_row(new_row)
     print(f"{worksheet} worksheet updated successfully\n")
-
-
-# def update_final_score():
-# worksheet.update_cell(12, 2, "")
-
 
 def show_scoreboard():
     """

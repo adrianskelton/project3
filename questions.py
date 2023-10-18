@@ -1,6 +1,6 @@
 quiz_data = [
     {
-        "question": "What animal has the longest lifespan?",
+        "question": "#1 of 15. What animal has the longest lifespan?",
         "answers": {
             "A": "Locust",
             "B": "Elephant",
@@ -13,7 +13,7 @@ quiz_data = [
                 " In captivity, some giant tortoises have lived as long as 177 years\n",
     },
     {
-        "question": "What is the only mammal capable of true flight?",
+        "question": "#2 of 15.What is the only mammal capable of true flight?",
         "answers": {
             "A": "Bat",
             "B": "Ocelot",
@@ -31,7 +31,7 @@ quiz_data = [
                 " Many species of bats are considered endangered.\n",
     },
     {
-        "question": "What is the fastest bird in the world?",
+        "question": "#3 of 15.What is the fastest bird in the world?",
         "answers": {
             "A": "PEREGRINE FALCON",
             "B": "SPINE-TAILED SWIFT",
@@ -48,7 +48,7 @@ quiz_data = [
                 " found on every continent except Antarctica.\n",
     },
     {
-        "question": "A newborn kangaroo is about the size of a..?",
+        "question": "#4 of 15.A newborn kangaroo is about the size of a..?",
         "answers": {
             "A": "Grapefruit",
             "B": "Lima Bean",
@@ -69,7 +69,7 @@ quiz_data = [
                 " particular infant.",
     },
     {
-        "question": "What is the gestation period of a blue whale?",
+        "question": "#5 of 15.What is the gestation period of a blue whale?",
         "answers": {
             "A": "4-6 Months",
             "B": "10-12 Months",
@@ -85,7 +85,7 @@ quiz_data = [
                 "until they are weaned.\n",
     },
     {
-        "question": "What is the smallest mammal in the world?",
+        "question": "#6 of 15.What is the smallest mammal in the world?",
         "answers": {
             "A": "Bumblebee bat",
             "B": "Pygmy marmoset",
@@ -107,7 +107,7 @@ quiz_data = [
                 " times its own body weight.\n",
     },
     {
-        "question": "How far away can a wolf smell its prey?",
+        "question": "#7 of 15.How far away can a wolf smell its prey?",
         "answers": {
             "A": "Nearly 4 miles/6.4kms",
             "B": "Nearly 2 miles/3.2km",
@@ -121,7 +121,7 @@ quiz_data = [
                 " miles away.\n",
     },
     {
-        "question": "What is the world's most poisonous spider?",
+        "question": "#8 of 15. What is the world's most poisonous spider?",
         "answers": {
             "A": "Daddy long legs",
             "B": "Brazilian wandering spider",
@@ -137,7 +137,7 @@ quiz_data = [
                 " spider.\n",
     },
     {
-        "question": "How many times can a hummingbird flap its wings per "
+        "question": "#9 of 15. How many times can a hummingbird flap its wings per "
         "second?",
         "answers": {
             "A": "80",
@@ -155,7 +155,7 @@ quiz_data = [
                 " they have a heart rate of approximately 1,260 beats per minute!\n",
     },
     {
-        "question": "What animal has the highest blood pressure?",
+        "question": "#10 of 15. What animal has the highest blood pressure?",
         "answers": {
             "A": "Giraffe",
             "B": "Elephant",
@@ -173,7 +173,7 @@ quiz_data = [
                 " prone to heart attacks.\n",
     },
     {
-        "question": "How big is the largest known ant colony?",
+        "question": "#11 of 15. How big is the largest known ant colony?",
         "answers": {
             "A": "3.7 miles",
             "B": "370 miles",
@@ -188,7 +188,7 @@ quiz_data = [
                 " introduced into Europe during the 1920s.\n",
     },
     {
-        "question": "How many times does a giant panda poop each day?",
+        "question": "#12 of 15. How many times does a giant panda poop each day?",
         "answers": {
             "A": "20",
             "B": "10",
@@ -202,7 +202,7 @@ quiz_data = [
                 " a day.",
     },
     {
-        "question": "What is the largest of the great apes?",
+        "question": "#13 of 15. What is the largest of the great apes?",
         "answers": {
             "A": "Western lowland gorilla",
             "B": "Eastern lowland gorilla",
@@ -219,7 +219,7 @@ quiz_data = [
                 "considered an endangered species.",
     },
     {
-        "question": "What makes the Burmese sneezing monkey sneeze?",
+        "question": "#14 of 15. What makes the Burmese sneezing monkey sneeze?",
         "answers": {
             "A": "Salt",
             "B": "Rain",
@@ -237,7 +237,7 @@ quiz_data = [
                 "downwards, hiding its face between its knees when it rains.\n",
     },
     {
-        "question": "What color is spider blood?",
+        "question": "#15 of 15. What color is spider blood?",
         "answers": {
             "A": "Black",
             "B": "Blue",
