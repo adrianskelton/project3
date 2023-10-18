@@ -61,7 +61,7 @@ def game_start():
     while True:
         global playername
         playername = input(
-             " Welcome to the amazing animal quiz game\n Please enter your name\n"
+             " Welcome to the amazing animal quiz game\n" + Fore.BLUE + " Please enter your name\033[39m\n"
          )
         if len(playername) <= 20 and len(playername) >= 1:
             update_scoreboard([playername], "scoreboard")
@@ -88,14 +88,14 @@ def option_screen():
     choice = ""
     while True:
         print(f'\033[2J')
-        print("Welcome " + playername + "." +
-              " You now have the following options: \n")
+        print(Fore.BLUE +"Welcome " + playername + "." +
+              " You now have the following options: \033[39m\n")
         print("1) Play the quiz.\n")
         print("2) Read the rules.\n")
         print("3) High scores.\n")
         print("4) Exit to start.\n")
 
-        choice = input("Enter choice:  ")
+        choice = input(Fore.BLUE +"Enter choice:  \033[39m\n")
         choice = choice.strip()
 
         if choice == "1":
@@ -111,20 +111,21 @@ def option_screen():
         else:
             print(Fore.RED + "ERROR!\033[39m Invalid option please "
             "select 1, 2, 3 or 4\n ")
-            input("Press Enter to continue...")
+            input(Fore.BLUE + "Press Enter to continue...\033[39m")
 
 
 # OPTION 2 Rules of the game
 def rules():
     print(f'\033[2J')
     linebreak()
-    print("HOW TO PLAY THE AMAZING ANIMAL QUIZ")
+    print(Fore.BLUE + "HOW TO PLAY THE AMAZING ANIMAL QUIZ\033[39m\n")
+    linebreak()
     print("Take the quiz to test your animal general knowledge.")
     print("There are 15 multiple choice questions.")
     print("Select your answer by typing 'a', 'b', 'c' or 'd'\n"
           "and pressing Enter afterwards.\n")
     linebreak()
-    input("Press Enter to continue...")
+    input(Fore.BLUE + "Press Enter to continue...\033[39m")
 
 
 def update_scoreboard(new_row, worksheet):
@@ -156,7 +157,7 @@ def show_scoreboard():
     ]
     for player, score in zip(scoreboard_players, scoreboard_scores):
         print("PLAYER: {} || POINTS: {} ||".format(player, score))
-    input("Press Enter to continue...")
+    input(Fore.BLUE + "Press Enter to continue...\033[39m")
 
 
 def score_grading(final_score):
@@ -166,11 +167,11 @@ def score_grading(final_score):
     """
     linebreak()
     print("\n")
-    print(f"Your score was {final_score}")
+    print(Fore.BLUE + f"Your score was {final_score}\033[39m")
     if final_score <= 7:
-        print("This was less than average, you could do better")
+        print(Fore.BLUE + "This was less than average, you could do better\033[39m")
     elif final_score >= 8:
-        print("That's above average, well done!")
+        print(Fore.BLUE + "That's above average, well done!\033[39m")
     gameover_option()
 
 
@@ -219,18 +220,18 @@ def run_quiz(quiz_data):
                     print("\N{smiling face with sunglasses} ")
                     print(f"{guess['fact']}")
                     score += 1
-                    input("Press Enter to continue...")
+                    input(Fore.BLUE + "Press Enter to continue...\033[39m")
                 else:
                     print(Fore.RED + 'Incorrect! ''\033[39m')
                     print(
                         "\N{loudly crying face}",
                         "Better luck with the next question\n")
                     print(f"{guess['fact']}")
-                    input("Press Enter to continue...")
+                    input(Fore.BLUE + "Press Enter to continue...\033[39m")
 
     final_score = score
     score_grading(final_score)
-    input("Press Enter to continue...")
+    input(Fore.BLUE + "Press Enter to continue...\033[39m")
     worksheet = SHEET.worksheet("scoreboard")
     # Update final score into spreadsheet
     worksheet.update_cell(13, 2, final_score)

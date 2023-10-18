@@ -80,18 +80,24 @@ Visit the live site [here.](https://animalgame-470e463a9700.herokuapp.com/ "Link
 
 ### **User Stories**
 
+- As a user I want an easy to understand game
+- As a user I want to be able to see what I scored at the end of the game
+- As a user I would like to learn something new playing the game
+- As a user I would like to see the scoreboard to know how I placed against others
+
 
 ---
 
 ## **Design**
 
+The game was designed to look a bit brighter and livelier than just a terminal screen so I chose a nice royalty free background from pexels.com.
+I also added some colours to the text with colorama and happy and sad emojis for if the user got something correct or incorrect.
+
 ### **Imagery**
 
 Background chameleon image from pexels.com
+
 ![](https://i.ibb.co/H7rz38r/pexels-george-lebada-567540-1.jpg)
-
-
-
 
 
 ### **Structure**
@@ -105,6 +111,12 @@ THIS IMAGE WILL BE UPDATED PLACEHOLDER
 
 Due to the nature of the project being mostly backend no wireframes were made or needed.
 
+### **Design process**
+- Colorama helped the output of the terminal. Green was used for correct inputs and answers.
+Yellow was used for headings of text to make it stand out from general text. Red was used only for error messages aassets/images/readme_images/screenshot_name_error.pngnd incorrect answers and blue was used for general messages such as "push enter to continue"
+- Emojis were used only in the case of correct and incorrect answers.
+- I tried to make the code as clean as possible by making linebreaks a function so that it did not look cluttered and I could just call the linebreak function.
+
 ---
 
 ## **Features**
@@ -112,11 +124,23 @@ Due to the nature of the project being mostly backend no wireframes were made or
 ### **Intro with name input**
 
 ![](assets/images/readme_images/screenshot_start.png)
+The user is welcomed to the game and asked to input their name. The game then checks via a while loop function if the user name is more than zero but less than 20 characters long. If it does not get this input it has the below error. 
 
-### **Guide**
+![](assets/images/readme_images/screenshot_name_error.png)
 
-![](assets/images/readme_images/screenshot_start.png)
+---
+### **Options**
+
+![](assets/images/readme_images/screenshot_options.png)
+
+Once the name is correctly entered the player is given four choices.
+1) Play the game
+2) Read the rules
+3) High scores
+4) Exit to start
+
 ### **Quiz**
+
 
 
 ### **Facts after guess**
