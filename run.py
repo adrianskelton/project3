@@ -29,6 +29,9 @@ score = 0
 
 
 def line_break():
+    """
+    makes the code more readable
+    """
     print("=========================================================")
 
 
@@ -122,14 +125,14 @@ def rules():
     prints out the rules of the game.
     """
     print(f'\033[2J')
-    _()
+    line_break()
     print(Fore.BLUE + "HOW TO PLAY THE AMAZING ANIMAL QUIZ\033[39m")
-    _()
+    line_break()
     print("Take the quiz to test your animal general knowledge.")
     print("There are 15 multiple choice questions.")
     print("Select your answer by typing 'a', 'b', 'c' or 'd'\n"
           "and pressing Enter afterwards.\n")
-    _()
+    line_break()
     input(Fore.BLUE + "Press Enter to continue...\033[39m")
 
 
@@ -165,7 +168,7 @@ def score_grading(final_score):
     My function is called once the game has ended and prints out if
     the score was good or bad based on the users final score
     """
-    _()
+    line_break()
     print("\n")
     print(Fore.BLUE + f"Your score was {final_score}\033[39m")
     if final_score <= 7:
@@ -181,7 +184,7 @@ def gameover_option():
     My function called once the game is over to ask the player what they
     want to do next
     """
-    _()
+    line_break()
     print("\nPlay again? Press p and enter otherwise press q to quit")
     option = (input("Make your selection now..."))
     if option not in ["p", "q"]:
@@ -204,9 +207,9 @@ def run_quiz(quiz_data):
     for guess in quiz_data:
         user_answer = ""
         while user_answer not in ["A", "B", "C", "D"]:
-            _()
+            line_break()
             print(f"{guess['question']}")
-            _()
+            line_break()
 
             for key, value in guess["answers"].items():
                 print(f"\t{key}: {value}")
