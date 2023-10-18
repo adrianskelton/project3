@@ -147,6 +147,13 @@ If none of the correct options are entered an error is shown, as pictured above.
 
 
 
+The game questions work with a function loop through the questions stored in quiz_data one at a time, the list of all the questions is saved as questions.py 
+
+I did this to make the run.py look much less cluttered, this is done by using the import statement at the beginning of run.py and then calling the list from the function later in the run.py
+
+ If the user does not enter a valid option of a, b, c or d then an error message is shown in red requesting a correct input, as shown below.
+
+
 
 ### **Facts after guess**
 
