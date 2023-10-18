@@ -39,13 +39,13 @@ quiz_data = [
             "D": "HORNED SUNGEM",
         },
         "correct_answer": "A",
-        "fact": "Able to dive at almost 200 miles per hour, the peregrine falcon is "
-                "not only the fastest flying bird in the world, but the fastest animal "
-                "on earth. Although several subspecies, including the Arctic peregrine "
-                "falcon and the American peregrine falcon, were once considered "
-                "endangered, they have made a successful recovery and are no longer "
-                "listed on the endangered species list. The peregrine falcon can be "
-                "found on every continent except Antarctica.",
+        "fact": "Able to dive at almost 200 miles per hour, the peregrine falcon is\n "
+                "not only the fastest flying bird in the world, but the fastest animal\n "
+                "on earth. Although several subspecies, including the Arctic peregrine\n "
+                "falcon and the American peregrine falcon, were once considered\n "
+                "endangered, they have made a successful recovery and are no longer\n "
+                "listed on the endangered species list. The peregrine falcon can be\n "
+                "found on every continent except Antarctica.\n",
     },
     {
         "question": "A newborn kangaroo is about the size of a..?",
@@ -56,16 +56,16 @@ quiz_data = [
             "D": "Plum",
         },
         "correct_answer": "B",
-        "fact": "A newborn kangaroo is about 1 inch in length - approximately "
-                "the size of a lima bean. Still essentially a fetus, the newborn "
-                "kangaroo swims through its mother's fur to reach her pouch where it "
-                "latches onto a teat which swells inside its mouth. The baby kangaroo "
-                "or joey will remain fused to the teat for four to five weeks. "
-                "After 7 to 8 months inside its mother's pouch, the infant will "
+        "fact": "A newborn kangaroo is about 1 inch in length - approximately\n "
+                "the size of a lima bean. Still essentially a fetus, the newborn\n "
+                "kangaroo swims through its mother's fur to reach her pouch where it\n "
+                "latches onto a teat which swells inside its mouth. The baby kangaroo\n "
+                "or joey will remain fused to the teat for four to five weeks.\n "
+                "After 7 to 8 months inside its mother's pouch, the infant will\n "
                 "venture outside, returning only to feed. "
-                "In the case of multiple infants belonging to the same mother, each "
-                "infant feeds only from its own individual teat, and each teat "
-                "provides a different mix of nutrients depending on the age of that "
+                "In the case of multiple infants belonging to the same mother, each\n "
+                "infant feeds only from its own individual teat, and each teat\n "
+                "provides a different mix of nutrients depending on the age of that\n "
                 "particular infant.",
     },
     {
@@ -77,12 +77,12 @@ quiz_data = [
             "D": "2 Years",
         },
         "correct_answer": "B",
-        "fact": "The gestation period of a blue whale is approximately 10 to "
-                "12 months. Usually, only one calf is born at a time, "
-                "although twins have been reported on rare occasions. "
-                "Most calves, which weigh about 2 1/2 tons, are born in late fall or "
-                "winter and will usually stay with their mother for 6 to 8 months "
-                "until they are weaned.",
+        "fact": "The gestation period of a blue whale is approximately 10 to\n "
+                "12 months. Usually, only one calf is born at a time,\n "
+                "although twins have been reported on rare occasions.\n "
+                "Most calves, which weigh about 2 1/2 tons, are born in late fall or\n "
+                "winter and will usually stay with their mother for 6 to 8 months\n "
+                "until they are weaned.\n",
     },
     {
         "question": "What is the smallest mammal in the world?",
@@ -93,18 +93,18 @@ quiz_data = [
             "D": "Numbat",
         },
         "correct_answer": "A",
-        "fact": "The smallest mammal in the world is the bumblebee bat which "
-                "lives along the River Kwai in western Thailand. "
-                "An endangered species, the bumblebee bat is not much larger than an"
-                " actual bumblebee (1.2 in) and weighs less than a penny (0.07 oz). "
-                "Of course, there are several mammals similar in size to the bumblebee"
-                " bat, and the designation of which one is actually the smallest can "
-                "sometimes be contentious. "
-                "Another animal which is sometimes awarded the title of the world's "
-                "smallest mammal is Savi's pygmy shrew, a tiny insectivore small "
-                "enough to run through the tunnels of large earthworms. "
-                "Each day, this pygmy shrew consumes insects and spiders up to 2 to 4 "
-                "times its own body weight.",
+        "fact": "The smallest mammal in the world is the bumblebee bat which\n "
+                "lives along the River Kwai in western Thailand.\n "
+                "An endangered species, the bumblebee bat is not much larger than an\n"
+                " actual bumblebee (1.2 in) and weighs less than a penny (0.07 oz).\n "
+                "Of course, there are several mammals similar in size to the bumblebee\n"
+                " bat, and the designation of which one is actually the smallest can\n "
+                "sometimes be contentious. \n"
+                "Another animal which is sometimes awarded the title of the world's \n"
+                "smallest mammal is Savi's pygmy shrew, a tiny insectivore small \n"
+                "enough to run through the tunnels of large earthworms. \n"
+                "Each day, this pygmy shrew consumes insects and spiders up to 2 to 4 \n"
+                "times its own body weight.\n",
     },
     {
         "question": "How far away can a wolf smell its prey?",
@@ -115,10 +115,10 @@ quiz_data = [
             "D": "Nearly half a mile/0.8km",
         },
         "correct_answer": "B",
-        "fact": "A wolf has two hundred million scent cells inside its nose "
-                "and can smell 100 times better than a human being. "
-                "Under favorable conditions, it can smell its prey from about 1.75"
-                "miles away.",
+        "fact": "A wolf has two hundred million scent cells inside its nose\n "
+                "and can smell 100 times better than a human being.\n "
+                "Under favorable conditions, it can smell its prey from about 1.75\n"
+                "miles away.\n",
     },
     {
         "question": "What is the world's most poisonous spider?",
@@ -129,12 +129,12 @@ quiz_data = [
             "D": "Sydney funnel spider",
         },
         "correct_answer": "B",
-        "fact": "According to the Guinness Book of World Records, the most "
-                "poisonous (or venomous) spider in the world is the Brazilian "
-                "wandering spider (Phoneutria nigriventer) or banana spider. "
-                "Its venom is so potent that just 0.006 mg (0.00000021 oz) can kill a "
-                "mouse, making it the most active neurotoxic venom of any known "
-                "spider.",
+        "fact": "According to the Guinness Book of World Records, the most\n "
+                "poisonous (or venomous) spider in the world is the Brazilian\n "
+                "wandering spider (Phoneutria nigriventer) or banana spider.\n "
+                "Its venom is so potent that just 0.006 mg (0.00000021 oz) can kill a\n "
+                "mouse, making it the most active neurotoxic venom of any known\n "
+                "spider.\n",
     },
     {
         "question": "How many times can a hummingbird flap its wings per "
@@ -146,13 +146,13 @@ quiz_data = [
             "D": "40",
         },
         "correct_answer": "D",
-        "fact": "A hummingbird can flap its wings about 80 times per second, "
-                "causing an audible humming sound. "
-                "Due to the unique structure of their wings, hummingbirds can fly"
-                "left, right, up, down, backward, or even upside down. "
-                "They can also hover by flapping their wings in a figure-eight"
-                "pattern. And their wings aren't the only fast-moving body part -- "
-                "they have a heart rate of approximately 1,260 beats per minute!",
+        "fact": "A hummingbird can flap its wings about 80 times per second,\n "
+                "causing an audible humming sound. \n"
+                "Due to the unique structure of their wings, hummingbirds can fly\n"
+                "left, right, up, down, backward, or even upside down. \n"
+                "They can also hover by flapping their wings in a figure-eight\n"
+                "pattern. And their wings aren't the only fast-moving body part -- \n"
+                "they have a heart rate of approximately 1,260 beats per minute!\n",
     },
     {
         "question": "What animal has the highest blood pressure?",
@@ -163,14 +163,14 @@ quiz_data = [
             "D": "Blue whale",
         },
         "correct_answer": "A",
-        "fact": "Because of its extremely long neck, the giraffe must rely on"
-                "its oversized heart (two feet long and twenty-five pounds!) to pump "
-                "blood all the way to its head. As a result, the giraffe has the "
-                "highest blood pressure of any animal:  280/180 mmHg (millimeters of "
-                "mercury) at heart level when prone -- more "
-                "than twice the blood pressure of an average human. "
-                "Not surprisingly, because of their high blood pressure, giraffes are "
-                "prone to heart attacks.",
+        "fact": "Because of its extremely long neck, the giraffe must rely on\n"
+                "its oversized heart (two feet long and twenty-five pounds!) to pump \n"
+                "blood all the way to its head. As a result, the giraffe has the\n "
+                "highest blood pressure of any animal:  280/180 mmHg (millimeters of \n"
+                "mercury) at heart level when prone -- more\n "
+                "than twice the blood pressure of an average human. \n"
+                "Not surprisingly, because of their high blood pressure, giraffes are \n"
+                "prone to heart attacks.\n",
     },
     {
         "question": "How big is the largest known ant colony?",
@@ -181,11 +181,11 @@ quiz_data = [
             "D": "37 miles",
         },
         "correct_answer": "C",
-        "fact": "The largest recorded contiguous colony of ants in the world "
-                "stretches 3,700 miles (6,000 kilometers) from northern Italy, through"
-                " the south of France to the Atlantic coast of Spain, "
-                "and is made up of a species of Argentine ant (Linepithema humile) "
-                "introduced into Europe during the 1920s.",
+        "fact": "The largest recorded contiguous colony of ants in the world \n"
+                "stretches 3,700 miles (6,000 kilometers) from northern Italy, through\n"
+                " the south of France to the Atlantic coast of Spain, \n"
+                "and is made up of a species of Argentine ant (Linepithema humile) \n"
+                "introduced into Europe during the 1920s.\n",
     },
     {
         "question": "How many times does a giant panda poop each day?",
@@ -196,9 +196,9 @@ quiz_data = [
             "D": "40 times",
         },
         "correct_answer": "D",
-        "fact": "The average daily diet of a giant panda consists of 20 to 30 "
-                "lbs of bamboo. "
-                "Given this voluminous diet, the giant panda defecates up to 40 times "
+        "fact": "The average daily diet of a giant panda consists of 20 to 30 \n"
+                "lbs of bamboo. \n"
+                "Given this voluminous diet, the giant panda defecates up to 40 times \n"
                 "a day.",
     },
     {
@@ -210,12 +210,12 @@ quiz_data = [
             "D": "Orangutan",
         },
         "correct_answer": "C",
-        "fact": "Reaching an average height of 6 feet tall and weighing 400 "
-                "to 500 pounds, the mountain gorilla is the largest of the great "
-                "apes. Found only in the mountains of Rwanda, Zaire, and Uganda, "
-                "mountain gorillas have been victimized by poaching as well as the "
-                "destruction of much of their natural habitat. "
-                "Like all other subspecies of gorilla, the mountain gorilla is "
+        "fact": "Reaching an average height of 6 feet tall and weighing 400 \n"
+                "to 500 pounds, the mountain gorilla is the largest of the great \n"
+                "apes. Found only in the mountains of Rwanda, Zaire, and Uganda, \n"
+                "mountain gorillas have been victimized by poaching as well as the \n"
+                "destruction of much of their natural habitat. \n"
+                "Like all other subspecies of gorilla, the mountain gorilla is \n"
                 "considered an endangered species.",
     },
     {
@@ -227,14 +227,14 @@ quiz_data = [
             "D": "Danger",
         },
         "correct_answer": "B",
-        "fact": "The Burmese sneezing monkey (Rhinopithecus strykeri), also "
-                "called the Burmese snub-nosed monkey, "
-                "is known in local dialects of Lisu people as mey nwoah and Law Waw "
-                "people as myuk na tok te, both of which mean 'monkey with an "
-                "upturned face'. Rain allegedly causes it to sneeze due to the short "
-                "upturned nasal flesh around its nostrils. "
-                "People from the area report that it sits with its head directed "
-                "downwards, hiding its face between its knees when it rains.",
+        "fact": "The Burmese sneezing monkey (Rhinopithecus strykeri), also \n"
+                "called the Burmese snub-nosed monkey, \n"
+                "is known in local dialects of Lisu people as mey nwoah and Law Waw \n"
+                "people as myuk na tok te, both of which mean 'monkey with an \n"
+                "upturned face'. Rain allegedly causes it to sneeze due to the short \n"
+                "upturned nasal flesh around its nostrils. \n"
+                "People from the area report that it sits with its head directed \n"
+                "downwards, hiding its face between its knees when it rains.\n",
     },
     {
         "question": "What color is spider blood?",
@@ -245,9 +245,9 @@ quiz_data = [
             "D": "Red",
         },
         "correct_answer": "B",
-        "fact": "In humans, oxygen is bound to hemoglobin, a molecule that "
-                "contains iron and gives blood its red color. "
-                "In spiders, oxygen is bound to hemocyanin, a molecule that contains "
-                "copper rather than iron, making their blood blue.",
+        "fact": "In humans, oxygen is bound to hemoglobin, a molecule that \n"
+                "contains iron and gives blood its red color.\n "
+                "In spiders, oxygen is bound to hemocyanin, a molecule that contains\n "
+                "copper rather than iron, making their blood blue.\n",
     }
 ]
