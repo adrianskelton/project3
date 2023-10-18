@@ -68,7 +68,12 @@ def game_start():
             option_screen()
             break #exit the loop if the name is valid
         else:
-            input("Please enter a name shorter than 20 characters\n")
+            if playername: # Checks if something is entered
+                input("Please enter your name\n")
+            else:
+                print(
+                Fore.RED + "ERROR!\033[39m Please enter a name with at least one but less "
+                      "than 20 characters.\n")
 
 
 
