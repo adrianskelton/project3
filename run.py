@@ -23,6 +23,7 @@ GSPREAD_CLIENT = gspread.authorize(SCOPED_CREDS)
 SHEET = GSPREAD_CLIENT.open("animal_game")
 worksheet = SHEET.worksheet("scoreboard")
 
+global score
 score = 0 #initialize the score
 
 
@@ -33,33 +34,30 @@ def line_break():
     print("=========================================================")
 
 
-def organize_sheet():
-    """
-    My function sorts the animal_game google sheet in descending order by
-    column 'B' so high scores are on top and the clear rows 13 to 20.
-    """
-    worksheet.sort((2, "des")) # Sort sheet A -> Z by column 'B'
-    clear_range = "A13:A20" #Deletes excess rows
-    empty_values = [[""]] * 8  # Create an empty list with 8 rows
-    worksheet.update(clear_range, empty_values)
-    option_screen()
-    
 
-
-
-
-quiz_data = questions.quiz_data #defining the variable from the question file
+quiz_data = questions.quiz_data #initialize quiz data questions
 
 
 def game_start():
     """
     The start of the game asking the player to enter their name
     """
+    # Sort sheet A -> Z by column 'B'
+    worksheet.sort((2, "des"))
+    # This sorts the excel scoreboard sheet and deletes some rows
+    clear_range = "A13:A20"
+    empty_values = [[""]] * 8  # Create an empty list with 8 rows
+    worksheet.update(clear_range, empty_values)
+    # Specify the row numbers you want to delete (in this case, rows 13 to 20)
+    rows_to_delete = list(range(12, 21))
+    # Delete the specified rows
+    for row in reversed(rows_to_delete):
+        worksheet.delete_rows(row)
     print(f'\033[2J')
     asci_art = artwork.artwork
-
     print(asci_art)
 
+    
     while True:
         global playername
         playername = input(
@@ -68,7 +66,7 @@ def game_start():
         )
         if len(playername) <= 20 and len(playername) >= 1:
             update_scoreboard([playername], "scoreboard")
-            organize_sheet()
+            option_screen()
             break  # exit the loop if the name is valid
         else:
             if playername:  # Checks if something is entered
@@ -235,7 +233,6 @@ def run_quiz(quiz_data):
                         "Better luck with the next question\n")
                     print(f"{guess['fact']}")
                     input(Fore.BLUE + "Press Enter to continue...\033[39m")
-
     final_score = score
     score_grading(final_score)
     input(Fore.BLUE + "Press Enter to continue...\033[39m")
