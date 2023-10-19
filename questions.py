@@ -13,7 +13,7 @@ quiz_data = [
                 " In captivity, some giant tortoises have lived as long as 177 years\n",
     },
     {
-        "question": "#2 of 15.What is the only mammal capable of true flight?",
+        "question": "#2 of 15. What is the only mammal capable of true flight?",
         "answers": {
             "A": "Bat",
             "B": "Ocelot",
@@ -31,12 +31,12 @@ quiz_data = [
                 " Many species of bats are considered endangered.\n",
     },
     {
-        "question": "#3 of 15.What is the fastest bird in the world?",
+        "question": "#3 of 15. What is the fastest bird in the world?",
         "answers": {
-            "A": "PEREGRINE FALCON",
-            "B": "SPINE-TAILED SWIFT",
-            "C": "HARPY EAGLE",
-            "D": "HORNED SUNGEM",
+            "A": "Peregrine falcon",
+            "B": "Spine-tailed swift",
+            "C": "Harpy eagle",
+            "D": "Horned sumgen",
         },
         "correct_answer": "A",
         "fact": " Able to dive at almost 200 miles per hour, the peregrine falcon is\n"
@@ -48,7 +48,7 @@ quiz_data = [
                 " found on every continent except Antarctica.\n",
     },
     {
-        "question": "#4 of 15.A newborn kangaroo is about the size of a..?",
+        "question": "#4 of 15. A newborn kangaroo is about the size of a..?",
         "answers": {
             "A": "Grapefruit",
             "B": "Lima Bean",
@@ -69,7 +69,7 @@ quiz_data = [
                 " particular infant.",
     },
     {
-        "question": "#5 of 15.What is the gestation period of a blue whale?",
+        "question": "#5 of 15. What is the gestation period of a blue whale?",
         "answers": {
             "A": "4-6 Months",
             "B": "10-12 Months",
@@ -85,7 +85,7 @@ quiz_data = [
                 "until they are weaned.\n",
     },
     {
-        "question": "#6 of 15.What is the smallest mammal in the world?",
+        "question": "#6 of 15. What is the smallest mammal in the world?",
         "answers": {
             "A": "Bumblebee bat",
             "B": "Pygmy marmoset",
@@ -107,7 +107,7 @@ quiz_data = [
                 " times its own body weight.\n",
     },
     {
-        "question": "#7 of 15.How far away can a wolf smell its prey?",
+        "question": "#7 of 15. How far away can a wolf smell its prey?",
         "answers": {
             "A": "Nearly 4 miles/6.4kms",
             "B": "Nearly 2 miles/3.2km",

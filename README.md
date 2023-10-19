@@ -32,7 +32,7 @@ Visit the live site [here.](https://animalgame-470e463a9700.herokuapp.com/ "Link
   * [Quiz](#quiz)
   * [More knowledge](#more-knowledge)
   * [Quiz end messages](#quiz-end-messages)
-  * [Leaderboard update message and display](#leaderboard-update-message-and-display)
+  * [Leader-board update message and display](#leaderboard-update-message-and-display)
   * [Quiz replay](#quiz-replay)
   * [Front-end features](#front-end-features)
 
@@ -90,7 +90,7 @@ Visit the live site [here.](https://animalgame-470e463a9700.herokuapp.com/ "Link
 ## **Design**
 
 The game was designed to look a bit brighter and livelier than just a terminal screen so I chose a nice royalty free background from pexels.com.
-I also added some colours to the text with colorama and happy and sad emojis for if the user got something correct or incorrect.
+I also added some colors to the text with colorama and happy and sad emojis for if the user got something correct or incorrect.
 
 ### **Imagery**
 
@@ -111,18 +111,24 @@ THIS IMAGE WILL BE UPDATED PLACEHOLDER
 Due to the nature of the project being mostly backend no wireframes were made or needed.
 
 ### **Design process**
-- Colorama helped the output of the terminal. Green was used for correct inputs and answers.
-Yellow was used for headings of text to make it stand out from general text. Red was used only for error messages aassets/images/readme_images/screenshot_name_error.pngnd incorrect answers and blue was used for general messages such as "push enter to continue"
-- Emojis were used only in the case of correct and incorrect answers.
-- I tried to make the code as clean as possible by making linebreaks a function so that it did not look cluttered and I could just call the linebreak function.
+- Colorama module was used for text output color of the terminal.\
+Green was used for correct inputs and answers.\
+Yellow was used for headings of text to make it stand out from general text.\
+Red was used only for error messages and incorrect answers.\
+Blue was used for general messages such as "push enter to continue"
+- Emojis were used only when displaying if answers were correct or incorrect.
+- I tried to make the code as clean as possible by making linebreaks a function so that it did not look cluttered and I could just call the line-break function.
+
 
 ---
 
 ## **Features**
 
-### **Google Sheets**
+### **Google Sheets with player name and score**
 
-Google sheets were used to store the players name and score. 
+Google sheets were used to store the players name and score. The playername and score were stored using gsheets module and all changes were made on the animal_game excell sheet. The simplest way I could think of for a scoreboard was to reorder the sheet by descending score and also to delete the rows from 13 to 20 at the start of the game. This would ensure a clean slate for the new players name to be put in 
+
+![](assets/images/readme_images/screenshot_sheet.png)
 
 ### **Intro with name input**
 
@@ -149,13 +155,11 @@ If none of the correct options are entered an error is shown, as pictured above.
 ### **Play the Quiz**
 
 
-
 The game questions work with a function loop through the questions stored in quiz_data one at a time, the list of all the questions is saved as questions.py 
 
 I did this to make the run.py look much less cluttered, this is done by using the import statement at the beginning of run.py and then calling the list from the function later in the run.py
 
  If the user does not enter a valid option of a, b, c or d then an error message is shown in red requesting a correct input, as shown below.
-
 
 
 ### **Facts after guess**
@@ -171,13 +175,11 @@ I thought it would be nice to have the facts displayed after the question was an
 Game over message is displayed along with the score and wether the score was above or below average worked out by the score grading function.\
 The user is then asked if they want to play again or quit the game.
 
-
-### **Leaderboard**
+### **Leader-board**
 
 ![](assets/images/readme_images/screenshot_highscores.png)
 
-The leaderboard is saved in the google excel sheet and is sorted by descending points to show who is on top of the leaderboard.
-
+The leader-board is saved in the google excel sheet and is sorted by descending points to show who is on top of the leader-board.
 
 ### **Front-end features**
 
@@ -207,13 +209,13 @@ VSCodes spell checker addon was used to check for spelling errors
 
 ### **Languages Used**
 
-Python\
-HTML and CSS edited for the styling of the page and background image
+Python - Used for the game functionality \
+HTML and CSS edited - for the styling of the page and background image
 
 
 ### **Programs Used**
 
-
+Photoshop was used to edit the screenshots
 
 ---
 
@@ -250,7 +252,16 @@ The project was deployed on github, the command 'python3 run.py' was used in ter
 |      Enter too many characters at name entry (over 20)       |         An error will be displayed         |  Pass   |
 |      Enter valid name      |         User will be welcomed and option screen will show         |  Pass   |
 |      Enter invalid option at option screen      |         Error message shown         |  Pass   |
-|      Enter invalid option at option screen      |         Error message shown         |  Pass   |
+|      Select rules option at option screen      |         Rules are shown         |  Pass   |
+|      Enter pressed at rules option      |         Return to main option screen         |  Pass   |
+|      Select high scores option at option screen     |         List of top 10 scores shown        |  Pass   |
+|      Enter pressed at the high score screen      |         Return to main option screen         |  Pass   |
+|      Quit game option selected at option screen      |         Game ended message shown         |  Pass   |
+|      Play game option selected      |         Game is started with good luck message and question with options shown         |  Pass   |
+|      Each question tested      |        Output matches the desired correct or incorrect answer       | Pass
+|      Terminal clears        |         Any old messages are cleared         |  Pass   |
+|      Terminal clears        |         Any old messages are cleared         |  Pass   |
+|      Terminal clears        |         Any old messages are cleared         |  Pass   |
 
 
 ### **Manual testing**
@@ -258,7 +269,8 @@ The project was deployed on github, the command 'python3 run.py' was used in ter
 During the design process I often tested and improved up the functionality of the game. I knew I wanted the game to look visually pleasing so used an ascii artwork for the game but this looked cluttered with the code so I imported it from a separate file in artwork.py
 This also avoided long line pep8 errors when putting run.py through the validator. 
 
-Problem: Colorama module was not working I thought it was not compatible with heroku but then realised it was not in the requirements.txt as it was added after initial deployment.\
+Problem: Colorama module was not working I thought it was not compatible with heroku but then realised it was not in the requirements.txt as it was added after initial deployment.
+
 Fix: Ran command Pip Freeze > Requirements.txt
 from terminal and pushed everything to heroku and it worked, solution found on code institute slack community.\
 Problem: When I entered a blank name it would give the error but when I retried to enter a blank name it would freeze.
@@ -277,6 +289,7 @@ Result: No errors
 ## **Credits**
 
 Game Questions were taken from this website [follow link](https://wehavekids.com/education/Multiple-Choice-Quiz-How-well-do-you-know-animals-suitable-for-kids)
+Ascii Art generated with Ascii Art Website [follow link](https://www.asciiart.eu/text-to-ascii-art)
 
 
 ### **Code used and adapted**
@@ -287,10 +300,12 @@ Some of the code for the functionality was adapted from here. Namely the quiz da
 
 ### **Websites visited to gather knowledge**
 
-[Gsheets](https://www.youtube.com/watch?v=wrR0YLzh4DQ) Help with gsheets and getting data from excel \
+[Gsheets tutorial 1](https://www.youtube.com/watch?v=wrR0YLzh4DQ) Help with gsheets and getting data from excel \
+[Gsheets tutorial 2](https://www.youtube.com/watch?v=cnPlKLEGR7E&t=589s&ab_channel=TechWithTim)\
 [Emojis](https://www.makeuseof.com/how-to-include-emojis-in-your-python-code) and how to add them\
 [W3Schools](https://www.w3schools.com/) used when I getting stuck with implementation of code
 Help sorting gspread by column.. https://stackoverflow.com/questions/50938274/sort-a-spread-sheet-via-gspread
+
 
 ###  **Acknowledgments**
 
@@ -302,7 +317,6 @@ Thanks to my kids for inspiring me to do this quiz (and most other things in lif
 
 ***
 
-## Source code 
 
 
 

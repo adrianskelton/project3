@@ -27,10 +27,7 @@ global score
 score = 0  # initialize the score
 
 
-def line_break():
-    """
-    makes the code more readable
-    """
+def line_break(): #  to make code less cluttered
     print("=========================================================")
 
 
@@ -102,7 +99,8 @@ def option_screen():
         elif choice == "3":
             show_scoreboard()
         elif choice == "4":
-            print("Game Exited")
+            print("Game Exited to restart the game, click on Run Program
+                  above")
             break
         else:
             print(Fore.RED + "ERROR!\033[39m Invalid option please "
