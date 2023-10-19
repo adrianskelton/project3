@@ -166,7 +166,10 @@ I thought it would be nice to have the facts displayed after the question was an
 
 ### **Quiz end messages** 
 
+![](assets/images/readme_images/screenshot_gameover.png)
 
+Game over message is displayed along with the score and wether the score was above or below average worked out by the score grading function.\
+The user is then asked if they want to play again or quit the game.
 
 
 ### **Leaderboard**
@@ -174,10 +177,13 @@ I thought it would be nice to have the facts displayed after the question was an
 ![](assets/images/readme_images/screenshot_highscores.png)
 
 The leaderboard is saved in the google excel sheet and is sorted by descending points to show who is on top of the leaderboard.
-This was 
 
 
 ### **Front-end features**
+
+The frontend is very basic with just the chameleon background added to make the game-play area look a bit more vibrant. There is also a heading of ANIMAL QUIZ above the terminal window which compliments the terminal window below it.
+
+![](https://i.ibb.co/H7rz38r/pexels-george-lebada-567540-1.jpg)
 
 
 ---
