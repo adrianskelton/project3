@@ -121,6 +121,10 @@ Yellow was used for headings of text to make it stand out from general text. Red
 
 ## **Features**
 
+### **Google Sheets**
+
+Google sheets were used to store the players name and score. 
+
 ### **Intro with name input**
 
 ![](assets/images/readme_images/screenshot_start.png)
@@ -177,6 +181,8 @@ This was
 ## **Future Implementations**
 
 - The choice of different categories can be introduced, such as reptiles, aquatic or flying animals.
+- A social share button will be added in a footer so the user can share the game on popular social media platforms.
+- A github link will also be placed in the footer once the game is at a point where it has more features so others can see the repository on github should they be interested. 
 
 
 ---
@@ -185,7 +191,8 @@ This was
 
 [Colorama](https://pypi.org/project/colorama/) - Used for the colours in the terminal\
 [Code Spell Checker v2.20.3](https://opencollective.com/code-spell-checker)Addon for VSCode used to check spelling\
-[Lucid Chart](https://www.lucidchart.com/pages/) - Used for making the flowchart seen in this readme
+[Lucid Chart](https://www.lucidchart.com/pages/) - Used for making the flowchart seen in this readme\
+VSCodes spell checker addon was used to check for spelling errors
 
 
 ### **Languages Used**
@@ -220,6 +227,11 @@ The project was deployed on github, the command 'python3 run.py' was used in ter
 
 ## **Testing**
 
+### **Manual testing**
+
+During the design process I often tested and improved up the functionality of the game. I knew I wanted the game to look visually pleasing so used an ascii artwork for the game but this looked cluttered with the code so I imported it from a separate file in artwork.py
+This also avoided long line pep8 errors when putting run.py through the validator. 
+
 Problem: Colorama module was not working I thought it was not compatible with heroku but then realised it was not in the requirements.txt as it was added after initial deployment.\
 Fix: Ran command Pip Freeze > Requirements.txt
 from terminal and pushed everything to heroku and it worked, solution found on code institute slack community.\
@@ -251,6 +263,7 @@ Some of the code for the functionality was adapted from here. Namely the quiz da
 [Gsheets](https://www.youtube.com/watch?v=wrR0YLzh4DQ) Help with gsheets and getting data from excel \
 [Emojis](https://www.makeuseof.com/how-to-include-emojis-in-your-python-code) and how to add them\
 [W3Schools](https://www.w3schools.com/) used when I getting stuck with implementation of code
+Help sorting gspread by column.. https://stackoverflow.com/questions/50938274/sort-a-spread-sheet-via-gspread
 
 ###  **Acknowledgments**
 
@@ -264,5 +277,5 @@ Thanks to my kids for inspiring me to do this quiz (and most other things in lif
 
 ## Source code 
 
-help sorting gspread by column.. https://stackoverflow.com/questions/50938274/sort-a-spread-sheet-via-gspread
+
 

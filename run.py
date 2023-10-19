@@ -34,14 +34,19 @@ def line_break():
     """
     print("=========================================================")
 
-"""
-# Sort sheet A -> Z by column 'B'
-worksheet.sort((2, "des"))
-# This sorts the excell scoreboard sheet and deletes some rows
-clear_range = "A13:A20"
-empty_values = [[""]] * 8  # Create an empty list with 8 rows
-worksheet.update(clear_range, empty_values)
-"""
+
+def organize_sheet():
+    """
+    My function sorts the animal_game googe sheet in descending order by
+    column 'B' so high scores are on top and the clear rows 13 to 20.
+    """
+    worksheet.sort((2, "des")) # Sort sheet A -> Z by column 'B'
+    clear_range = "A13:A20" #Deletes excess rows
+    empty_values = [[""]] * 8  # Create an empty list with 8 rows
+    worksheet.update(clear_range, empty_values)
+    game_start()
+
+
 
 """
 The set of 15 questions that is used during the game. Questions
@@ -191,6 +196,7 @@ def gameover_option():
     elif option == "q":
         print(f'\033[2J')
         print("Thank you for playing, enjoy your day further!")
+        print("If you want to play again click Run Program above")
     elif option == "p":
         global score
         score = 0  # Reset the score
@@ -245,4 +251,4 @@ def run_quiz(quiz_data):
     worksheet.sort((2, "des"))
 
 
-game_start()
+organize_sheet()
