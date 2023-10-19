@@ -1,10 +1,10 @@
 import gspread
-import questions #located in questions.py 
-import artwork # ascii artwork for the game artwork.py
+import questions  # located in questions.py
+import artwork    # ascii artwork for the game artwork.py
 from google.oauth2.service_account import Credentials
 import json
 import os
-from colorama import init, Fore, Back, Style #color styling 
+from colorama import init, Fore, Back, Style  # color styling
 
 # Every Google account has as an IAM (Identity and Access Management)
 # configuration which specifies what the user has access to.
@@ -24,7 +24,7 @@ SHEET = GSPREAD_CLIENT.open("animal_game")
 worksheet = SHEET.worksheet("scoreboard")
 
 global score
-score = 0 #initialize the score
+score = 0  # initialize the score
 
 
 def line_break():
@@ -34,8 +34,7 @@ def line_break():
     print("=========================================================")
 
 
-
-quiz_data = questions.quiz_data #initialize quiz data questions
+quiz_data = questions.quiz_data  # initialize quiz data questions
 
 
 def game_start():
@@ -57,7 +56,6 @@ def game_start():
     asci_art = artwork.artwork
     print(asci_art)
 
-    
     while True:
         global playername
         playername = input(
@@ -73,10 +71,8 @@ def game_start():
                 input("Please enter your name\n")
             else:
                 print(
-                    Fore.RED +
-                    "ERROR!\033[39m Please enter a name with at least one but less "
-                    "than 20 characters.\n")
-        
+                    Fore.RED + "ERROR!\033[39m Please enter a name with at"
+                    "least one but less than 20 characters.\n")
 
 
 def option_screen():
@@ -116,7 +112,7 @@ def option_screen():
 
 def rules():
     """
-    Option 2 called from the game menu option. This function 
+    Option 2 called from the game menu option. This function
     prints out the rules of the game.
     """
     print(f'\033[2J')
@@ -139,6 +135,7 @@ def update_scoreboard(new_row, worksheet):
     worksheet_to_update = SHEET.worksheet(worksheet)
     worksheet_to_update.append_row(new_row)
     print(f"{worksheet} worksheet updated successfully\n")
+
 
 def show_scoreboard():
     """
@@ -211,12 +208,14 @@ def run_quiz(quiz_data):
 
             for key, value in guess["answers"].items():
                 print(f"\t{key}: {value}")
-            user_answer = input(Fore.BLUE + "Select answer and press enter...\033[39m\n")
+            user_answer = input(Fore.BLUE + "Select answer and press"
+                                " enter...\033[39m\n")
             user_answer = user_answer.upper()
 
             if user_answer not in ["A", "B", "C", "D"]:
                 print(
-                    Fore.RED + "ERROR!\033[39m Please select 'A', 'B', 'C', or 'D' as an answer.\n")
+                    Fore.RED + "ERROR!\033[39m Please select 'A', 'B',"
+                               " 'C', or 'D' as an answer.\n")
 
             else:
                 if user_answer == guess["correct_answer"]:
@@ -234,8 +233,8 @@ def run_quiz(quiz_data):
                     input(Fore.BLUE + "Press Enter to continue...\033[39m")
     final_score = score
     worksheet = SHEET.worksheet("scoreboard")
-    worksheet.update_cell(12, 2, final_score) #Update final score into spreadsheet
-    worksheet.sort((2, "des")) # Sort sheet A -> Z by column 'B'
+    worksheet.update_cell(13, 2, final_score)  # Update final score into sheet
+    worksheet.sort((2, "des"))  # Sort sheet A -> Z by column 'B'
     score_grading(final_score)
     input(Fore.BLUE + "Press Enter to continue...\033[39m")
 
