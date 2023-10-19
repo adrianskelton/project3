@@ -85,7 +85,6 @@ Visit the live site [here.](https://animalgame-470e463a9700.herokuapp.com/ "Link
 - As a user I would like to learn something new playing the game
 - As a user I would like to see the scoreboard to know how I placed against others
 
-
 ---
 
 ## **Design**
@@ -161,8 +160,13 @@ I did this to make the run.py look much less cluttered, this is done by using th
 
 ### **Facts after guess**
 
+![](assets/images/readme_images/screenshot_facts.png)
+
+I thought it would be nice to have the facts displayed after the question was answered so the user could learn something. The user then presses enter to continue to the next question.
 
 ### **Quiz end messages** 
+
+
 
 
 ### **Leaderboard**

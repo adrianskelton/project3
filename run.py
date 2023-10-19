@@ -49,7 +49,7 @@ def game_start():
     empty_values = [[""]] * 8  # Create an empty list with 8 rows
     worksheet.update(clear_range, empty_values)
     # Specify the row numbers you want to delete (in this case, rows 13 to 20)
-    rows_to_delete = list(range(12, 21))
+    rows_to_delete = list(range(13, 20))
     # Delete the specified rows
     for row in reversed(rows_to_delete):
         worksheet.delete_rows(row)
@@ -114,7 +114,6 @@ def option_screen():
             input(Fore.BLUE + "Press Enter to continue...\033[39m")
 
 
-
 def rules():
     """
     Option 2 called from the game menu option. This function 
@@ -165,7 +164,7 @@ def score_grading(final_score):
     the score was good or bad based on the users final score
     """
     line_break()
-    print("\n")
+    print(Fore.BLUE + "GAME OVER!\033[39m")
     print(Fore.BLUE + f"Your score was {final_score}\033[39m")
     if final_score <= 7:
         print(Fore.BLUE +
@@ -234,12 +233,11 @@ def run_quiz(quiz_data):
                     print(f"{guess['fact']}")
                     input(Fore.BLUE + "Press Enter to continue...\033[39m")
     final_score = score
+    worksheet = SHEET.worksheet("scoreboard")
+    worksheet.update_cell(12, 2, final_score) #Update final score into spreadsheet
+    worksheet.sort((2, "des")) # Sort sheet A -> Z by column 'B'
     score_grading(final_score)
     input(Fore.BLUE + "Press Enter to continue...\033[39m")
-    worksheet = SHEET.worksheet("scoreboard")
-    # Update final score into spreadsheet
-    worksheet.update_cell(13, 2, final_score)
-    # Sort sheet A -> Z by column 'B'
-    worksheet.sort((2, "des"))
+
 
 game_start()
