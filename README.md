@@ -231,6 +231,22 @@ The project was deployed on github, the command 'python3 run.py' was used in ter
 
 ## **Testing**
 
+### **Expected vs Reacted**
+
+## Testing
+
+|           Action            |        Expectation                           | Outcome |
+| :-------------------------: |   :-------------------------------------:    | :-----: |
+|           Game start        |   The game starts when program is run        |  Pass   |
+|      Terminal clears        |         Any old messages are cleared         |  Pass   |
+|      Ascii Art called        |         Ascii art is displayed correctly         |  Pass   |
+|      Enter nothing at name entry       |         An error will be displayed         |  Pass   |
+|      Enter too many characters at name entry (over 20)       |         An error will be displayed         |  Pass   |
+|      Enter valid name      |         User will be welcomed and option screen will show         |  Pass   |
+|      Enter invalid option at option screen      |         Error message shown         |  Pass   |
+|      Enter invalid option at option screen      |         Error message shown         |  Pass   |
+
+
 ### **Manual testing**
 
 During the design process I often tested and improved up the functionality of the game. I knew I wanted the game to look visually pleasing so used an ascii artwork for the game but this looked cluttered with the code so I imported it from a separate file in artwork.py
