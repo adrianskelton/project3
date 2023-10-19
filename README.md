@@ -250,11 +250,12 @@ Result: No errors
 
 ## **Credits**
 
+Game Questions were taken from this website [follow link](https://wehavekids.com/education/Multiple-Choice-Quiz-How-well-do-you-know-animals-suitable-for-kids)
 
 
 ### **Code used and adapted**
 
-Some of the code for the functionality was adapted from here. Namely the quiz data function [link here](https://github.com/cornishcoder1/Food_of_Japan_Quiz/blob/main/run.py)
+Some of the code for the functionality was adapted from here. Namely the quiz data function [follow link](https://github.com/cornishcoder1/Food_of_Japan_Quiz/blob/main/run.py)
 
 
 

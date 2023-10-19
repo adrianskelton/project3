@@ -1,11 +1,10 @@
 import gspread
-import questions
-# ascii artwork for the game
-import artwork
+import questions #located in questions.py 
+import artwork # ascii artwork for the game artwork.py
 from google.oauth2.service_account import Credentials
 import json
 import os
-from colorama import init, Fore, Back, Style
+from colorama import init, Fore, Back, Style #color styling 
 
 # Every Google account has as an IAM (Identity and Access Management)
 # configuration which specifies what the user has access to.
@@ -24,8 +23,7 @@ GSPREAD_CLIENT = gspread.authorize(SCOPED_CREDS)
 SHEET = GSPREAD_CLIENT.open("animal_game")
 worksheet = SHEET.worksheet("scoreboard")
 
-global score
-score = 0
+score = 0 #initialize the score
 
 
 def line_break():
@@ -37,25 +35,20 @@ def line_break():
 
 def organize_sheet():
     """
-    My function sorts the animal_game googe sheet in descending order by
+    My function sorts the animal_game google sheet in descending order by
     column 'B' so high scores are on top and the clear rows 13 to 20.
     """
     worksheet.sort((2, "des")) # Sort sheet A -> Z by column 'B'
     clear_range = "A13:A20" #Deletes excess rows
     empty_values = [[""]] * 8  # Create an empty list with 8 rows
     worksheet.update(clear_range, empty_values)
-    game_start()
+    option_screen()
+    
 
 
 
-"""
-The set of 15 questions that is used during the game. Questions
-imported from questions.py file. Source of questions credited in the
- readme.
-"""
-quiz_data = questions.quiz_data
 
-
+quiz_data = questions.quiz_data #defining the variable from the question file
 
 
 def game_start():
@@ -75,7 +68,7 @@ def game_start():
         )
         if len(playername) <= 20 and len(playername) >= 1:
             update_scoreboard([playername], "scoreboard")
-            option_screen()
+            organize_sheet()
             break  # exit the loop if the name is valid
         else:
             if playername:  # Checks if something is entered
@@ -85,6 +78,7 @@ def game_start():
                     Fore.RED +
                     "ERROR!\033[39m Please enter a name with at least one but less "
                     "than 20 characters.\n")
+        
 
 
 def option_screen():
@@ -200,7 +194,7 @@ def gameover_option():
     elif option == "p":
         global score
         score = 0  # Reset the score
-        run_quiz(quiz_data)  # Start a new game
+        game_start()  # Start a new game
 
 
 def run_quiz(quiz_data):
@@ -208,6 +202,7 @@ def run_quiz(quiz_data):
     Runs through questions in the quiz and answers get user's input and changes
     the score by 1 if correct depending on the answer
     """
+    global score
     score = 0
     final_score = 0
     for guess in quiz_data:
@@ -250,5 +245,4 @@ def run_quiz(quiz_data):
     # Sort sheet A -> Z by column 'B'
     worksheet.sort((2, "des"))
 
-
-organize_sheet()
+game_start()
