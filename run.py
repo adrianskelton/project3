@@ -223,13 +223,13 @@ def run_quiz(quiz_data):
 
             else:
                 if user_answer == guess["correct_answer"]:
-                    print(Fore.GREEN + 'Correct! ''\033[39m')
+                    print(Fore.GREEN + 'CORRECT! ''\033[39m')
                     print("\N{smiling face with sunglasses} ")
                     print(f"{guess['fact']}")
                     score += 1
                     input(Fore.BLUE + "Press Enter to continue...\033[39m")
                 else:
-                    print(Fore.RED + 'Incorrect! ''\033[39m')
+                    print(Fore.RED + 'INCORRECT! ''\033[39m')
                     print(
                         "\N{loudly crying face}",
                         "Better luck with the next question\n")
