@@ -174,19 +174,21 @@ def gameover_option():
     My function called once the game is over to ask the player what they
     want to do next
     """
-    line_break()
-    print("\nPlay again? Press p and enter otherwise press q to quit")
-    option = (input("Make your selection now..."))
-    if option not in ["p", "q"]:
+    while True:
+        line_break()
+        print("\nPlay again? Press p and enter otherwise press q to quit")
+        option = (input("Make your selection now..."))
+        if option == "q":
+            print(f'\033[2J')
+            print("Thank you for playing, enjoy your day further!")
+            print("If you want to play again click Run Program above")
+        elif option == "p":
+            global score
+            score = 0  # Reset the score
+            game_start()  # Start a new game
+            break # Exit loop 
+    else:
         print("Incorrect choice. Please enter p or q and press enter")
-    elif option == "q":
-        print(f'\033[2J')
-        print("Thank you for playing, enjoy your day further!")
-        print("If you want to play again click Run Program above")
-    elif option == "p":
-        global score
-        score = 0  # Reset the score
-        game_start()  # Start a new game
 
 
 def run_quiz(quiz_data):

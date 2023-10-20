@@ -174,7 +174,7 @@ I thought it would be nice to have the facts displayed after the question was an
 ![](assets/images/readme_images/screenshot_gameover.png)
 
 Game over message is displayed along with the score and wether the score was above or below average worked out by the score grading function.\
-The user is then asked if they want to play again or quit the game.
+The user is then asked if they want to play again or quit the game. The function checks if the input is p then it will 
 
 ### **Leader-board**
 
@@ -230,7 +230,8 @@ Photoshop was used to edit the screenshots
 
 ## **Deployment**
 
-The project was deployed on github, the command 'python3 run.py' was used in terminal to launch the game and once there was a good enough portion of the game written it was then deployed on heroku. The following steps were taken for deployment:
+The project was deployed on github, the command 'python3 run.py' was used in terminal to launch the game and once there was a good enough portio n of the game written it was then deployed on herokuearly in the project to avoid problems later on with incompatibility. The following steps were taken for deployment:
+
 
 1. Add dependencies in GitPod to requirements.txt file with command "pip3 freeze > requirements.txt"
 2. Commit and push to GitHub
@@ -248,9 +249,9 @@ The project was deployed on github, the command 'python3 run.py' was used in ter
 
 ## **Testing**
 
-### **Expected vs Reacted**
+### **Expected vs Result**
 
-## Testing
+## Manuel Testing
 
 |           Action            |        Expectation                           | Outcome |
 | :-------------------------: |   :-------------------------------------:    | :-----: |
@@ -274,7 +275,11 @@ The project was deployed on github, the command 'python3 run.py' was used in ter
 
 ### **Unfixed bugs**
 
-As far as I know there are no unfixed bugs
+When the game is run the following error shows though it does not affect the functioning of the overall game. 
+
+/app/.heroku/python/lib/python3.11/site-packages/gspread/worksheet.py:1069: UserWarning: [Deprecated][in version 6.0.0]: method signature will change to: 'Worksheet.update(value = [[]], range_name=)' arguments 'range_name' and 'values' will swap, values will be mandatory of type: 'list(list(...))'
+
+I tried to upgrade the gspread module and pip also as suggested in [this post](https://stackoverflow.com/questions/66730666/gspread-worksheet-update-error-worksheet-has-no-attribute-update) from stackoverflow however this did not solve it. I then used the clear screen function instead, so that the player does not see this message at the welcome screen and it does not negatively impact the user experience, the functionality is unaffected by this error.
 
 ### **Manual testing**
 
@@ -282,7 +287,7 @@ During the design process I often tested and improved up the functionality of th
 This also avoided long line pep8 errors when putting run.py through the validator. 
 
 **Colorama** 
-Problem: Colorama module was not working I thought it was not compatible with heroku but then realised it was not in the requirements.txt as it was added after initial deployment.
+Problem: Colorama module was not working I thought it was not compatible with heroku but then realized it was not in the requirements.txt as it was added after initial deployment.
 
 Fix: Ran command Pip Freeze > Requirements.txt
 from terminal and pushed everything to heroku and it worked, solution found on code institute slack community.\
@@ -295,7 +300,7 @@ Ran the code through code institutes Python Linter [pep8 validator](https://pep8
 
 ![](assets/images/readme_images/screenshot_linter.png)
 
-Result: No errors
+**Result:** No errors
 
 ---
 
@@ -318,7 +323,7 @@ Some of the code for the functionality was adapted from here. Namely the quiz da
 \
 [Emojis](https://www.makeuseof.com/how-to-include-emojis-in-your-python-code) and how to add them\
 [W3Schools](https://www.w3schools.com/) used when I getting stuck with implementation of code
-Help sorting gspread by column.. https://stackoverflow.com/questions/50938274/sort-a-spread-sheet-via-gspread
+Help sorting gspread by column.. [Stackoverflow](https://stackoverflow.com/questions/50938274/sort-a-spread-sheet-via-gspread) help with spreadsheet sort function
 
 
 ###  **Acknowledgments**
