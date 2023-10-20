@@ -251,7 +251,7 @@ The project was deployed on github, the command 'python3 run.py' was used in ter
 
 ### **Expected vs Result**
 
-## Manuel Testing
+## Manual Testing
 
 |           Action            |        Expectation                           | Outcome |
 | :-------------------------: |   :-------------------------------------:    | :-----: |
@@ -269,9 +269,8 @@ The project was deployed on github, the command 'python3 run.py' was used in ter
 |      Quit game option selected at option screen      |         Game ended message shown         |  Pass   |
 |      Play game option selected      |         Game is started with good luck message and question with options shown         |  Pass   |
 |      Each question tested      |        Output matches the desired correct or incorrect answer       | Pass
-|      End of game       |         Game over message with score and wether score was above or below average. The player is given two options to play again or quit         |  Pass   |
-|      Terminal clears        |         Any old messages are cleared         |  Pass   |
-|      Terminal clears        |         Any old messages are cleared         |  Pass   |
+|      End of game       |         Game over message with score and wether score was above or below average. The player is given two options to play again or quit. If play again is selected the player is sent back to the start or if quit is selected, they game ends with a message to the user.        |  Pass  |
+
 
 ### **Unfixed bugs**
 
@@ -284,14 +283,15 @@ I tried to upgrade the gspread module and pip also as suggested in [this post](h
 ### **Manual testing**
 
 During the design process I often tested and improved up the functionality of the game. I knew I wanted the game to look visually pleasing so used an ascii artwork for the game but this looked cluttered with the code so I imported it from a separate file in artwork.py
-This also avoided long line pep8 errors when putting run.py through the validator. 
+This also avoided long line pep8 errors when putting run.py through the validator. I realized during the creation of the validation of the input options that there was case sensitivity which was solved by adding .lower() after the input to convert the input to lowercase.
 
 **Colorama** 
 Problem: Colorama module was not working I thought it was not compatible with heroku but then realized it was not in the requirements.txt as it was added after initial deployment.
 
 Fix: Ran command Pip Freeze > Requirements.txt
 from terminal and pushed everything to heroku and it worked, solution found on code institute slack community.\
-Problem: When I entered a blank name it would give the error but when I retried to enter a blank name it would freeze.
+
+Problem: When I entered a blank name it would give the error but when I retried to enter a blank name it would freeze. I needed to make a while loop instead for this and function and then also changed my game over function to a while loop so that the error message displayed until the required input was entered to break out of the loop.
 
 
 ### **Automated testing**
@@ -324,11 +324,11 @@ Some of the code for the functionality was adapted from here. Namely the quiz da
 [Emojis](https://www.makeuseof.com/how-to-include-emojis-in-your-python-code) and how to add them\
 [W3Schools](https://www.w3schools.com/) used when I getting stuck with implementation of code
 Help sorting gspread by column.. [Stackoverflow](https://stackoverflow.com/questions/50938274/sort-a-spread-sheet-via-gspread) help with spreadsheet sort function
-
+[Upper and lowercase Error handling solution](https://www.quora.com/How-do-I-allow-both-lower-and-uppercase-input-in-Python)
 
 ###  **Acknowledgments**
 
-Thanks to all the help and support via the slack community.\
+Thanks to all the help and support via the slack community for peer code review and all the support from the community when handling imposter syndrome, you are all appreciated.\
 Thanks to my kids for inspiring me to do this quiz (and most other things in life too) 
 
 

@@ -42,10 +42,10 @@ def game_start():
     """
 
     worksheet.sort((2, "des"))  # Sort sheet A -> Z by column 'B'
-    clear_range = "A13:A20"
+    clear_range = "A12:A19"
     empty_values = [[""]] * 8  # Create an empty list with 8 rows
     worksheet.update(clear_range, empty_values)
-    rows_to_delete = list(range(13, 20))
+    rows_to_delete = list(range(12, 19))
     # Delete the specified rows
     for row in reversed(rows_to_delete):
         worksheet.delete_rows(row)
@@ -177,7 +177,7 @@ def gameover_option():
     while True:
         line_break()
         print("\nPlay again? Press p and enter otherwise press q to quit")
-        option = (input("Make your selection now..."))
+        option = (input("Make your selection now...").lower())
         if option == "q":
             print(f'\033[2J')
             print("Thank you for playing, enjoy your day further!")
@@ -233,7 +233,7 @@ def run_quiz(quiz_data):
                     input(Fore.BLUE + "Press Enter to continue...\033[39m")
     final_score = score
     worksheet = SHEET.worksheet("scoreboard")
-    worksheet.update_cell(13, 2, final_score)  # Update final score into sheet
+    worksheet.update_cell(12, 2, final_score)  # Update final score into sheet
     worksheet.sort((2, "des"))  # Sort sheet A -> Z by column 'B'
     score_grading(final_score)
     input(Fore.BLUE + "Press Enter to continue...\033[39m")
