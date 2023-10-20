@@ -27,7 +27,7 @@ global score
 score = 0  # initialize the score
 
 
-def line_break(): #  to make code less cluttered
+def line_break():  # To make code less cluttered going forward
     print("=========================================================")
 
 
@@ -36,7 +36,7 @@ quiz_data = questions.quiz_data  # initialize quiz data questions
 
 def game_start():
     """
-    The start of the game asking the player to enter their name. The 
+    The start of the game asking the player to enter their name. The
     Excel sheet is sorted for scoring system and unused rows cleared
     in preparation of new player name entry.
     """
@@ -186,7 +186,7 @@ def gameover_option():
             global score
             score = 0  # Reset the score
             game_start()  # Start a new game
-            break # Exit loop 
+            break  # Exit loop
     else:
         print("Incorrect choice. Please enter p or q and press enter")
 
