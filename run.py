@@ -100,7 +100,7 @@ def option_screen():
             show_scoreboard()
         elif choice == "4":
             print("Game Exited to restart the game, click on Run Program
-                  above")
+                  "above")
             break
         else:
             print(Fore.RED + "ERROR!\033[39m Invalid option please "
