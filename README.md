@@ -1,13 +1,13 @@
 # ANIMAL QUIZ
 
-Animal-Quiz is my third project for Code Institute Full Stack development program. 
+Animal-Quiz is my third project for Code Institute Full Stack development program which is focused on python language and also integrates a spreadsheet shared on google drive.
 
 The inspiration for the game came from my two children Axel and Hannah and their love for animal facts and the natural world in general. 
 
 
 ![Animal Quiz website image](https://i.ibb.co/6nx2BN1/screenshot.png)
 
-Visit the live site [here.](https://animalgame-470e463a9700.herokuapp.com/ "Link to animal quiz on heroku")
+Visit the live site [here](https://animalgame-470e463a9700.herokuapp.com/ "Link to animal quiz on heroku")
 
 ---
 
@@ -103,7 +103,8 @@ Background chameleon image from pexels.com
 
 
 ![](assets/images/readme_images/flow_chart.png)
-THIS IMAGE WILL BE UPDATED PLACEHOLDER
+
+The flowchart above shows the general flow of the game. 
 
  
 ### **Wireframes**
@@ -126,7 +127,7 @@ Blue was used for general messages such as "push enter to continue"
 
 ### **Google Sheets with player name and score**
 
-Google sheets were used to store the players name and score. The playername and score were stored using gsheets module and all changes were made on the animal_game excell sheet. The simplest way I could think of for a scoreboard was to reorder the sheet by descending score and also to delete the rows from 13 to 20 at the start of the game. This would ensure a clean slate for the new players name to be put in 
+Google sheets were used to store the players name and score. The playername and score were stored using gsheets module and all changes were made on the animal_game excell sheet. The simplest way I could think of for a scoreboard was to reorder the sheet by descending score and also to delete the rows from 13 to 20 at the start of the game. This would ensure a clean slate for the new players name to be put in. When the game ends the final score is inserted into the game and the column is then again checked that the scores descend, putting the high scorer at the top.
 
 ![](assets/images/readme_images/screenshot_sheet.png)
 
@@ -181,11 +182,19 @@ The user is then asked if they want to play again or quit the game.
 
 The leader-board is saved in the google excel sheet and is sorted by descending points to show who is on top of the leader-board.
 
-### **Front-end features**
+## **Front-end features**
 
-The frontend is very basic with just the chameleon background added to make the game-play area look a bit more vibrant. There is also a heading of ANIMAL QUIZ above the terminal window which compliments the terminal window below it.
+### **Background image**
+The frontend is very basic with just the chameleon background added to make the game-play area look a bit more vibrant. \
 
 ![](https://i.ibb.co/H7rz38r/pexels-george-lebada-567540-1.jpg)
+
+
+### **Title Heading**
+
+ANIMAL QUIZ above the terminal window which compliments the terminal window below it.
+
+![](assets/images/readme_images/screenshot_header.png)
 
 
 ---
@@ -259,16 +268,20 @@ The project was deployed on github, the command 'python3 run.py' was used in ter
 |      Quit game option selected at option screen      |         Game ended message shown         |  Pass   |
 |      Play game option selected      |         Game is started with good luck message and question with options shown         |  Pass   |
 |      Each question tested      |        Output matches the desired correct or incorrect answer       | Pass
-|      Terminal clears        |         Any old messages are cleared         |  Pass   |
+|      End of game       |         Game over message with score and wether score was above or below average. The player is given two options to play again or quit         |  Pass   |
 |      Terminal clears        |         Any old messages are cleared         |  Pass   |
 |      Terminal clears        |         Any old messages are cleared         |  Pass   |
 
+### **Unfixed bugs**
+
+As far as I know there are no unfixed bugs
 
 ### **Manual testing**
 
 During the design process I often tested and improved up the functionality of the game. I knew I wanted the game to look visually pleasing so used an ascii artwork for the game but this looked cluttered with the code so I imported it from a separate file in artwork.py
 This also avoided long line pep8 errors when putting run.py through the validator. 
 
+**Colorama** 
 Problem: Colorama module was not working I thought it was not compatible with heroku but then realised it was not in the requirements.txt as it was added after initial deployment.
 
 Fix: Ran command Pip Freeze > Requirements.txt
@@ -300,8 +313,9 @@ Some of the code for the functionality was adapted from here. Namely the quiz da
 
 ### **Websites visited to gather knowledge**
 
-[Gsheets tutorial 1](https://www.youtube.com/watch?v=wrR0YLzh4DQ) Help with gsheets and getting data from excel \
-[Gsheets tutorial 2](https://www.youtube.com/watch?v=cnPlKLEGR7E&t=589s&ab_channel=TechWithTim)\
+[Gsheets tutorial 1](https://www.youtube.com/watch?v=wrR0YLzh4DQ) Using Google Sheets with Python (Complete Beginner GSpread Tutorial!) \
+[Gsheets tutorial 2](https://www.youtube.com/watch?v=cnPlKLEGR7E&t=589s&ab_channel=TechWithTim) Python Google Sheets API Tutorial - 2019
+\
 [Emojis](https://www.makeuseof.com/how-to-include-emojis-in-your-python-code) and how to add them\
 [W3Schools](https://www.w3schools.com/) used when I getting stuck with implementation of code
 Help sorting gspread by column.. https://stackoverflow.com/questions/50938274/sort-a-spread-sheet-via-gspread

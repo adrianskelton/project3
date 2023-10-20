@@ -36,15 +36,15 @@ quiz_data = questions.quiz_data  # initialize quiz data questions
 
 def game_start():
     """
-    The start of the game asking the player to enter their name
+    The start of the game asking the player to enter their name. The 
+    Excel sheet is sorted for scoring system and unused rows cleared
+    in preparation of new player name entry.
     """
-    # Sort sheet A -> Z by column 'B'
-    worksheet.sort((2, "des"))
-    # This sorts the excel scoreboard sheet and deletes some rows
+
+    worksheet.sort((2, "des"))  # Sort sheet A -> Z by column 'B'
     clear_range = "A13:A20"
     empty_values = [[""]] * 8  # Create an empty list with 8 rows
     worksheet.update(clear_range, empty_values)
-    # Specify the row numbers you want to delete (in this case, rows 13 to 20)
     rows_to_delete = list(range(13, 20))
     # Delete the specified rows
     for row in reversed(rows_to_delete):
