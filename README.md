@@ -113,12 +113,11 @@ Due to the nature of the project being mostly backend no wireframes were made or
 
 ### **Design process**
 - Colorama module was used for text output color of the terminal.\
-Green was used for correct inputs and answers.\
-Yellow was used for headings of text to make it stand out from general text.\
-Red was used only for error messages and incorrect answers.\
-Blue was used for general messages such as "push enter to continue"
+- Green was used for correct inputs and answers.\
+- Red was used only for error messages and incorrect answers.\
+- Blue was used for general messages such as "push enter to continue"
 - Emojis were used only when displaying if answers were correct or incorrect.
-- I tried to make the code as clean as possible by making linebreaks a function so that it did not look cluttered and I could just call the line-break function.
+- I tried to make the code as clean as possible by making linebreaks a function so that it did not look cluttered and I could just call the line-break function. 
 
 
 ---
@@ -167,13 +166,15 @@ I did this to make the run.py look much less cluttered, this is done by using th
 
 ![](assets/images/readme_images/screenshot_facts.png)
 
-I thought it would be nice to have the facts displayed after the question was answered so the user could learn something. The user then presses enter to continue to the next question.
+I thought it would be nice to have the facts displayed after the question was answered so the user could learn something.\
+The user then presses enter to continue to the next question. I considered using a clear screen function so that it would seem cleaner on the screen but thought it was more beneficial to scroll up if the user wanted to read an old question before the game ended.
 
 ### **Quiz end messages** 
 
 ![](assets/images/readme_images/screenshot_gameover.png)
 
 Game over message is displayed along with the score and wether the score was above or below average worked out by the score grading function.\
+This is a very simple function that checks if the final score is less than
 The user is then asked if they want to play again or quit the game. The function checks if the input is p then it will 
 
 ### **Leader-board**
