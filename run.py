@@ -161,10 +161,10 @@ def score_grading(final_score):
     line_break()
     print(Fore.BLUE + "GAME OVER!\033[39m")
 
-    score_percentage = (final_score / 15) * 100  # This converts score to percentage
+    score_percentage = (final_score / 15) * 100  # Converts score to percentage
 
     print(Fore.BLUE + f"You got {score_percentage:.2f}% or {final_score} out"
-    " of 15 of the questions right\033[39m")
+          " of 15 of the questions right\033[39m")
     if final_score <= 7:
         print(Fore.BLUE +
               "This was less than average, you could do better\033[39m")

@@ -68,7 +68,7 @@ Visit the live site [here](https://animalgame-470e463a9700.herokuapp.com/ "Link 
 - Understand the purpose of the site
 - Find out the rules of the game and have them easy to understand
 - Have the game be fun and informative
-- Give the full facts about the answer if answered correctly
+- Give a fact about the animal wether it is correct or incorrectly answered
 - Have a scoring system where the player can see their score on the leader-board 
 
 ### **User Expectations**
@@ -109,15 +109,15 @@ The flowchart above shows the general flow of the game.
  
 ### **Wireframes**
 
-Due to the nature of the project being mostly backend no wireframes were made or needed.
+Due to the nature of the project being mostly backend no wireframes were made or needed
 
 ### **Design process**
-- Colorama module was used for text output color of the terminal.\
-- Green was used for correct inputs and answers.\
-- Red was used only for error messages and incorrect answers.\
+- Colorama module was used for text output color of the terminal
+- Green was used for correct inputs and answers
+- Red was used only for error messages and incorrect answers
 - Blue was used for general messages such as "push enter to continue"
-- Emojis were used only when displaying if answers were correct or incorrect.
-- I tried to make the code as clean as possible by making linebreaks a function so that it did not look cluttered and I could just call the line-break function. 
+- Emojis were used only when displaying if answers were correct or incorrect
+- I tried to make the code as clean as possible by making linebreaks a function so that it did not look cluttered and I could just call the line-break function
 
 
 ---
@@ -126,7 +126,9 @@ Due to the nature of the project being mostly backend no wireframes were made or
 
 ### **Google Sheets with player name and score**
 
-Google sheets were used to store the players name and score. The playername and score were stored using gsheets module and all changes were made on the animal_game excell sheet. The simplest way I could think of for a scoreboard was to reorder the sheet by descending score and also to delete the rows from 13 to 20 at the start of the game. This would ensure a clean slate for the new players name to be put in. When the game ends the final score is inserted into the game and the column is then again checked that the scores descend, putting the high scorer at the top.
+Google sheets were used to store the players name and score. The playername and score were stored using gsheets module and all changes were made on the animal_game excell sheet. 
+
+The simplest way I could think of for a scoreboard was to reorder the sheet by descending score and also to delete the rows from 12 to 19 at the start of the game. This would ensure a clean slate for the new players name to be put in. When the game ends the final score is inserted into the game and the column is then again checked that the scores descend in order, putting the high scorer at the top.
 
 ![](assets/images/readme_images/screenshot_sheet.png)
 
@@ -174,8 +176,9 @@ The user then presses enter to continue to the next question. I considered using
 ![](assets/images/readme_images/screenshot_gameover.png)
 
 Game over message is displayed along with the score and wether the score was above or below average worked out by the score grading function.\
-This is a very simple function that checks if the final score is less than
-The user is then asked if they want to play again or quit the game. The function checks if the input is p then it will 
+This is a very simple function that checks if the final score is less than or more than 7 out of 15 to say if it was below or above average and also works out the percentage of correct answers.
+
+The user is then asked if they want to play again or quit the game. The function checks if the input is p then it will reset the score and restart the game. Otherwise it will quit the game, if q is selected. If an incorrect choice is selected then an error will be shown until the user selects one of the above.
 
 ### **Leader-board**
 
@@ -186,17 +189,15 @@ The leader-board is saved in the google excel sheet and is sorted by descending 
 ## **Front-end features**
 
 ### **Background image**
-The frontend is very basic with just the chameleon background added to make the game-play area look a bit more vibrant. \
+The frontend is very basic with just the chameleon background added to make the game-play area look a bit more vibrant. 
 
 ![](https://i.ibb.co/H7rz38r/pexels-george-lebada-567540-1.jpg)
 
-
 ### **Title Heading**
 
-ANIMAL QUIZ above the terminal window which compliments the terminal window below it.
+ANIMAL QUIZ above the terminal window which compliments the terminal window below it. I added a drop shadow in the css to make the title more visible as there was too much white in the background image.
 
 ![](assets/images/readme_images/screenshot_header.png)
-
 
 ---
 
@@ -205,7 +206,6 @@ ANIMAL QUIZ above the terminal window which compliments the terminal window belo
 - The choice of different categories can be introduced, such as reptiles, aquatic or flying animals.
 - A social share button will be added in a footer so the user can share the game on popular social media platforms.
 - A github link will also be placed in the footer once the game is at a point where it has more features so others can see the repository on github should they be interested. 
-
 
 ---
 
@@ -231,7 +231,7 @@ Photoshop was used to edit the screenshots
 
 ## **Deployment**
 
-The project was deployed on github, the command 'python3 run.py' was used in terminal to launch the game and once there was a good enough portio n of the game written it was then deployed on herokuearly in the project to avoid problems later on with incompatibility. The following steps were taken for deployment:
+The project was deployed on github, the command 'python3 run.py' was used in terminal to launch the game and once there was a good enough portion of the game written it was then deployed on heroku early in the project to avoid problems later on with incompatibility. The following steps were taken for deployment:
 
 
 1. Add dependencies in GitPod to requirements.txt file with command "pip3 freeze > requirements.txt"
@@ -326,6 +326,7 @@ Some of the code for the functionality was adapted from here. Namely the quiz da
 [W3Schools](https://www.w3schools.com/) used when I getting stuck with implementation of code
 Help sorting gspread by column.. [Stackoverflow](https://stackoverflow.com/questions/50938274/sort-a-spread-sheet-via-gspread) help with spreadsheet sort function
 [Upper and lowercase Error handling solution](https://www.quora.com/How-do-I-allow-both-lower-and-uppercase-input-in-Python)
+[Percentage calculation](https://stackoverflow.com/questions/5306756/how-to-print-a-percentage-value) help from stackoverflow
 
 ###  **Acknowledgments**
 
