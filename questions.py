@@ -23,7 +23,7 @@ quiz_data = [
         "correct_answer": "A",
         "fact": " Bats are the only mammals capable of true flight.\n"
                 " A bat's wing is constructed very much like the human hand,\n"
-                " with extremely elongated fingers and membranes stretched between.\n "
+                " with extremely elongated fingers and membranes stretched between.\n"
                 " Bats can be found almost anywhere in the world except for areas\n"
                 " with extreme temperatures such as polar regions and deserts.\n"
                 " In fact, there are almost 1,000 species of bats worldwide,\n"
@@ -77,7 +77,7 @@ quiz_data = [
             "D": "2 Years",
         },
         "correct_answer": "B",
-        "fact": "The gestation period of a blue whale is approximately 10 to\n "
+        "fact": " The gestation period of a blue whale is approximately 10 to\n "
                 "12 months. Usually, only one calf is born at a time,\n "
                 "although twins have been reported on rare occasions.\n "
                 "Most calves, which weigh about 2 1/2 tons, are born in late fall or\n "
@@ -93,10 +93,10 @@ quiz_data = [
             "D": "Numbat",
         },
         "correct_answer": "A",
-        "fact": " The smallest mammal in the world is the bumblebee bat which\n "
-                " lives along the River Kwai in western Thailand.\n "
+        "fact": " The smallest mammal in the world is the bumblebee bat which\n"
+                " lives along the River Kwai in western Thailand.\n"
                 " An endangered species, the bumblebee bat is not much larger than an\n"
-                " actual bumblebee (1.2 in) and weighs less than a penny (0.07 oz).\n "
+                " actual bumblebee (1.2 in) and weighs less than a penny (0.07 oz).\n"
                 " Another animal which is sometimes awarded the title of the world's\n"
                 " smallest mammal is Savi's pygmy shrew, a tiny insectivore small\n"
                 " enough to run through the tunnels of large earthworms.\n"
@@ -113,7 +113,7 @@ quiz_data = [
         },
         "correct_answer": "B",
         "fact": " A wolf has two hundred million scent cells inside its nose\n"
-                " and can smell 100 times better than a human being.\n "
+                " and can smell 100 times better than a human being.\n"
                 " Under favorable conditions, it can smell its prey from about 1.75\n"
                 " miles away.\n",
     },
@@ -126,11 +126,11 @@ quiz_data = [
             "D": "Sydney funnel spider",
         },
         "correct_answer": "B",
-        "fact": " According to the Guinness Book of World Records, the most\n "
-                " poisonous (or venomous) spider in the world is the Brazilian\n "
-                " wandering spider (Phoneutria nigriventer) or banana spider.\n "
-                " Its venom is so potent that just 0.006 mg (0.00000021 oz) can kill a\n "
-                " mouse, making it the most active neurotoxic venom of any known\n "
+        "fact": " According to the Guinness Book of World Records, the most\n"
+                " poisonous (or venomous) spider in the world is the Brazilian\n"
+                " wandering spider (Phoneutria nigriventer) or banana spider.\n"
+                " Its venom is so potent that just 0.006 mg (0.00000021 oz) can kill a\n"
+                " mouse, making it the most active neurotoxic venom of any known\n"
                 " spider.\n",
     },
     {
@@ -143,7 +143,7 @@ quiz_data = [
             "D": "40",
         },
         "correct_answer": "D",
-        "fact": " A hummingbird can flap its wings about 80 times per second,\n "
+        "fact": " A hummingbird can flap its wings about 80 times per second,\n"
                 " causing an audible humming sound.\n"
                 " Due to the unique structure of their wings, hummingbirds can fly\n"
                 " left, right, up, down, backward, or even upside down.\n"
@@ -162,9 +162,9 @@ quiz_data = [
         "correct_answer": "A",
         "fact": " Because of its extremely long neck, the giraffe must rely on\n"
                 " its oversized heart (two feet long and twenty-five pounds!) to pump\n"
-                " blood all the way to its head. As a result, the giraffe has the\n "
+                " blood all the way to its head. As a result, the giraffe has the\n"
                 " highest blood pressure of any animal:  280/180 mmHg (millimeters of\n"
-                " mercury) at heart level when prone -- more\n "
+                " mercury) at heart level when prone -- more\n"
                 " than twice the blood pressure of an average human.\n"
                 " Not surprisingly, because of their high blood pressure, giraffes are\n"
                 " prone to heart attacks.\n",
@@ -207,13 +207,13 @@ quiz_data = [
             "D": "Orangutan",
         },
         "correct_answer": "C",
-        "fact": "Reaching an average height of 6 feet tall and weighing 400 \n"
-                "to 500 pounds, the mountain gorilla is the largest of the great \n"
-                "apes. Found only in the mountains of Rwanda, Zaire, and Uganda, \n"
-                "mountain gorillas have been victimized by poaching as well as the \n"
-                "destruction of much of their natural habitat. \n"
-                "Like all other subspecies of gorilla, the mountain gorilla is \n"
-                "considered an endangered species.",
+        "fact": " Reaching an average height of 6 feet tall and weighing 400 \n"
+                " to 500 pounds, the mountain gorilla is the largest of the great \n"
+                " apes. Found only in the mountains of Rwanda, Zaire, and Uganda, \n"
+                " mountain gorillas have been victimized by poaching as well as the \n"
+                " destruction of much of their natural habitat. \n"
+                " Like all other subspecies of gorilla, the mountain gorilla is \n"
+                " considered an endangered species.",
     },
     {
         "question": "#14 of 15. What makes the Burmese sneezing monkey sneeze?",
@@ -224,14 +224,14 @@ quiz_data = [
             "D": "Danger",
         },
         "correct_answer": "B",
-        "fact": "The Burmese sneezing monkey (Rhinopithecus strykeri), also \n"
-                "called the Burmese snub-nosed monkey, \n"
-                "is known in local dialects of Lisu people as mey nwoah and Law Waw \n"
-                "people as myuk na tok te, both of which mean 'monkey with an \n"
-                "upturned face'. Rain allegedly causes it to sneeze due to the short \n"
-                "upturned nasal flesh around its nostrils. \n"
-                "People from the area report that it sits with its head directed \n"
-                "downwards, hiding its face between its knees when it rains.\n",
+        "fact": " The Burmese sneezing monkey (Rhinopithecus strykeri), also \n"
+                " called the Burmese snub-nosed monkey, \n"
+                " is known in local dialects of Lisu people as mey nwoah and Law Waw \n"
+                " people as myuk na tok te, both of which mean 'monkey with an \n"
+                " upturned face'. Rain allegedly causes it to sneeze due to the short \n"
+                " upturned nasal flesh around its nostrils. \n"
+                " People from the area report that it sits with its head directed \n"
+                " downwards, hiding its face between its knees when it rains.\n",
     },
     {
         "question": "#15 of 15. What color is spider blood?",
@@ -242,9 +242,9 @@ quiz_data = [
             "D": "Red",
         },
         "correct_answer": "B",
-        "fact": "In humans, oxygen is bound to hemoglobin, a molecule that \n"
-                "contains iron and gives blood its red color.\n "
-                "In spiders, oxygen is bound to hemocyanin, a molecule that contains\n "
-                "copper rather than iron, making their blood blue.\n",
+        "fact": " In humans, oxygen is bound to hemoglobin, a molecule that\n"
+                " contains iron and gives blood its red color.\n"
+                " In spiders, oxygen is bound to hemocyanin, a molecule that contains\n"
+                " copper rather than iron, making their blood blue.\n",
     }
 ]
