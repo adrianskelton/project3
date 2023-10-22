@@ -54,6 +54,7 @@ Visit the live site [here](https://animalgame-470e463a9700.herokuapp.com/ "Link 
   * [Manual testing](#manual-testing)
   * [Unfixed bugs](#unfixed-bugs)
   * [Additional notes on testing](#additional-notes-on-testing)
+  * [Automated testing](#automated-testing)
 
 * [Credits](#credits)
   * [Code used and adapted](#code-used-and-adapted)
@@ -144,6 +145,7 @@ The simplest way I could think of for a scoreboard was to reorder the sheet by d
 ### **Intro with name input**
 
 ![](assets/images/readme_images/screenshot_start.png)
+
 The user is welcomed to the game and asked to input their name. The game then checks via a while loop function if the user name is more than zero but less than 20 characters long. If it does not get this input it has the below error. 
 
 ![](assets/images/readme_images/screenshot_name_error.png)
@@ -200,6 +202,10 @@ Game over message is displayed along with the score and wether the score was abo
 This is a very simple function that checks if the final score is less than or more than 7 out of 15 to say if it was below or above average and also works out the percentage of correct answers.
 
 The user is then asked if they want to play again or quit the game. The function checks if the input is p then it will reset the score and restart the game. Otherwise it will quit the game, if q is selected. If an incorrect choice is selected then an error will be shown until the user selects one of the above.
+
+The message below is shown if the user selects to quit.
+
+![](assets/images/readme_images/screenshot_quit.png)
 
 ## **Front-end features**
 
@@ -297,7 +303,8 @@ I tried to upgrade the gspread module and pip also as suggested in [this post](h
 ### **Additional notes on testing**
 
 During the design process I often tested and improved up the functionality of the game. I knew I wanted the game to look visually pleasing so used an ascii artwork for the game but this looked cluttered with the code so I imported it from a separate file in artwork.py
-This also avoided long line pep8 errors when putting run.py through the validator. I realized during the creation of the validation of the input options that there was case sensitivity which was solved by adding .lower() after the input to convert the input to lowercase.
+
+This also avoided long line pep8 errors when putting run.py through the validator. I realized during the creation of the validation of the input options that there was case sensitivity which was solved by adding .lower() after the input to convert the input to lowercase before checking if the input was valid.
 
 **Colorama** 
 
