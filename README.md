@@ -1,6 +1,8 @@
 # ANIMAL QUIZ
 
-Animal-Quiz is my third project for Code Institute Full Stack development program which is focused on python language and also integrates a spreadsheet shared on google drive.
+Animal-Quiz is my third project for Code Institute Full Stack development program. This project is focused on python programming language and also integrates a spreadsheet shared on google drive, I learned a lot during this program such as defininite and indefinite iteration of loops and when to use them apporpriately for example in error handling intil a condition is met or in the quiz game where a set of 15 questions were iterated through.
+
+I also learnt about checking for bugs and using the pep8 python style conventions, which I checked throughout the coding process so that I could remind myself of best practices when it came to spacing, white space and other rules. I tried my best to keep the code clean, readable and have docstrings that were to the point but descriptive enough to convey what the code did. I kept the ascii art and the questions for the quiz in seperate python files and imported them into the main run.py file to keep the main python file looking less cluttered. 
 
 The inspiration for the game came from my two children Axel and Hannah and their love for animal facts and the natural world in general. 
 
@@ -24,17 +26,21 @@ Visit the live site [here](https://animalgame-470e463a9700.herokuapp.com/ "Link 
   * [Imagery](#imagery)
   * [Structure](#structure)
   * [Wireframes](#wireframes)
+  * [Design process](#design-process)
 
 * [Features](#features)
-  * [Intro](#intro)
-  * [Name input](#name-input)
-  * [Guide](#guide)
-  * [Quiz](#quiz)
-  * [More knowledge](#more-knowledge)
+  * [Google Sheets](#google-sheets-with-player-name-and-score)
+  * [Intro with name input](#intro-with-name-input)
+  * [Options](#options)
+  * [Leader-board](#leader-board)
+  * [Rules](#rules)
+  * [Play the quiz](#play-the-quiz)
+  * [Facts after guess](#facts-after-guess)
   * [Quiz end messages](#quiz-end-messages)
-  * [Leader-board update message and display](#leaderboard-update-message-and-display)
-  * [Quiz replay](#quiz-replay)
-  * [Front-end features](#front-end-features)
+
+ * [Front-end features](#front-end-features)
+   * [Background Image](#background-image)
+   * [Title heading](#title-heading)
 
 * [Future Implementations](#future-implementations)
 
@@ -45,16 +51,18 @@ Visit the live site [here](https://animalgame-470e463a9700.herokuapp.com/ "Link 
 * [Deployment](#deployment)
 
 * [Testing](#testing)
+  * [Manual testing](#manual-testing)
+  * [Unfixed bugs](#unfixed-bugs)
+  * [Additional notes on testing](#additional-notes-on-testing)
 
 * [Credits](#credits)
   * [Code used and adapted](#code-used-and-adapted)
+  * [Websites visited to gather knowledge](#websites-visited-to-gather-knowledge)
   * [Acknowledgments](#acknowledgments)
 
 ---
 
 ## **Project Overview**
-
-
 
 ### **Project Goals**
 - Create a game in python
@@ -68,7 +76,7 @@ Visit the live site [here](https://animalgame-470e463a9700.herokuapp.com/ "Link 
 - Understand the purpose of the site
 - Find out the rules of the game and have them easy to understand
 - Have the game be fun and informative
-- Give a fact about the animal wether it is correct or incorrectly answered
+- Give a fact about the animal wether regardless if question is answered correctly or incorrectly
 - Have a scoring system where the player can see their score on the leader-board 
 
 ### **User Expectations**
@@ -112,6 +120,7 @@ The flowchart above shows the general flow of the game.
 Due to the nature of the project being mostly backend no wireframes were made or needed
 
 ### **Design process**
+
 - Colorama module was used for text output color of the terminal
 - Green was used for correct inputs and answers
 - Red was used only for error messages and incorrect answers
@@ -139,7 +148,6 @@ The user is welcomed to the game and asked to input their name. The game then ch
 
 ![](assets/images/readme_images/screenshot_name_error.png)
 
----
 ### **Options**
 
 ![](assets/images/readme_images/screenshot_options.png)
@@ -153,6 +161,18 @@ Once the name is correctly entered the player is given four choices, as seen abo
 ![](assets/images/readme_images/screenshot_options_incorrect.png)
 
 If none of the correct options are entered an error is shown, as pictured above.
+
+### **Leader-board**
+
+![](assets/images/readme_images/screenshot_highscores.png)
+
+The leader-board is saved in the google excel sheet and is sorted by descending points to show who is on top of the leader-board.
+
+### **Rules**
+
+![](assets/images/readme_images/screenshot_rules.png)
+
+The rules of the game are shown (above)
 
 ### **Play the Quiz**
 
@@ -168,7 +188,8 @@ I did this to make the run.py look much less cluttered, this is done by using th
 
 ![](assets/images/readme_images/screenshot_facts.png)
 
-I thought it would be nice to have the facts displayed after the question was answered so the user could learn something.\
+I thought it would be nice to have the facts displayed after the question was answered so the user could learn something.
+
 The user then presses enter to continue to the next question. I considered using a clear screen function so that it would seem cleaner on the screen but thought it was more beneficial to scroll up if the user wanted to read an old question before the game ended.
 
 ### **Quiz end messages** 
@@ -179,12 +200,6 @@ Game over message is displayed along with the score and wether the score was abo
 This is a very simple function that checks if the final score is less than or more than 7 out of 15 to say if it was below or above average and also works out the percentage of correct answers.
 
 The user is then asked if they want to play again or quit the game. The function checks if the input is p then it will reset the score and restart the game. Otherwise it will quit the game, if q is selected. If an incorrect choice is selected then an error will be shown until the user selects one of the above.
-
-### **Leader-board**
-
-![](assets/images/readme_images/screenshot_highscores.png)
-
-The leader-board is saved in the google excel sheet and is sorted by descending points to show who is on top of the leader-board.
 
 ## **Front-end features**
 
@@ -250,9 +265,7 @@ The project was deployed on github, the command 'python3 run.py' was used in ter
 
 ## **Testing**
 
-### **Expected vs Result**
-
-## Manual Testing
+### **Manual Testing**
 
 |           Action            |        Expectation                           | Outcome |
 | :-------------------------: |   :-------------------------------------:    | :-----: |
@@ -281,18 +294,23 @@ When the game is run the following error shows though it does not affect the fun
 
 I tried to upgrade the gspread module and pip also as suggested in [this post](https://stackoverflow.com/questions/66730666/gspread-worksheet-update-error-worksheet-has-no-attribute-update) from stackoverflow however this did not solve it. I then used the clear screen function instead, so that the player does not see this message at the welcome screen and it does not negatively impact the user experience, the functionality is unaffected by this error.
 
-### **Manual testing**
+### **Additional notes on testing**
 
 During the design process I often tested and improved up the functionality of the game. I knew I wanted the game to look visually pleasing so used an ascii artwork for the game but this looked cluttered with the code so I imported it from a separate file in artwork.py
 This also avoided long line pep8 errors when putting run.py through the validator. I realized during the creation of the validation of the input options that there was case sensitivity which was solved by adding .lower() after the input to convert the input to lowercase.
 
 **Colorama** 
+
 Problem: Colorama module was not working I thought it was not compatible with heroku but then realized it was not in the requirements.txt as it was added after initial deployment.
 
 Fix: Ran command Pip Freeze > Requirements.txt
 from terminal and pushed everything to heroku and it worked, solution found on code institute slack community.\
 
-Problem: When I entered a blank name it would give the error but when I retried to enter a blank name it would freeze. I needed to make a while loop instead for this and function and then also changed my game over function to a while loop so that the error message displayed until the required input was entered to break out of the loop.
+**Validation and looping**
+
+Problem: When I entered a blank name it would give the error but when I retried to enter a blank name it would freeze. 
+
+Fix: I needed to make a while loop instead for this and function and then also changed my game over function to a while loop so that the error message displayed until the required input was entered to break out of the loop.
 
 
 ### **Automated testing**
