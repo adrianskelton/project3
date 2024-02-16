@@ -1,6 +1,6 @@
 # ANIMAL QUIZ
 
-Animal-Quiz is my third project for Code Institute Full Stack development program. This project is focused on python programming language and also integrates a spreadsheet shared on google drive, I learned a lot during this program such as defininite and indefinite iteration of loops and when to use them apporpriately for example in error handling intil a condition is met or in the quiz game where a set of 15 questions were iterated through.
+Animal-Quiz WAS my third project for Code Institute Full Stack development program. This project is focused on python programming language and also integrates a spreadsheet shared on google drive, I learned a lot during this program such as defininite and indefinite iteration of loops and when to use them apporpriately for example in error handling intil a condition is met or in the quiz game where a set of 15 questions were iterated through.
 
 I also learnt about checking for bugs and using the pep8 python style conventions, which I checked throughout the coding process so that I could remind myself of best practices when it came to spacing, white space and other rules. I tried my best to keep the code clean, readable and have docstrings that were to the point but descriptive enough to convey what the code did. I kept the ascii art and the questions for the quiz in seperate python files and imported them into the main run.py file to keep the main python file looking less cluttered. 
 
